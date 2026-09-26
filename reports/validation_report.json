@@ -1,0 +1,1269 @@
+{
+  "generated": "2026-09-26",
+  "network_checked": false,
+  "counts": {
+    "publish": 6,
+    "review": 23,
+    "archive": 6,
+    "quarantine": 18
+  },
+  "finding_counts": {
+    "hub_url_as_listing": 2,
+    "never_verified": 33,
+    "aggregator_link": 12,
+    "bot_protected_source": 14,
+    "search_url_as_listing": 13,
+    "unparseable_term": 7,
+    "term_passed": 9,
+    "vague_employer": 3
+  },
+  "shared_urls": {
+    "https://jobs.rbc.com/ca/en/featuredopportunities/student-early-talent-jobs": [
+      "2026 Fall \u2013 GRM, AI Innovation Business Analyst Intern",
+      "2026 Fall \u2013 GRM, Developer \u2013 AI Innovation for Risk Management"
+    ],
+    "https://jobs.opg.com/go/Our-Students-%26-New-Grads/2626017?q=&sortColumn=sort_title&sortDirection=asc": [
+      "Fall 2026 \u2014 Business Analytics & Adult Education Programs",
+      "Fall 2026 \u2014 MBA Student"
+    ]
+  },
+  "results": [
+    {
+      "listing_id": "a9321e97ce6d",
+      "title": "RBC Co-ops & Internships \u2014 Student Early Talent Hub",
+      "organization": "RBC",
+      "url": "https://jobs.rbc.com/ca/en/students-grad-co-ops-internships",
+      "entity_kind": "hub",
+      "canonical_status": "active",
+      "verdict": "publish",
+      "confidence": 100,
+      "checked_network": false,
+      "findings": []
+    },
+    {
+      "listing_id": "5b3e4a370a86",
+      "title": "2026 Fall \u2013 GRM, AI Innovation Business Analyst Intern",
+      "organization": "RBC",
+      "url": "https://jobs.rbc.com/ca/en/featuredopportunities/student-early-talent-jobs",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 70,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "hub_url_as_listing",
+          "severity": "warning",
+          "message": "Presented as a specific opening, but the URL is a career hub page",
+          "hint": "Link the individual posting, or relabel as a hub source."
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "e606def5a842",
+      "title": "2026 Fall \u2013 GRM, Developer \u2013 AI Innovation for Risk Management",
+      "organization": "RBC",
+      "url": "https://jobs.rbc.com/ca/en/featuredopportunities/student-early-talent-jobs",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 70,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "hub_url_as_listing",
+          "severity": "warning",
+          "message": "Presented as a specific opening, but the URL is a career hub page",
+          "hint": "Link the individual posting, or relabel as a hub source."
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "775d5b6ecfd8",
+      "title": "Students & New Grads Jobs",
+      "organization": "Scotiabank",
+      "url": "https://jobs.scotiabank.com/go/Student-%26-New-Grad-Jobs/2298417/",
+      "entity_kind": "hub",
+      "canonical_status": "active",
+      "verdict": "publish",
+      "confidence": 100,
+      "checked_network": false,
+      "findings": []
+    },
+    {
+      "listing_id": "c42641ba79ae",
+      "title": "ASPIRE Commercial Banking \u2014 National Office Co-op / Internship",
+      "organization": "Scotiabank",
+      "url": "https://www.eluta.ca/spl/aspire-commercial-banking-national-office-fall-2026-co-op-internship-job-details-scotiabank-681b6428257abed2e927bb6ae967e8fd",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 82,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "aggregator_link",
+          "severity": "info",
+          "message": "Links to aggregator eluta.ca rather than the employer",
+          "hint": "Aggregator links expire sooner and add redirect hops."
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "84a050469933",
+      "title": "Canadian Banking \u2014 Accounting Automotive Finance Internship/Co-op",
+      "organization": "Scotiabank",
+      "url": "https://www.eluta.ca/spl/canadian-banking-accounting-automotive-finance-internship-co-op-fall-2026-job-details-97aaa479cf4a5df6bd6abb0f84c0b668",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 82,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "aggregator_link",
+          "severity": "info",
+          "message": "Links to aggregator eluta.ca rather than the employer",
+          "hint": "Aggregator links expire sooner and add redirect hops."
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "63c3c4b54c59",
+      "title": "Global Operations \u2014 Detection and Application Fraud Internship/Co-op",
+      "organization": "Scotiabank",
+      "url": "https://www.eluta.ca/spl/global-operations-detection-and-application-fraud-internship-co-op-fall-2026-jobdetails-b25bb544fb4ad600c6e203a8d62af4e0",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 82,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "aggregator_link",
+          "severity": "info",
+          "message": "Links to aggregator eluta.ca rather than the employer",
+          "hint": "Aggregator links expire sooner and add redirect hops."
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "51339b7a3d1a",
+      "title": "Velocity \u2014 Finance Accounting Internship/Co-op",
+      "organization": "Scotiabank",
+      "url": "https://www.eluta.ca/spl/velocity-finance-accounting-internship-co-op-fall-2026-job-details-scotiabank-866d1dc2857a2b57b7256efabf2d042a",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 82,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "aggregator_link",
+          "severity": "info",
+          "message": "Links to aggregator eluta.ca rather than the employer",
+          "hint": "Aggregator links expire sooner and add redirect hops."
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "040b070e1288",
+      "title": "Velocity \u2014 Cloud Engineer Internship/Co-op",
+      "organization": "Scotiabank",
+      "url": "https://www.eluta.ca/spl/velocity-cloud-engineer-internship-co-op-fall-2026-job-details-scotiabank-79356c6cd35d039e6bcd90d972b23fc6",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 82,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "aggregator_link",
+          "severity": "info",
+          "message": "Links to aggregator eluta.ca rather than the employer",
+          "hint": "Aggregator links expire sooner and add redirect hops."
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "8be0ac786c2b",
+      "title": "Canadian Banking \u2014 Technology Analysis Internship/Co-op",
+      "organization": "Scotiabank",
+      "url": "https://www.eluta.ca/spl/canadian-banking-technology-analysis-internship-co-op-fall-2026-job-details-scotiabank-a5ab72235fc8749ab6f70a51fdcdcfcc",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 82,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "aggregator_link",
+          "severity": "info",
+          "message": "Links to aggregator eluta.ca rather than the employer",
+          "hint": "Aggregator links expire sooner and add redirect hops."
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "76eb472e8f8f",
+      "title": "GBM Investment Banking (Mining) Internship/Co-op",
+      "organization": "Scotiabank",
+      "url": "https://jobs.scotiabank.com/job/Toronto-GBM-Investment-Banking-%28Mining%29-InternshipCo-op-Winter-2027-ON/604279917/",
+      "entity_kind": "listing",
+      "canonical_status": "archived",
+      "verdict": "archive",
+      "confidence": 100,
+      "checked_network": false,
+      "findings": []
+    },
+    {
+      "listing_id": "1b0a929319dc",
+      "title": "Fund My Business Intern / Co-op",
+      "organization": "TD Bank",
+      "url": "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Toronto-Ontario/Fund-My-Business-Intern---Co-Op_R_1480660",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 85,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "2a1110ab6681",
+      "title": "Governance & Control Intern / Co-op",
+      "organization": "TD Bank",
+      "url": "https://td.wd3.myworkdayjobs.com/TD_Bank_Careers/job/Toronto-Ontario/Governance---Control-Intern---Co-Op--FALL-2026-_R_1481025",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 85,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "8945612c31d2",
+      "title": "Run My Business Intern / Co-op",
+      "organization": "TD Bank",
+      "url": "https://td.wd3.myworkdayjobs.com/TD_Bank_Careers/job/TD-Centre---West---100-Wellington-Street-West-Toronto-Ontario/Run-My-Business-Intern---Co-Op--FALL-2026-_R_1481183",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 85,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "8d46623f7da5",
+      "title": "Wealth Colleague Experience Intern/Co-op",
+      "organization": "TD Bank",
+      "url": "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Wealth-Colleague-Experience-Intern-Co-Op--Fall-2026-_R_1479122",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 85,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "299d3088a574",
+      "title": "Digital Servicing Intern/Co-op",
+      "organization": "TD Bank",
+      "url": "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Digital-Servicing-Intern-Co-op--FALL-2026-_R_1481233",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 85,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "daf598e373d5",
+      "title": "IT Technical Advisor I \u2014 4 Month Internship/Co-op",
+      "organization": "Intact",
+      "url": "https://ca.linkedin.com/jobs/view/it-technical-advisor-i-%E2%80%93-4-month-internship-co-op-fall-2026-at-intact-4408693641",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 70,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "bot_protected_source",
+          "severity": "warning",
+          "message": "ca.linkedin.com blocks automated checks, so this listing can never be auto-verified",
+          "hint": "Find the employer's own posting URL. Until then this needs periodic manual review."
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "bf3c9fe00100",
+      "title": "Security Analyst I \u2014 4 Month Internship/Co-op",
+      "organization": "Intact",
+      "url": "https://ca.indeed.com/m/jobs?l=Toronto%2C+ON&q=Winter+Co+Op",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "quarantine",
+      "confidence": 0,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "search_url_as_listing",
+          "severity": "critical",
+          "message": "Presented as a specific opening, but the URL is a Indeed mobile search page",
+          "hint": "Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening."
+        },
+        {
+          "code": "bot_protected_source",
+          "severity": "warning",
+          "message": "ca.indeed.com blocks automated checks, so this listing can never be auto-verified",
+          "hint": "Find the employer's own posting URL. Until then this needs periodic manual review."
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "cc5085a29429",
+      "title": "Software Developer I \u2014 4 Month Internship/Co-op",
+      "organization": "Intact",
+      "url": "https://emplois.ca.indeed.com/q-winter-co-op-l-greater-toronto-area%2C-on-jobs.html",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "quarantine",
+      "confidence": 0,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "search_url_as_listing",
+          "severity": "critical",
+          "message": "Presented as a specific opening, but the URL is a Indeed keyword search page",
+          "hint": "Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening."
+        },
+        {
+          "code": "bot_protected_source",
+          "severity": "warning",
+          "message": "emplois.ca.indeed.com blocks automated checks, so this listing can never be auto-verified",
+          "hint": "Find the employer's own posting URL. Until then this needs periodic manual review."
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "082ebae8de92",
+      "title": "Project Management Intern",
+      "organization": "Arup",
+      "url": "https://jobs.arup.com/jobs/project-management-intern-august-december-2026-32738",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 85,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "63bba243fa74",
+      "title": "Marketing Intern",
+      "organization": "Arup",
+      "url": "https://jobs.arup.com/jobs/marketing-intern-august-december-2026-32787",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 85,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "7c7b0b4b1cc6",
+      "title": "Fire Safety Intern",
+      "organization": "Arup",
+      "url": "https://jobs.arup.com/jobs/fire-safety-intern-august-december-2026-32744",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 85,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "0fcd50ad8e70",
+      "title": "Civil Project Management Intern / Co-op",
+      "organization": "Arup",
+      "url": "https://jobs.arup.com/jobs/civil-project-management-intern-co-op-3677",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 82,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "unparseable_term",
+          "severity": "info",
+          "message": "Could not determine whether term 'Rolling / verify' is current",
+          "hint": ""
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "5ae34c672408",
+      "title": "Architecture Intern / Co-op",
+      "organization": "Arup",
+      "url": "https://jobs.arup.com/jobs/architecture-intern-co-op-5194",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 82,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "unparseable_term",
+          "severity": "info",
+          "message": "Could not determine whether term 'Rolling / verify' is current",
+          "hint": ""
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "f81dc7436aba",
+      "title": "BIM Intern / Co-op",
+      "organization": "Arup",
+      "url": "https://jobs.arup.com/jobs/bim-intern-co-op-5202",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 82,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "unparseable_term",
+          "severity": "info",
+          "message": "Could not determine whether term 'Rolling / verify' is current",
+          "hint": ""
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "df15f2a2f12d",
+      "title": "Software Development Intern / Co-op",
+      "organization": "Arup",
+      "url": "https://jobs.arup.com/jobs/software-development-intern-co-op-1403",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 82,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "unparseable_term",
+          "severity": "info",
+          "message": "Could not determine whether term 'Rolling / verify' is current",
+          "hint": ""
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "4c12ef77e534",
+      "title": "Students & New Grads",
+      "organization": "Ontario Power Generation",
+      "url": "https://jobs.opg.com/go/Our-Students-%26-New-Grads/2626017",
+      "entity_kind": "hub",
+      "canonical_status": "active",
+      "verdict": "publish",
+      "confidence": 100,
+      "checked_network": false,
+      "findings": []
+    },
+    {
+      "listing_id": "6e0a1727381f",
+      "title": "Fall 2026 \u2014 Business Analytics & Adult Education Programs",
+      "organization": "Ontario Power Generation",
+      "url": "https://jobs.opg.com/go/Our-Students-%26-New-Grads/2626017?q=&sortColumn=sort_title&sortDirection=asc",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "quarantine",
+      "confidence": 0,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "search_url_as_listing",
+          "severity": "critical",
+          "message": "Presented as a specific opening, but the URL is a sorted result listing, not a posting",
+          "hint": "Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening."
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "2af4d6c3eaeb",
+      "title": "Fall 2026 \u2014 MBA Student",
+      "organization": "Ontario Power Generation",
+      "url": "https://jobs.opg.com/go/Our-Students-%26-New-Grads/2626017?q=&sortColumn=sort_title&sortDirection=asc",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "quarantine",
+      "confidence": 0,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "search_url_as_listing",
+          "severity": "critical",
+          "message": "Presented as a specific opening, but the URL is a sorted result listing, not a posting",
+          "hint": "Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening."
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "96ec4a6b2a8b",
+      "title": "Student & New Grad Jobs",
+      "organization": "Hydro One",
+      "url": "https://jobs.hydroone.com/go/Student-Jobs/826900/",
+      "entity_kind": "hub",
+      "canonical_status": "watchlist",
+      "verdict": "archive",
+      "confidence": 100,
+      "checked_network": false,
+      "findings": []
+    },
+    {
+      "listing_id": "96810bd9a13f",
+      "title": "University Co-op Student \u2014 Distribution Planning",
+      "organization": "Hydro One",
+      "url": "https://www.eluta.ca/spl/university-co-op-student-distribution-planning-12-months-fall-2026-b740166ea0e15d4d6ba334e10c3684d0",
+      "entity_kind": "listing",
+      "canonical_status": "archived",
+      "verdict": "archive",
+      "confidence": 97,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "aggregator_link",
+          "severity": "info",
+          "message": "Links to aggregator eluta.ca rather than the employer",
+          "hint": "Aggregator links expire sooner and add redirect hops."
+        }
+      ]
+    },
+    {
+      "listing_id": "823b203405b0",
+      "title": "College Co-op Student \u2014 Outage Planning",
+      "organization": "Hydro One",
+      "url": "https://jobs.hydroone.com/job/Barrie-College-Co-Op-Student-Outage-Planning-4-Months-Winter-2026-ON/1290316647/",
+      "entity_kind": "listing",
+      "canonical_status": "archived",
+      "verdict": "quarantine",
+      "confidence": 0,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "term_passed",
+          "severity": "critical",
+          "message": "Work term 'Winter 2026' ended before 2026-09-26",
+          "hint": "Archive it. Keep for next-cycle pattern data."
+        }
+      ]
+    },
+    {
+      "listing_id": "2f4cf5b807ce",
+      "title": "Community Development Co-op Student",
+      "organization": "Stantec",
+      "url": "https://www.eluta.ca/spl/community-development-co-op-student-summer-2026-4-12-months-a03e5f280973589efac38f43a5758119",
+      "entity_kind": "listing",
+      "canonical_status": "archived",
+      "verdict": "quarantine",
+      "confidence": 0,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "aggregator_link",
+          "severity": "info",
+          "message": "Links to aggregator eluta.ca rather than the employer",
+          "hint": "Aggregator links expire sooner and add redirect hops."
+        },
+        {
+          "code": "term_passed",
+          "severity": "critical",
+          "message": "Work term 'Summer 2026 / 4\u201312 months' ended before 2026-09-26",
+          "hint": "Archive it. Keep for next-cycle pattern data."
+        }
+      ]
+    },
+    {
+      "listing_id": "49895765e8f8",
+      "title": "Co-op Student \u2014 Business Planning and Analysis",
+      "organization": "Peel Regional Police",
+      "url": "https://www.eluta.ca/spl/co-op-student-business-planning-and-analysis-32bdc353451164bb07a6ce6f876b3fe7",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 79,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "aggregator_link",
+          "severity": "info",
+          "message": "Links to aggregator eluta.ca rather than the employer",
+          "hint": "Aggregator links expire sooner and add redirect hops."
+        },
+        {
+          "code": "unparseable_term",
+          "severity": "info",
+          "message": "Could not determine whether term 'Verify' is current",
+          "hint": ""
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "efb795891bf6",
+      "title": "Co-op Student \u2014 Corporate Security Services",
+      "organization": "Peel Regional Police",
+      "url": "https://www.eluta.ca/spl/co-op-student-corporate-security-services-f0c46eb5c6a0029bbffbcda0cb90f4cf",
+      "entity_kind": "listing",
+      "canonical_status": "archived",
+      "verdict": "archive",
+      "confidence": 94,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "aggregator_link",
+          "severity": "info",
+          "message": "Links to aggregator eluta.ca rather than the employer",
+          "hint": "Aggregator links expire sooner and add redirect hops."
+        },
+        {
+          "code": "unparseable_term",
+          "severity": "info",
+          "message": "Could not determine whether term 'Verify' is current",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "listing_id": "b0ab596617fa",
+      "title": "Environmental Stewardship Co-op",
+      "organization": "Niagara Parks Commission",
+      "url": "https://www.eluta.ca/spl/environmental-stewardship-co-op-e66b7abb8a312133260b071835ccfa7c",
+      "entity_kind": "listing",
+      "canonical_status": "archived",
+      "verdict": "quarantine",
+      "confidence": 0,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "aggregator_link",
+          "severity": "info",
+          "message": "Links to aggregator eluta.ca rather than the employer",
+          "hint": "Aggregator links expire sooner and add redirect hops."
+        },
+        {
+          "code": "term_passed",
+          "severity": "critical",
+          "message": "Work term 'Summer 2026' ended before 2026-09-26",
+          "hint": "Archive it. Keep for next-cycle pattern data."
+        }
+      ]
+    },
+    {
+      "listing_id": "0301feaa800c",
+      "title": "Logistics Co-op",
+      "organization": "IKO Industries Ltd.",
+      "url": "https://www.eluta.ca/spl/logistics-co-op-549eed8b812b4ea6dfada94880c5ba2c",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "review",
+      "confidence": 79,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "aggregator_link",
+          "severity": "info",
+          "message": "Links to aggregator eluta.ca rather than the employer",
+          "hint": "Aggregator links expire sooner and add redirect hops."
+        },
+        {
+          "code": "unparseable_term",
+          "severity": "info",
+          "message": "Could not determine whether term 'Verify' is current",
+          "hint": ""
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "c9f1ae365b94",
+      "title": "Outside Sales Internship / Co-op",
+      "organization": "Uline",
+      "url": "https://ca.indeed.com/q-uline-jobs-l-ontario-jobs.html",
+      "entity_kind": "listing",
+      "canonical_status": "archived",
+      "verdict": "quarantine",
+      "confidence": 0,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "search_url_as_listing",
+          "severity": "critical",
+          "message": "Presented as a specific opening, but the URL is a Indeed keyword search page",
+          "hint": "Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening."
+        },
+        {
+          "code": "bot_protected_source",
+          "severity": "warning",
+          "message": "ca.indeed.com blocks automated checks, so this listing can never be auto-verified",
+          "hint": "Find the employer's own posting URL. Until then this needs periodic manual review."
+        },
+        {
+          "code": "term_passed",
+          "severity": "critical",
+          "message": "Work term 'Summer 2026' ended before 2026-09-26",
+          "hint": "Archive it. Keep for next-cycle pattern data."
+        }
+      ]
+    },
+    {
+      "listing_id": "5bdbc20960d6",
+      "title": "Student, Supply Chain Analyst",
+      "organization": "General Dynamics Land Systems",
+      "url": "https://ca.indeed.com/q-general-dynamics-land-systems-l-london%2C-on-jobs.html",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "quarantine",
+      "confidence": 0,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "search_url_as_listing",
+          "severity": "critical",
+          "message": "Presented as a specific opening, but the URL is a Indeed keyword search page",
+          "hint": "Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening."
+        },
+        {
+          "code": "bot_protected_source",
+          "severity": "warning",
+          "message": "ca.indeed.com blocks automated checks, so this listing can never be auto-verified",
+          "hint": "Find the employer's own posting URL. Until then this needs periodic manual review."
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "6660aa8d336d",
+      "title": "Student, Software Developer",
+      "organization": "General Dynamics Land Systems",
+      "url": "https://ca.indeed.com/q-general-dynamics-land-systems-student-l-london%2C-on-jobs.html",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "quarantine",
+      "confidence": 0,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "search_url_as_listing",
+          "severity": "critical",
+          "message": "Presented as a specific opening, but the URL is a Indeed keyword search page",
+          "hint": "Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening."
+        },
+        {
+          "code": "bot_protected_source",
+          "severity": "warning",
+          "message": "ca.indeed.com blocks automated checks, so this listing can never be auto-verified",
+          "hint": "Find the employer's own posting URL. Until then this needs periodic manual review."
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "3571703dc3aa",
+      "title": "Staff Accountant \u2014 Audit Public/Private Co-op/Intern",
+      "organization": "Accounting firm / Ontario offices",
+      "url": "https://ca.indeed.com/viewjob?jk=2877129e0d8b6e2f",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "quarantine",
+      "confidence": 0,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "bot_protected_source",
+          "severity": "warning",
+          "message": "ca.indeed.com blocks automated checks, so this listing can never be auto-verified",
+          "hint": "Find the employer's own posting URL. Until then this needs periodic manual review."
+        },
+        {
+          "code": "vague_employer",
+          "severity": "critical",
+          "message": "'Accounting firm / Ontario offices' is a category, not a named organisation",
+          "hint": "Students cannot research or apply to a category. Identify the actual employer or remove the record."
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "79e1068a7770",
+      "title": "Co-op Accountant, Assurance and Accounting",
+      "organization": "MNP",
+      "url": "https://ca.indeed.com/q-student-jobs-l-london%2C-on-jobs.html?vjk=325889a359eae6d4",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "quarantine",
+      "confidence": 0,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "search_url_as_listing",
+          "severity": "critical",
+          "message": "Presented as a specific opening, but the URL is a Indeed keyword search page",
+          "hint": "Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening."
+        },
+        {
+          "code": "bot_protected_source",
+          "severity": "warning",
+          "message": "ca.indeed.com blocks automated checks, so this listing can never be auto-verified",
+          "hint": "Find the employer's own posting URL. Until then this needs periodic manual review."
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "25aefecbdafe",
+      "title": "Co-op / Intern \u2014 Master Planning & Logistics",
+      "organization": "Automotive employer",
+      "url": "https://ca.indeed.com/q-co-op-internship-l-ontario-jobs.html",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "quarantine",
+      "confidence": 0,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "search_url_as_listing",
+          "severity": "critical",
+          "message": "Presented as a specific opening, but the URL is a Indeed keyword search page",
+          "hint": "Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening."
+        },
+        {
+          "code": "bot_protected_source",
+          "severity": "warning",
+          "message": "ca.indeed.com blocks automated checks, so this listing can never be auto-verified",
+          "hint": "Find the employer's own posting URL. Until then this needs periodic manual review."
+        },
+        {
+          "code": "vague_employer",
+          "severity": "critical",
+          "message": "'Automotive employer' is a category, not a named organisation",
+          "hint": "Students cannot research or apply to a category. Identify the actual employer or remove the record."
+        },
+        {
+          "code": "term_passed",
+          "severity": "critical",
+          "message": "Work term 'August 2026 / 8 months' ended before 2026-09-26",
+          "hint": "Archive it. Keep for next-cycle pattern data."
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "d5dcec0eb492",
+      "title": "IT / Business Co-op \u2014 12-month fixed term",
+      "organization": "Industrial and Commercial Bank of China (Canada)",
+      "url": "https://ca.indeed.com/q-developer-intern-it-intern-co-op-student-l-ontario-jobs.html",
+      "entity_kind": "listing",
+      "canonical_status": "unverified",
+      "verdict": "quarantine",
+      "confidence": 0,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "search_url_as_listing",
+          "severity": "critical",
+          "message": "Presented as a specific opening, but the URL is a Indeed keyword search page",
+          "hint": "Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening."
+        },
+        {
+          "code": "bot_protected_source",
+          "severity": "warning",
+          "message": "ca.indeed.com blocks automated checks, so this listing can never be auto-verified",
+          "hint": "Find the employer's own posting URL. Until then this needs periodic manual review."
+        },
+        {
+          "code": "never_verified",
+          "severity": "warning",
+          "message": "Status is 'verify before applying' -- this has never been confirmed",
+          "hint": "Run the network verifier, or check manually."
+        }
+      ]
+    },
+    {
+      "listing_id": "f27348ac876f",
+      "title": "Job Bank \u2014 Internship Search",
+      "organization": "Government of Canada Job Bank",
+      "url": "https://www.jobbank.gc.ca/jobsearch/jobsearch?searchstring=internship",
+      "entity_kind": "hub",
+      "canonical_status": "active",
+      "verdict": "publish",
+      "confidence": 100,
+      "checked_network": false,
+      "findings": []
+    },
+    {
+      "listing_id": "04ef25bf7f83",
+      "title": "Job Bank \u2014 Student Jobs in Ontario",
+      "organization": "Government of Canada Job Bank",
+      "url": "https://www.jobbank.gc.ca/jobsearch/jobsearch?fprov=ON&jkw=student",
+      "entity_kind": "hub",
+      "canonical_status": "active",
+      "verdict": "publish",
+      "confidence": 100,
+      "checked_network": false,
+      "findings": []
+    },
+    {
+      "listing_id": "1218cae6126c",
+      "title": "Ontario Public Service \u2014 Student and New Professionals",
+      "organization": "Government of Ontario / OPS",
+      "url": "https://www.ontario.ca/page/careers-student-and-new-professionals",
+      "entity_kind": "hub",
+      "canonical_status": "active",
+      "verdict": "publish",
+      "confidence": 100,
+      "checked_network": false,
+      "findings": []
+    },
+    {
+      "listing_id": "4f0af84462c1",
+      "title": "Summer Employment Opportunities Program",
+      "organization": "Ontario Public Service",
+      "url": "https://www.gojobs.gov.on.ca/Preview.aspx?JobID=201105&Language=English",
+      "entity_kind": "hub",
+      "canonical_status": "archived",
+      "verdict": "archive",
+      "confidence": 100,
+      "checked_network": false,
+      "findings": []
+    },
+    {
+      "listing_id": "4c46c73d5f64",
+      "title": "Ontario Internship Program",
+      "organization": "Government of Ontario",
+      "url": "https://www.ontario.ca/page/apply-ontario-internship-program",
+      "entity_kind": "hub",
+      "canonical_status": "archived",
+      "verdict": "archive",
+      "confidence": 100,
+      "checked_network": false,
+      "findings": []
+    },
+    {
+      "listing_id": "d5dcbc0274ab",
+      "title": "Full-Time Summer Camp Child/Youth Support Worker",
+      "organization": "Community Living York South",
+      "url": "https://ca.indeed.com/q-community-living-york-south-l-markham%2C-on-jobs.html",
+      "entity_kind": "listing",
+      "canonical_status": "archived",
+      "verdict": "quarantine",
+      "confidence": 0,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "search_url_as_listing",
+          "severity": "critical",
+          "message": "Presented as a specific opening, but the URL is a Indeed keyword search page",
+          "hint": "Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening."
+        },
+        {
+          "code": "bot_protected_source",
+          "severity": "warning",
+          "message": "ca.indeed.com blocks automated checks, so this listing can never be auto-verified",
+          "hint": "Find the employer's own posting URL. Until then this needs periodic manual review."
+        },
+        {
+          "code": "term_passed",
+          "severity": "critical",
+          "message": "Work term 'Summer 2026' ended before 2026-09-26",
+          "hint": "Archive it. Keep for next-cycle pattern data."
+        }
+      ]
+    },
+    {
+      "listing_id": "450be483d8f8",
+      "title": "Summer Student Worker",
+      "organization": "Toronto Botanical Garden",
+      "url": "https://ca.indeed.com/q-student-summer-l-richmond-hill%2C-on-jobs.html",
+      "entity_kind": "listing",
+      "canonical_status": "archived",
+      "verdict": "quarantine",
+      "confidence": 0,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "search_url_as_listing",
+          "severity": "critical",
+          "message": "Presented as a specific opening, but the URL is a Indeed keyword search page",
+          "hint": "Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening."
+        },
+        {
+          "code": "bot_protected_source",
+          "severity": "warning",
+          "message": "ca.indeed.com blocks automated checks, so this listing can never be auto-verified",
+          "hint": "Find the employer's own posting URL. Until then this needs periodic manual review."
+        },
+        {
+          "code": "term_passed",
+          "severity": "critical",
+          "message": "Work term 'Summer 2026' ended before 2026-09-26",
+          "hint": "Archive it. Keep for next-cycle pattern data."
+        }
+      ]
+    },
+    {
+      "listing_id": "1b34fccb34b0",
+      "title": "Back Up Summer Program Coordinator",
+      "organization": "Rooks to Cooks",
+      "url": "https://ca.indeed.com/q-summer-student-l-richmond-hill%2C-on-jobs.html",
+      "entity_kind": "listing",
+      "canonical_status": "archived",
+      "verdict": "quarantine",
+      "confidence": 0,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "search_url_as_listing",
+          "severity": "critical",
+          "message": "Presented as a specific opening, but the URL is a Indeed keyword search page",
+          "hint": "Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening."
+        },
+        {
+          "code": "bot_protected_source",
+          "severity": "warning",
+          "message": "ca.indeed.com blocks automated checks, so this listing can never be auto-verified",
+          "hint": "Find the employer's own posting URL. Until then this needs periodic manual review."
+        },
+        {
+          "code": "term_passed",
+          "severity": "critical",
+          "message": "Work term 'Summer 2026' ended before 2026-09-26",
+          "hint": "Archive it. Keep for next-cycle pattern data."
+        }
+      ]
+    },
+    {
+      "listing_id": "ca25ff2e199b",
+      "title": "Summer Student / Youth Program Leads",
+      "organization": "Safehaven / youth-service employers",
+      "url": "https://ca.indeed.com/q-summer-student-l-woodbridge%2C-on-jobs.html",
+      "entity_kind": "hub",
+      "canonical_status": "watchlist",
+      "verdict": "quarantine",
+      "confidence": 0,
+      "checked_network": false,
+      "findings": [
+        {
+          "code": "bot_protected_source",
+          "severity": "warning",
+          "message": "ca.indeed.com blocks automated checks, so this listing can never be auto-verified",
+          "hint": "Find the employer's own posting URL. Until then this needs periodic manual review."
+        },
+        {
+          "code": "vague_employer",
+          "severity": "critical",
+          "message": "'Safehaven / youth-service employers' is a category, not a named organisation",
+          "hint": "Students cannot research or apply to a category. Identify the actual employer or remove the record."
+        },
+        {
+          "code": "term_passed",
+          "severity": "critical",
+          "message": "Work term 'Summer 2026 / next cycle' ended before 2026-09-26",
+          "hint": "Archive it. Keep for next-cycle pattern data."
+        }
+      ]
+    }
+  ]
+}

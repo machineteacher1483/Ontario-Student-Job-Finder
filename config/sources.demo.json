@@ -1,0 +1,12 @@
+{
+  "_comment": "Offline demo registry -- no API keys, no network. Run: python scripts/refresh.py --config config/sources.demo.json --no-verify --force",
+  "sources": [
+    {
+      "name": "DemoCorp",
+      "type": "fixture",
+      "emulates": "greenhouse",
+      "path": "tests/fixtures/demo_greenhouse.json",
+      "enabled": true
+    }
+  ]
+}

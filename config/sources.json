@@ -1,0 +1,48 @@
+{
+  "_comment": "Source registry. Adding a company = adding an entry here, NOT changing code. Greenhouse token comes from boards.greenhouse.io/<token>. Lever slug from jobs.lever.co/<slug>. Confirm each returns HTTP 200 before setting enabled=true.",
+  "sources": [
+    {
+      "name": "Shopify",
+      "type": "greenhouse",
+      "board_token": "shopify",
+      "enabled": true,
+      "notes": "Confirm token before first production run"
+    },
+    {
+      "name": "Wealthsimple",
+      "type": "greenhouse",
+      "board_token": "wealthsimple",
+      "enabled": true
+    },
+    {
+      "name": "Faire",
+      "type": "greenhouse",
+      "board_token": "faire",
+      "enabled": true
+    },
+    {
+      "name": "Clio",
+      "type": "lever",
+      "company_slug": "clio",
+      "enabled": true
+    },
+    {
+      "name": "Ada",
+      "type": "ashby",
+      "org_slug": "ada",
+      "enabled": false,
+      "notes": "Disabled until slug confirmed"
+    },
+    {
+      "name": "Adzuna",
+      "type": "adzuna",
+      "query": "internship co-op student",
+      "where": "Ontario",
+      "max_pages": 5,
+      "results_per_page": 50,
+      "max_days_old": 30,
+      "enabled": true,
+      "notes": "Broad coverage. Needs ADZUNA_APP_ID + ADZUNA_APP_KEY env vars."
+    }
+  ]
+}

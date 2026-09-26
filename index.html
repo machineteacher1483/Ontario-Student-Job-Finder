@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ontario Internship Finder | Public Beta Dataset</title>
+  <style>
+    :root {
+      --bg:#f3f8ff; --panel:#ffffff; --ink:#12213d; --muted:#607087;
+      --blue:#0b5bd3; --blue2:#1282e7; --navy:#052b66; --sky:#dcedff;
+      --cyan:#0ba8d6; --green:#0f9d76; --orange:#ff9f1c; --red:#d83b3b;
+      --border:#d6e6fb; --shadow:0 16px 45px rgba(5,43,102,.11);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter,Segoe UI,Roboto,Arial,sans-serif; color:var(--ink); background:linear-gradient(180deg,#eaf4ff 0,#f7fbff 44%,#f3f8ff 100%); }
+    a { color:var(--blue); }
+    .wrap { width:min(1180px,92vw); margin:0 auto; }
+    header { background:linear-gradient(135deg,#062b5f 0%,#0b5bd3 55%,#15a9dc 100%); color:white; padding:44px 0 32px; position:relative; overflow:hidden; }
+    header:before { content:""; position:absolute; inset:-70px -100px auto auto; width:420px; height:420px; border-radius:50%; background:rgba(255,255,255,.10); }
+    header:after { content:""; position:absolute; left:-120px; bottom:-180px; width:430px; height:430px; border-radius:50%; background:rgba(255,255,255,.08); }
+    .hero { position:relative; z-index:1; display:grid; grid-template-columns:1.4fr .8fr; gap:24px; align-items:center; }
+    h1 { font-size:clamp(34px,5vw,60px); line-height:1.02; margin:0 0 16px; letter-spacing:-1.8px; }
+    .subtitle { font-size:18px; line-height:1.6; max-width:760px; opacity:.94; margin:0; }
+    .hero-card { background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.28); backdrop-filter:blur(10px); padding:22px; border-radius:24px; box-shadow:0 12px 40px rgba(0,0,0,.12); }
+    .hero-card .big { font-size:44px; font-weight:800; }
+    .hero-card span { display:block; color:#dff4ff; margin-top:4px; }
+    .chips { display:flex; gap:10px; flex-wrap:wrap; margin-top:20px; }
+    .chip { background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.27); padding:8px 11px; border-radius:999px; font-size:13px; }
+    main { padding:28px 0 54px; }
+    .notice { background:#fff8e8; border:1px solid #ffe2a8; border-left:6px solid var(--orange); border-radius:18px; padding:16px 18px; margin:22px 0; line-height:1.55; }
+    .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:22px 0; }
+    .metric { background:var(--panel); border:1px solid var(--border); border-radius:20px; padding:20px; box-shadow:var(--shadow); }
+    .metric b { font-size:32px; color:var(--navy); display:block; }
+    .metric span { color:var(--muted); line-height:1.4; }
+    section { margin:28px 0; }
+    .section-head { display:flex; justify-content:space-between; align-items:end; gap:16px; margin-bottom:14px; }
+    h2 { font-size:28px; margin:0; color:var(--navy); letter-spacing:-.4px; }
+    .small { color:var(--muted); font-size:14px; }
+    .controls { background:var(--panel); border:1px solid var(--border); border-radius:24px; padding:18px; box-shadow:var(--shadow); display:grid; grid-template-columns:1.3fr repeat(5,1fr); gap:12px; position:sticky; top:0; z-index:4; }
+    input, select { width:100%; padding:12px 12px; border:1px solid #bfd4ef; border-radius:14px; background:#fbfdff; font-size:14px; color:var(--ink); outline:none; }
+    input:focus, select:focus { border-color:var(--blue); box-shadow:0 0 0 3px rgba(11,91,211,.10); }
+    .toolrow { display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
+    button { border:0; background:var(--blue); color:white; padding:11px 14px; border-radius:14px; font-weight:700; cursor:pointer; }
+    button.secondary { background:#e8f2ff; color:var(--blue); border:1px solid #b9d8ff; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:18px; }
+    .card { background:var(--panel); border:1px solid var(--border); border-radius:22px; padding:18px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:12px; min-height:290px; }
+    .card h3 { margin:0; font-size:19px; line-height:1.25; color:var(--navy); }
+    .org { color:var(--blue); font-weight:800; }
+    .meta { display:flex; gap:8px; flex-wrap:wrap; }
+    .tag { font-size:12px; padding:6px 8px; background:#eef6ff; color:#16466e; border-radius:999px; border:1px solid #d4e9ff; }
+    .status { background:#ecfff8; color:#0b7054; border-color:#bcefdc; }
+    .status.warn { background:#fff7e7; color:#9a5d05; border-color:#f6db9e; }
+    .status.closed { background:#fff0f0; color:#9a2020; border-color:#ffd0d0; }
+    .notes { color:#405169; line-height:1.45; font-size:14px; flex:1; }
+    .apply { margin-top:auto; display:flex; justify-content:space-between; align-items:center; gap:10px; }
+    .apply a { text-decoration:none; font-weight:800; background:var(--blue); color:white; padding:10px 12px; border-radius:12px; }
+    .confidence { font-size:12px; color:var(--muted); }
+    .sources { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+    .source { background:var(--panel); border:1px solid var(--border); border-radius:18px; padding:16px; box-shadow:0 10px 30px rgba(5,43,102,.08); }
+    .source h3 { margin:0 0 6px; color:var(--navy); }
+    .source p { margin:6px 0; color:#4f6078; line-height:1.45; }
+    .pipeline { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+    .step { background:var(--panel); border:1px solid var(--border); border-radius:20px; padding:18px; box-shadow:0 10px 30px rgba(5,43,102,.08); }
+    .step b { display:inline-grid; place-items:center; width:34px; height:34px; border-radius:12px; background:var(--blue); color:white; margin-right:8px; }
+    .step h3 { margin:0 0 8px; color:var(--navy); }
+    .step p, .step li { color:#46576f; line-height:1.5; }
+    pre { background:#071e42; color:#d7efff; padding:16px; border-radius:18px; overflow:auto; font-size:13px; line-height:1.5; }
+    .footer { margin-top:40px; color:#66758d; font-size:13px; line-height:1.55; }
+    .empty { background:#fff; border:1px dashed #9ec2ee; border-radius:18px; padding:24px; color:#607087; display:none; }
+    @media(max-width:980px){ .hero,.grid3,.cards,.sources,.pipeline{ grid-template-columns:1fr; } .controls{ grid-template-columns:1fr 1fr; position:static; } }
+    @media(max-width:620px){ .controls{ grid-template-columns:1fr; } .hero-card .big{font-size:34px;} }
+    .status.ok { background:#e6f7f0; color:#0f7355; border-color:#b9e6d6; }
+    .status.bad { background:#fdecec; color:#b32020; border-color:#f5c2c2; }
+    .problems { margin-top:10px; padding:9px 11px; background:#fff6ec; border:1px solid #ffd9b0;
+      border-radius:12px; font-size:12.5px; color:#8a4b12; line-height:1.45; }
+    .controls { grid-template-columns:1.3fr repeat(6,1fr); }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap hero">
+    <div>
+      <h1>Ontario Internship Finder</h1>
+      <p class="subtitle">A shareable public beta page for Ontario college and university students to find internships, co-ops, summer student roles and hidden SME opportunities by program, industry and city.</p>
+      <div class="chips">
+        <span class="chip">Program-based search</span><span class="chip">Company + city filters</span><span class="chip">20-day update cycle</span><span class="chip">Career-centre ready</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="big">53</div><span>publicly collected leads in this beta dataset</span><br/>
+      <div class="big">14</div><span>monitored source feeds and employer hubs</span><br/>
+      <div class="big">20 days</div><span>recommended refresh interval</span>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <div class="notice"><strong>Data note:</strong> This prototype uses publicly discoverable Ontario internship/co-op/student-job leads collected as of <strong>August 12, 2026</strong>. Internship postings expire quickly. Always open the source link and verify eligibility, deadline, location and work-term dates before applying. Some records are employer hubs or watchlist sources, not guaranteed open postings.</div>
+
+  <div class="grid3">
+    <div class="metric"><b>Students</b><span>Search by major, city, industry, term and opportunity type.</span></div>
+    <div class="metric"><b>Career Offices</b><span>Use the source directory to build a repeatable employer outreach and posting scan workflow.</span></div>
+    <div class="metric"><b>SMEs</b><span>Hidden internships can be submitted and verified before appearing on the public list.</span></div>
+  </div>
+
+  <section>
+    <div class="section-head"><h2>Search the Opportunity Dataset</h2><span class="small" id="resultCount"></span></div>
+    <div class="controls">
+      <input id="q" placeholder="Search keyword: AI, supply chain, Toronto, biology, accounting..." />
+      <select id="program"><option value="">All programs</option></select>
+      <select id="industry"><option value="">All industries</option></select>
+      <select id="city"><option value="">All cities</option></select>
+      <select id="term"><option value="">All terms</option></select>
+      <select id="status"><option value="">All statuses</option></select>
+    </div>
+    <div class="toolrow">
+      <select id="quality" title="Listing quality filter">
+        <option value="applyable">Applyable (hide quality issues)</option>
+        <option value="verified">Verified only</option>
+        <option value="all">Show everything</option>
+        <option value="problems">Quality issues only (admin)</option>
+      </select>
+      <button onclick="resetFilters()" class="secondary">Reset filters</button>
+    </div>
+    <p id="dataMeta" class="small" style="margin:14px 0 4px"></p>
+    <div id="cards" class="cards"></div>
+    <div id="empty" class="empty">No matching records. Try a broader program, industry or city.</div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Monitored Source Directory</h2><span class="small">Use these feeds for the automated update pipeline.</span></div>
+    <div class="sources" id="sources"></div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>20-Day Update Implementation Plan</h2><span class="small">Concrete MVP-to-production workflow</span></div>
+    <div class="pipeline">
+      <div class="step"><h3><b>1</b>Build the source registry</h3><p>Create a table of approved public sources: employer career pages, government job boards, school-friendly boards, and manually verified SME submissions. Store source name, URL, allowed collection method, update frequency and reliability score.</p></div>
+      <div class="step"><h3><b>2</b>Use legal collection methods first</h3><p>Prefer official APIs, RSS feeds, public career-page search URLs, employer ATS feeds, partner feeds, and manual submissions. Do not scrape platforms that prohibit automated access or require login unless you have permission.</p></div>
+      <div class="step"><h3><b>3</b>Normalize each posting</h3><p>Convert every record into the same schema: title, employer, city, province, source URL, program tags, industry, term, deadline, work format, paid/unpaid, eligibility, date collected and expiry status.</p></div>
+      <div class="step"><h3><b>4</b>Deduplicate records</h3><p>Generate a unique hash from title + employer + city + term + source URL. If the same role appears on Indeed, Eluta and the employer site, keep the employer site as the preferred apply link.</p></div>
+      <div class="step"><h3><b>5</b>Map roles to student programs</h3><p>Use keyword rules first: “supply chain” → Logistics/Business; “software/cloud/AI” → CS/IT/Data; “child/youth/support” → Psychology/Social Work/Health Sciences; “civil/BIM” → Engineering/Architecture.</p></div>
+      <div class="step"><h3><b>6</b>Run a verification pass</h3><p>Before publishing, check whether the source page is still live, the deadline has not passed, the location is in Ontario, and the role is suitable for college/university students.</p></div>
+      <div class="step"><h3><b>7</b>Schedule every 20 days</h3><p>Use GitHub Actions, Netlify Scheduled Functions, Vercel Cron, or a small Python script on a server. Run daily, but only refresh if the last successful update was 20+ days ago.</p></div>
+      <div class="step"><h3><b>8</b>Publish data separately from design</h3><p>Store opportunities in <code>/data/opportunities.json</code>. The HTML page reads the JSON and renders cards. This lets you update data without redesigning the page.</p></div>
+      <div class="step"><h3><b>9</b>Add school/employer submission forms</h3><p>Students, SMEs and career centres can submit leads through a form. New leads should enter “Pending review” status and only become public after manual verification.</p></div>
+      <div class="step"><h3><b>10</b>Track expired and hidden leads</h3><p>Expired listings should not disappear. Mark them as “Archived / watch next cycle” because they reveal which employers hire students and when the next intake may open.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Recommended Technical Setup</h2><span class="small">Low-cost MVP stack</span></div>
+    <pre>Frontend:  Static HTML + JavaScript, hosted on Netlify / Vercel / GitHub Pages
+Data:      /data/opportunities.json or Supabase table
+Forms:     Tally / Google Forms / Airtable / Supabase form table
+Updater:   Python script + GitHub Actions daily schedule with 20-day gate
+Review:    Google Sheet or Airtable admin view
+Rule:      Employer official link wins over job-board duplicate links
+
+Pseudo-schedule:
+- Daily 9:00 AM ET: updater checks last_successful_refresh
+- If days_since_last_refresh >= 20: collect + normalize + dedupe + verify + publish
+- If source fails: keep old data but mark source as "needs review"
+- If posting deadline passed: move to "Archived / watch next cycle"</pre>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>SME Hidden Internship Intake</h2><span class="small">For future database expansion</span></div>
+    <div class="notice" style="background:#eef8ff;border-color:#c9e6ff;border-left-color:var(--blue)">
+      <strong>Suggested intake fields:</strong> Company name, industry, city, contact email, student level, program fit, paid/unpaid status, expected start date, weekly hours, job duties, required skills, application deadline, and whether the employer can provide a school co-op agreement.
+    </div>
+  </section>
+
+  <div class="footer">Public beta dataset created for Ontario student internship discovery. This page is a prototype and not a legal, immigration, employment or school co-op approval tool. Schools and students should verify every posting directly with the employer or official job board.</div>
+</main>
+<script>
+/* ---------------------------------------------------------------------------
+   Data now lives in data/opportunities.json, written by the refresh pipeline.
+   This file contains NO listing data -- editing listings means running the
+   pipeline or editing that JSON, never touching this page.
+--------------------------------------------------------------------------- */
+
+let OPPS = [];
+let META = {};
+
+/* Map the pipeline's canonical schema onto the fields these cards render. */
+function adapt(o){
+  const flags = o.flags || [];
+  const get = p => { const f = flags.find(x => x.startsWith(p)); return f ? f.slice(p.length) : ''; };
+  const confidence = parseInt(get('confidence:'), 10);
+  const problems = flags
+    .filter(f => f.startsWith('critical:') || f.startsWith('warning:'))
+    .map(f => f.split(':')[1].replace(/_/g, ' '));
+
+  return {
+    title:        o.title || '',
+    organization: o.employer || '',
+    city:         o.city || o.province || 'Ontario',
+    region:       o.province || '',
+    industry:     o.industry || 'Multi-industry',
+    program:      (o.program_tags || []).join(', ') || 'All programs',
+    type:         o.opportunity_type || 'Student role',
+    term:         o.term || 'Verify',
+    status:       o.status || 'pending_review',
+    verdict:      get('verdict:') || 'review',
+    confidence:   isNaN(confidence) ? null : confidence,
+    problems:     problems,
+    notes:        get('notes:'),
+    url:          o.source_url || '',
+    lastVerified: o.last_verified || null
+  };
+}
+
+async function loadData(){
+  const cards = document.getElementById('cards');
+  cards.innerHTML = '<p class="small">Loading listings…</p>';
+  try {
+    const res = await fetch('data/opportunities.json', {cache: 'no-store'});
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    const payload = await res.json();
+    META = payload;
+    OPPS = (payload.opportunities || []).map(adapt);
+  } catch (err) {
+    cards.innerHTML = `<div class="notice"><b>Could not load listings.</b><br>
+      ${esc(String(err))}<br><br>
+      If you are opening this file directly from your computer, browsers block
+      <code>fetch()</code> on <code>file://</code> URLs. Run a local server instead:
+      <code>python -m http.server 8000</code>, then visit
+      <code>http://localhost:8000</code>.</div>`;
+    return;
+  }
+  buildFilters();
+  renderMeta();
+  render();
+}
+
+/* Dropdown options are derived from the data, so they can never drift out of
+   sync with what is actually in the file. */
+function buildFilters(){
+  const uniq = key => [...new Set(OPPS.map(o => o[key]).filter(Boolean))].sort();
+  const multi = key => [...new Set(OPPS.flatMap(
+      o => o[key].split(',').map(s => s.trim()).filter(Boolean)))].sort();
+
+  fill('program',  multi('program'));
+  fill('industry', uniq('industry'));
+  fill('city',     uniq('city'));
+  fill('term',     uniq('term'));
+  fill('status',   uniq('verdict'));
+}
+
+function fill(id, values){
+  const sel = document.getElementById(id);
+  const first = sel.querySelector('option');
+  sel.innerHTML = '';
+  if(first) sel.appendChild(first);
+  values.forEach(v => {
+    const opt = document.createElement('option');
+    opt.value = v; opt.textContent = v;
+    sel.appendChild(opt);
+  });
+}
+
+function renderMeta(){
+  const el = document.getElementById('dataMeta');
+  if(!el) return;
+  const c = META.counts || {};
+  const when = META.generated_at ? META.generated_at.replace('T', ' ') : 'unknown';
+  el.innerHTML = `Dataset generated <b>${esc(when)}</b> ·
+    ${c.active || 0} verified · ${c.pending_review || 0} awaiting review ·
+    ${c.archived || 0} archived ·
+    refreshes every ${META.refresh_interval_days || 20} days`;
+}
+
+function verdictClass(v){
+  return {publish:'ok', review:'warn', archive:'closed', quarantine:'bad'}[v] || 'warn';
+}
+function verdictLabel(v){
+  return {publish:'Verified', review:'Unverified — check before applying',
+          archive:'Archived', quarantine:'Quality issue'}[v] || v;
+}
+
+function render(){
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  const f = {
+    program:  document.getElementById('program').value,
+    industry: document.getElementById('industry').value,
+    city:     document.getElementById('city').value,
+    term:     document.getElementById('term').value,
+    status:   document.getElementById('status').value
+  };
+  const quality = document.getElementById('quality').value;
+
+  let data = OPPS.filter(o => {
+    /* Quality gate. Default hides quarantined records from students, but an
+       admin can switch it on to work through the review queue. */
+    if(quality === 'verified'  && o.verdict !== 'publish') return false;
+    if(quality === 'applyable' && (o.verdict === 'quarantine' || o.verdict === 'archive')) return false;
+    if(quality === 'problems'  && o.verdict !== 'quarantine') return false;
+
+    const blob = [o.title,o.organization,o.city,o.industry,o.program,o.term,o.notes]
+                   .join(' ').toLowerCase();
+    return (!q || blob.includes(q)) &&
+      (!f.program  || o.program.includes(f.program)) &&
+      (!f.industry || o.industry === f.industry) &&
+      (!f.city     || o.city === f.city) &&
+      (!f.term     || o.term === f.term) &&
+      (!f.status   || o.verdict === f.status);
+  });
+
+  document.getElementById('resultCount').textContent = data.length + ' matching records';
+  document.getElementById('empty').style.display = data.length ? 'none' : 'block';
+
+  document.getElementById('cards').innerHTML = data.map(o => {
+    const problems = o.problems.length
+      ? `<div class="problems"><b>Flagged:</b> ${esc(o.problems.join(' · '))}</div>` : '';
+    const conf = o.confidence === null ? '' : ` · Confidence ${o.confidence}/100`;
+    return `<article class="card">
+      <div class="org">${esc(o.organization)}</div>
+      <h3>${esc(o.title)}</h3>
+      <div class="meta">
+        <span class="tag">${esc(o.city)}</span>
+        <span class="tag">${esc(o.industry)}</span>
+        <span class="tag">${esc(o.term)}</span>
+        <span class="tag status ${verdictClass(o.verdict)}">${esc(verdictLabel(o.verdict))}</span>
+      </div>
+      <div class="notes"><strong>Program fit:</strong> ${esc(o.program)}
+        ${o.notes ? '<br/><br/>' + esc(o.notes) : ''}</div>
+      ${problems}
+      <div class="apply">
+        <span class="confidence">${esc(o.type)}${conf}</span>
+        <a href="${esc(o.url)}" target="_blank" rel="noopener">Open source</a>
+      </div>
+    </article>`;
+  }).join('');
+}
+
+function renderSources(){
+  const el = document.getElementById('sources');
+  if(!el) return;
+  const health = META.source_health || {};
+  const rows = Object.entries(health);
+  if(!rows.length){ el.innerHTML = '<p class="small">No source health data yet.</p>'; return; }
+  el.innerHTML = rows.map(([name, h]) => `<div class="source">
+    <h3>${esc(name)}</h3>
+    <p><strong>${h.needs_review ? 'Needs review' : 'Healthy'}</strong> ·
+       last outcome <code>${esc(h.last_outcome || '?')}</code></p>
+    <p>${h.last_matched_count ?? 0} student roles from
+       ${h.last_raw_count ?? 0} postings</p>
+    ${h.last_error ? `<p class="small">${esc(h.last_error)}</p>` : ''}
+  </div>`).join('');
+}
+
+function resetFilters(){
+  ['q','program','industry','city','term','status'].forEach(
+    id => document.getElementById(id).value = '');
+  document.getElementById('quality').value = 'applyable';
+  render();
+}
+
+function esc(s){
+  return String(s ?? '').replace(/[&<>"']/g,
+    m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+}
+
+['q','program','industry','city','term','status','quality'].forEach(
+  id => document.getElementById(id).addEventListener('input', render));
+
+loadData().then(renderSources);
+</script>
+</body>
+</html>

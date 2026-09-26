@@ -1,0 +1,42 @@
+{
+  "jobs": [
+    {
+      "id": 1001,
+      "title": "Software Engineering Intern (Summer 2027)",
+      "location": {"name": "Toronto, ON"},
+      "absolute_url": "https://job-boards.greenhouse.io/demo/jobs/1001",
+      "updated_at": "2026-08-01T10:00:00-04:00",
+      "content": "<p>Join our cloud platform team. Python, AWS, distributed systems.</p>"
+    },
+    {
+      "id": 1002,
+      "title": "Supply Chain Co-op Student",
+      "location": {"name": "Cambridge, Ontario"},
+      "absolute_url": "https://job-boards.greenhouse.io/demo/jobs/1002",
+      "updated_at": "2026-08-05T10:00:00-04:00",
+      "content": "<p>Logistics and procurement analysis, winter 2027 term.</p>"
+    },
+    {
+      "id": 1003,
+      "title": "Senior Engineering Manager",
+      "location": {"name": "Toronto, ON"},
+      "absolute_url": "https://job-boards.greenhouse.io/demo/jobs/1003",
+      "content": "<p>10+ years of experience leading teams.</p>"
+    },
+    {
+      "id": 1004,
+      "title": "Marketing Intern",
+      "location": {"name": "Vancouver, BC"},
+      "absolute_url": "https://job-boards.greenhouse.io/demo/jobs/1004",
+      "content": "<p>Brand and social media.</p>"
+    },
+    {
+      "id": 1005,
+      "title": "Civil Engineering Intern",
+      "location": {"name": "Ottawa, ON"},
+      "absolute_url": "https://job-boards.greenhouse.io/demo/jobs/1005",
+      "updated_at": "2026-08-07T10:00:00-04:00",
+      "content": "<p>BIM modelling and structural drafting with Revit.</p>"
+    }
+  ]
+}

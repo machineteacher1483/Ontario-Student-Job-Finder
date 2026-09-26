@@ -1,0 +1,593 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Listing validation review queue</title><style>
+*{box-sizing:border-box}
+body{font:15px/1.55 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+margin:0;background:#f6f7f9;color:#1a1d21}
+header{background:#12263f;color:#fff;padding:28px 32px}
+header h1{margin:0 0 6px;font-size:22px}
+header p{margin:0;opacity:.75;font-size:14px}
+.wrap{max-width:1240px;margin:0 auto;padding:24px 32px 60px}
+.stats{display:flex;gap:14px;flex-wrap:wrap;margin:22px 0}
+.stat{background:#fff;border:1px solid #e3e6ea;border-radius:10px;padding:16px 22px;min-width:150px}
+.stat .n{font-size:30px;font-weight:700;line-height:1}
+.stat .l{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#6b7280;margin-top:6px}
+.s-q .n{color:#c0392b} .s-r .n{color:#b7791f} .s-p .n{color:#1e8449}
+.panel{background:#fff;border:1px solid #e3e6ea;border-radius:10px;padding:20px 24px;margin-bottom:22px}
+.panel.warn{border-left:4px solid #d68910}
+.panel h2{margin:0 0 8px;font-size:16px}
+.panel p{margin:0 0 12px;color:#4b5563;font-size:14px}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #e3e6ea;border-radius:10px;overflow:hidden}
+th{background:#f0f2f5;text-align:left;padding:11px 14px;font-size:12px;
+text-transform:uppercase;letter-spacing:.05em;color:#4b5563}
+td{padding:14px;border-top:1px solid #eceff2;vertical-align:top}
+.row-q{background:#fff8f7} .row-r{background:#fffdf5}
+.badge{display:inline-block;padding:4px 10px;border-radius:20px;font-size:11px;
+font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.b-q{background:#fdeceb;color:#c0392b} .b-r{background:#fdf5e3;color:#b7791f}
+.b-p{background:#e9f7ef;color:#1e8449} .b-a{background:#eaf0f6;color:#2c5282}
+.row-a{background:#fafbfc} .s-a .n{color:#2c5282}
+.conf{font-weight:700;font-size:17px;color:#4b5563;text-align:center;width:60px}
+.title{font-weight:600;margin-bottom:2px}
+.org{color:#6b7280;font-size:13px;margin-bottom:5px}
+.url{font-size:11px;color:#2563eb;word-break:break-all;text-decoration:none}
+.findings{margin:0;padding-left:17px}
+.findings li{margin-bottom:7px;font-size:13px}
+.findings i{color:#6b7280;font-size:12px}
+.f-critical b{color:#c0392b} .f-warning b{color:#b7791f} .f-info b{color:#5b6570}
+.f-ok{color:#1e8449;list-style:none;margin-left:-17px}
+.shared li{margin-bottom:8px;font-size:13px}
+code{background:#f0f2f5;padding:1px 5px;border-radius:4px;font-size:12px}
+</style></head><body>
+<header><h1>Listing validation — review queue</h1>
+<p>Generated 2026-09-26 · 53 records checked</p></header>
+<div class="wrap">
+<div class="stats">
+  <div class="stat s-q"><div class="n">18</div><div class="l">Quarantine</div></div>
+  <div class="stat s-r"><div class="n">23</div><div class="l">Needs review</div></div>
+  <div class="stat s-a"><div class="n">6</div><div class="l">Archive</div></div>
+  <div class="stat s-p"><div class="n">6</div><div class="l">Ready to publish</div></div>
+</div>
+<section class="panel warn">
+          <h2>URLs shared by multiple records (2)</h2>
+          <p>Several distinct listings pointing at one URL almost always means
+          that URL is a search or hub page, not a specific posting.</p>
+          <ul class="shared"><li><code>https://jobs.rbc.com/ca/en/featuredopportunities/student-early-talent-jobs</code><br><small>2026 Fall – GRM, AI Innovation Business Analyst Intern, 2026 Fall – GRM, Developer – AI Innovation for Risk Management</small></li><li><code>https://jobs.opg.com/go/Our-Students-%26-New-Grads/2626017?q=&amp;sortColumn=sort_title&amp;sortDirection=as</code><br><small>Fall 2026 — Business Analytics &amp; Adult Education Programs, Fall 2026 — MBA Student</small></li></ul></section>
+<section class="panel"><h2>How to read this</h2>
+<p><b>Quarantine</b> — a critical problem. Do not show these to students until fixed.
+<b>Needs review</b> — publishable, but a person should confirm first.
+<b>Ready to publish</b> — passed every automated check.</p>
+<p>Confidence starts at 100 and loses 100 per critical finding, 15 per warning, 3 per note.</p></section>
+<table><thead><tr><th>Verdict</th><th>Conf</th><th>Listing</th><th>Findings</th></tr></thead>
+<tbody>
+        <tr class="row-q">
+          <td><span class="badge b-q">quarantine</span></td>
+          <td class="conf">0</td>
+          <td>
+            <div class="title">Co-op / Intern — Master Planning &amp; Logistics</div>
+            <div class="org">Automotive employer</div>
+            <a class="url" href="https://ca.indeed.com/q-co-op-internship-l-ontario-jobs.html" target="_blank" rel="noopener">https://ca.indeed.com/q-co-op-internship-l-ontario-jobs.html</a>
+          </td>
+          <td><ul class="findings"><li class="f-critical"><b>search_url_as_listing</b> — Presented as a specific opening, but the URL is a Indeed keyword search page<br><i>Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening.</i></li><li class="f-warning"><b>bot_protected_source</b> — ca.indeed.com blocks automated checks, so this listing can never be auto-verified<br><i>Find the employer's own posting URL. Until then this needs periodic manual review.</i></li><li class="f-critical"><b>vague_employer</b> — 'Automotive employer' is a category, not a named organisation<br><i>Students cannot research or apply to a category. Identify the actual employer or remove the record.</i></li><li class="f-critical"><b>term_passed</b> — Work term 'August 2026 / 8 months' ended before 2026-09-26<br><i>Archive it. Keep for next-cycle pattern data.</i></li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-q">
+          <td><span class="badge b-q">quarantine</span></td>
+          <td class="conf">0</td>
+          <td>
+            <div class="title">Security Analyst I — 4 Month Internship/Co-op</div>
+            <div class="org">Intact</div>
+            <a class="url" href="https://ca.indeed.com/m/jobs?l=Toronto%2C+ON&amp;q=Winter+Co+Op" target="_blank" rel="noopener">https://ca.indeed.com/m/jobs?l=Toronto%2C+ON&amp;q=Winter+Co+Op</a>
+          </td>
+          <td><ul class="findings"><li class="f-critical"><b>search_url_as_listing</b> — Presented as a specific opening, but the URL is a Indeed mobile search page<br><i>Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening.</i></li><li class="f-warning"><b>bot_protected_source</b> — ca.indeed.com blocks automated checks, so this listing can never be auto-verified<br><i>Find the employer's own posting URL. Until then this needs periodic manual review.</i></li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-q">
+          <td><span class="badge b-q">quarantine</span></td>
+          <td class="conf">0</td>
+          <td>
+            <div class="title">Software Developer I — 4 Month Internship/Co-op</div>
+            <div class="org">Intact</div>
+            <a class="url" href="https://emplois.ca.indeed.com/q-winter-co-op-l-greater-toronto-area%2C-on-jobs.html" target="_blank" rel="noopener">https://emplois.ca.indeed.com/q-winter-co-op-l-greater-toronto-area%2C-on-jobs.html</a>
+          </td>
+          <td><ul class="findings"><li class="f-critical"><b>search_url_as_listing</b> — Presented as a specific opening, but the URL is a Indeed keyword search page<br><i>Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening.</i></li><li class="f-warning"><b>bot_protected_source</b> — emplois.ca.indeed.com blocks automated checks, so this listing can never be auto-verified<br><i>Find the employer's own posting URL. Until then this needs periodic manual review.</i></li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-q">
+          <td><span class="badge b-q">quarantine</span></td>
+          <td class="conf">0</td>
+          <td>
+            <div class="title">Outside Sales Internship / Co-op</div>
+            <div class="org">Uline</div>
+            <a class="url" href="https://ca.indeed.com/q-uline-jobs-l-ontario-jobs.html" target="_blank" rel="noopener">https://ca.indeed.com/q-uline-jobs-l-ontario-jobs.html</a>
+          </td>
+          <td><ul class="findings"><li class="f-critical"><b>search_url_as_listing</b> — Presented as a specific opening, but the URL is a Indeed keyword search page<br><i>Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening.</i></li><li class="f-warning"><b>bot_protected_source</b> — ca.indeed.com blocks automated checks, so this listing can never be auto-verified<br><i>Find the employer's own posting URL. Until then this needs periodic manual review.</i></li><li class="f-critical"><b>term_passed</b> — Work term 'Summer 2026' ended before 2026-09-26<br><i>Archive it. Keep for next-cycle pattern data.</i></li></ul></td>
+        </tr>
+        <tr class="row-q">
+          <td><span class="badge b-q">quarantine</span></td>
+          <td class="conf">0</td>
+          <td>
+            <div class="title">Student, Supply Chain Analyst</div>
+            <div class="org">General Dynamics Land Systems</div>
+            <a class="url" href="https://ca.indeed.com/q-general-dynamics-land-systems-l-london%2C-on-jobs.html" target="_blank" rel="noopener">https://ca.indeed.com/q-general-dynamics-land-systems-l-london%2C-on-jobs.html</a>
+          </td>
+          <td><ul class="findings"><li class="f-critical"><b>search_url_as_listing</b> — Presented as a specific opening, but the URL is a Indeed keyword search page<br><i>Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening.</i></li><li class="f-warning"><b>bot_protected_source</b> — ca.indeed.com blocks automated checks, so this listing can never be auto-verified<br><i>Find the employer's own posting URL. Until then this needs periodic manual review.</i></li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-q">
+          <td><span class="badge b-q">quarantine</span></td>
+          <td class="conf">0</td>
+          <td>
+            <div class="title">Student, Software Developer</div>
+            <div class="org">General Dynamics Land Systems</div>
+            <a class="url" href="https://ca.indeed.com/q-general-dynamics-land-systems-student-l-london%2C-on-jobs.html" target="_blank" rel="noopener">https://ca.indeed.com/q-general-dynamics-land-systems-student-l-london%2C-on-jobs.html</a>
+          </td>
+          <td><ul class="findings"><li class="f-critical"><b>search_url_as_listing</b> — Presented as a specific opening, but the URL is a Indeed keyword search page<br><i>Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening.</i></li><li class="f-warning"><b>bot_protected_source</b> — ca.indeed.com blocks automated checks, so this listing can never be auto-verified<br><i>Find the employer's own posting URL. Until then this needs periodic manual review.</i></li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-q">
+          <td><span class="badge b-q">quarantine</span></td>
+          <td class="conf">0</td>
+          <td>
+            <div class="title">Staff Accountant — Audit Public/Private Co-op/Intern</div>
+            <div class="org">Accounting firm / Ontario offices</div>
+            <a class="url" href="https://ca.indeed.com/viewjob?jk=2877129e0d8b6e2f" target="_blank" rel="noopener">https://ca.indeed.com/viewjob?jk=2877129e0d8b6e2f</a>
+          </td>
+          <td><ul class="findings"><li class="f-warning"><b>bot_protected_source</b> — ca.indeed.com blocks automated checks, so this listing can never be auto-verified<br><i>Find the employer's own posting URL. Until then this needs periodic manual review.</i></li><li class="f-critical"><b>vague_employer</b> — 'Accounting firm / Ontario offices' is a category, not a named organisation<br><i>Students cannot research or apply to a category. Identify the actual employer or remove the record.</i></li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-q">
+          <td><span class="badge b-q">quarantine</span></td>
+          <td class="conf">0</td>
+          <td>
+            <div class="title">Co-op Accountant, Assurance and Accounting</div>
+            <div class="org">MNP</div>
+            <a class="url" href="https://ca.indeed.com/q-student-jobs-l-london%2C-on-jobs.html?vjk=325889a359eae6d4" target="_blank" rel="noopener">https://ca.indeed.com/q-student-jobs-l-london%2C-on-jobs.html?vjk=325889a359eae6d4</a>
+          </td>
+          <td><ul class="findings"><li class="f-critical"><b>search_url_as_listing</b> — Presented as a specific opening, but the URL is a Indeed keyword search page<br><i>Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening.</i></li><li class="f-warning"><b>bot_protected_source</b> — ca.indeed.com blocks automated checks, so this listing can never be auto-verified<br><i>Find the employer's own posting URL. Until then this needs periodic manual review.</i></li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-q">
+          <td><span class="badge b-q">quarantine</span></td>
+          <td class="conf">0</td>
+          <td>
+            <div class="title">IT / Business Co-op — 12-month fixed term</div>
+            <div class="org">Industrial and Commercial Bank of China (Canada)</div>
+            <a class="url" href="https://ca.indeed.com/q-developer-intern-it-intern-co-op-student-l-ontario-jobs.html" target="_blank" rel="noopener">https://ca.indeed.com/q-developer-intern-it-intern-co-op-student-l-ontario-jobs.html</a>
+          </td>
+          <td><ul class="findings"><li class="f-critical"><b>search_url_as_listing</b> — Presented as a specific opening, but the URL is a Indeed keyword search page<br><i>Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening.</i></li><li class="f-warning"><b>bot_protected_source</b> — ca.indeed.com blocks automated checks, so this listing can never be auto-verified<br><i>Find the employer's own posting URL. Until then this needs periodic manual review.</i></li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-q">
+          <td><span class="badge b-q">quarantine</span></td>
+          <td class="conf">0</td>
+          <td>
+            <div class="title">Full-Time Summer Camp Child/Youth Support Worker</div>
+            <div class="org">Community Living York South</div>
+            <a class="url" href="https://ca.indeed.com/q-community-living-york-south-l-markham%2C-on-jobs.html" target="_blank" rel="noopener">https://ca.indeed.com/q-community-living-york-south-l-markham%2C-on-jobs.html</a>
+          </td>
+          <td><ul class="findings"><li class="f-critical"><b>search_url_as_listing</b> — Presented as a specific opening, but the URL is a Indeed keyword search page<br><i>Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening.</i></li><li class="f-warning"><b>bot_protected_source</b> — ca.indeed.com blocks automated checks, so this listing can never be auto-verified<br><i>Find the employer's own posting URL. Until then this needs periodic manual review.</i></li><li class="f-critical"><b>term_passed</b> — Work term 'Summer 2026' ended before 2026-09-26<br><i>Archive it. Keep for next-cycle pattern data.</i></li></ul></td>
+        </tr>
+        <tr class="row-q">
+          <td><span class="badge b-q">quarantine</span></td>
+          <td class="conf">0</td>
+          <td>
+            <div class="title">Summer Student Worker</div>
+            <div class="org">Toronto Botanical Garden</div>
+            <a class="url" href="https://ca.indeed.com/q-student-summer-l-richmond-hill%2C-on-jobs.html" target="_blank" rel="noopener">https://ca.indeed.com/q-student-summer-l-richmond-hill%2C-on-jobs.html</a>
+          </td>
+          <td><ul class="findings"><li class="f-critical"><b>search_url_as_listing</b> — Presented as a specific opening, but the URL is a Indeed keyword search page<br><i>Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening.</i></li><li class="f-warning"><b>bot_protected_source</b> — ca.indeed.com blocks automated checks, so this listing can never be auto-verified<br><i>Find the employer's own posting URL. Until then this needs periodic manual review.</i></li><li class="f-critical"><b>term_passed</b> — Work term 'Summer 2026' ended before 2026-09-26<br><i>Archive it. Keep for next-cycle pattern data.</i></li></ul></td>
+        </tr>
+        <tr class="row-q">
+          <td><span class="badge b-q">quarantine</span></td>
+          <td class="conf">0</td>
+          <td>
+            <div class="title">Back Up Summer Program Coordinator</div>
+            <div class="org">Rooks to Cooks</div>
+            <a class="url" href="https://ca.indeed.com/q-summer-student-l-richmond-hill%2C-on-jobs.html" target="_blank" rel="noopener">https://ca.indeed.com/q-summer-student-l-richmond-hill%2C-on-jobs.html</a>
+          </td>
+          <td><ul class="findings"><li class="f-critical"><b>search_url_as_listing</b> — Presented as a specific opening, but the URL is a Indeed keyword search page<br><i>Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening.</i></li><li class="f-warning"><b>bot_protected_source</b> — ca.indeed.com blocks automated checks, so this listing can never be auto-verified<br><i>Find the employer's own posting URL. Until then this needs periodic manual review.</i></li><li class="f-critical"><b>term_passed</b> — Work term 'Summer 2026' ended before 2026-09-26<br><i>Archive it. Keep for next-cycle pattern data.</i></li></ul></td>
+        </tr>
+        <tr class="row-q">
+          <td><span class="badge b-q">quarantine</span></td>
+          <td class="conf">0</td>
+          <td>
+            <div class="title">Summer Student / Youth Program Leads</div>
+            <div class="org">Safehaven / youth-service employers</div>
+            <a class="url" href="https://ca.indeed.com/q-summer-student-l-woodbridge%2C-on-jobs.html" target="_blank" rel="noopener">https://ca.indeed.com/q-summer-student-l-woodbridge%2C-on-jobs.html</a>
+          </td>
+          <td><ul class="findings"><li class="f-warning"><b>bot_protected_source</b> — ca.indeed.com blocks automated checks, so this listing can never be auto-verified<br><i>Find the employer's own posting URL. Until then this needs periodic manual review.</i></li><li class="f-critical"><b>vague_employer</b> — 'Safehaven / youth-service employers' is a category, not a named organisation<br><i>Students cannot research or apply to a category. Identify the actual employer or remove the record.</i></li><li class="f-critical"><b>term_passed</b> — Work term 'Summer 2026 / next cycle' ended before 2026-09-26<br><i>Archive it. Keep for next-cycle pattern data.</i></li></ul></td>
+        </tr>
+        <tr class="row-q">
+          <td><span class="badge b-q">quarantine</span></td>
+          <td class="conf">0</td>
+          <td>
+            <div class="title">Fall 2026 — Business Analytics &amp; Adult Education Programs</div>
+            <div class="org">Ontario Power Generation</div>
+            <a class="url" href="https://jobs.opg.com/go/Our-Students-%26-New-Grads/2626017?q=&amp;sortColumn=sort_title&amp;sortDirection=asc" target="_blank" rel="noopener">https://jobs.opg.com/go/Our-Students-%26-New-Grads/2626017?q=&amp;sortColumn=sort_title&amp;sortDi</a>
+          </td>
+          <td><ul class="findings"><li class="f-critical"><b>search_url_as_listing</b> — Presented as a specific opening, but the URL is a sorted result listing, not a posting<br><i>Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening.</i></li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-q">
+          <td><span class="badge b-q">quarantine</span></td>
+          <td class="conf">0</td>
+          <td>
+            <div class="title">Fall 2026 — MBA Student</div>
+            <div class="org">Ontario Power Generation</div>
+            <a class="url" href="https://jobs.opg.com/go/Our-Students-%26-New-Grads/2626017?q=&amp;sortColumn=sort_title&amp;sortDirection=asc" target="_blank" rel="noopener">https://jobs.opg.com/go/Our-Students-%26-New-Grads/2626017?q=&amp;sortColumn=sort_title&amp;sortDi</a>
+          </td>
+          <td><ul class="findings"><li class="f-critical"><b>search_url_as_listing</b> — Presented as a specific opening, but the URL is a sorted result listing, not a posting<br><i>Replace with the direct posting URL, or reclassify this record as a monitored search source rather than an opening.</i></li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-q">
+          <td><span class="badge b-q">quarantine</span></td>
+          <td class="conf">0</td>
+          <td>
+            <div class="title">Community Development Co-op Student</div>
+            <div class="org">Stantec</div>
+            <a class="url" href="https://www.eluta.ca/spl/community-development-co-op-student-summer-2026-4-12-months-a03e5f280973589efac38f43a5758119" target="_blank" rel="noopener">https://www.eluta.ca/spl/community-development-co-op-student-summer-2026-4-12-months-a03e5</a>
+          </td>
+          <td><ul class="findings"><li class="f-info"><b>aggregator_link</b> — Links to aggregator eluta.ca rather than the employer<br><i>Aggregator links expire sooner and add redirect hops.</i></li><li class="f-critical"><b>term_passed</b> — Work term 'Summer 2026 / 4–12 months' ended before 2026-09-26<br><i>Archive it. Keep for next-cycle pattern data.</i></li></ul></td>
+        </tr>
+        <tr class="row-q">
+          <td><span class="badge b-q">quarantine</span></td>
+          <td class="conf">0</td>
+          <td>
+            <div class="title">Environmental Stewardship Co-op</div>
+            <div class="org">Niagara Parks Commission</div>
+            <a class="url" href="https://www.eluta.ca/spl/environmental-stewardship-co-op-e66b7abb8a312133260b071835ccfa7c" target="_blank" rel="noopener">https://www.eluta.ca/spl/environmental-stewardship-co-op-e66b7abb8a312133260b071835ccfa7c</a>
+          </td>
+          <td><ul class="findings"><li class="f-info"><b>aggregator_link</b> — Links to aggregator eluta.ca rather than the employer<br><i>Aggregator links expire sooner and add redirect hops.</i></li><li class="f-critical"><b>term_passed</b> — Work term 'Summer 2026' ended before 2026-09-26<br><i>Archive it. Keep for next-cycle pattern data.</i></li></ul></td>
+        </tr>
+        <tr class="row-q">
+          <td><span class="badge b-q">quarantine</span></td>
+          <td class="conf">0</td>
+          <td>
+            <div class="title">College Co-op Student — Outage Planning</div>
+            <div class="org">Hydro One</div>
+            <a class="url" href="https://jobs.hydroone.com/job/Barrie-College-Co-Op-Student-Outage-Planning-4-Months-Winter-2026-ON/1290316647/" target="_blank" rel="noopener">https://jobs.hydroone.com/job/Barrie-College-Co-Op-Student-Outage-Planning-4-Months-Winter</a>
+          </td>
+          <td><ul class="findings"><li class="f-critical"><b>term_passed</b> — Work term 'Winter 2026' ended before 2026-09-26<br><i>Archive it. Keep for next-cycle pattern data.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">79</td>
+          <td>
+            <div class="title">Co-op Student — Business Planning and Analysis</div>
+            <div class="org">Peel Regional Police</div>
+            <a class="url" href="https://www.eluta.ca/spl/co-op-student-business-planning-and-analysis-32bdc353451164bb07a6ce6f876b3fe7" target="_blank" rel="noopener">https://www.eluta.ca/spl/co-op-student-business-planning-and-analysis-32bdc353451164bb07a6</a>
+          </td>
+          <td><ul class="findings"><li class="f-info"><b>aggregator_link</b> — Links to aggregator eluta.ca rather than the employer<br><i>Aggregator links expire sooner and add redirect hops.</i></li><li class="f-info"><b>unparseable_term</b> — Could not determine whether term 'Verify' is current</li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">79</td>
+          <td>
+            <div class="title">Logistics Co-op</div>
+            <div class="org">IKO Industries Ltd.</div>
+            <a class="url" href="https://www.eluta.ca/spl/logistics-co-op-549eed8b812b4ea6dfada94880c5ba2c" target="_blank" rel="noopener">https://www.eluta.ca/spl/logistics-co-op-549eed8b812b4ea6dfada94880c5ba2c</a>
+          </td>
+          <td><ul class="findings"><li class="f-info"><b>aggregator_link</b> — Links to aggregator eluta.ca rather than the employer<br><i>Aggregator links expire sooner and add redirect hops.</i></li><li class="f-info"><b>unparseable_term</b> — Could not determine whether term 'Verify' is current</li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">70</td>
+          <td>
+            <div class="title">2026 Fall – GRM, AI Innovation Business Analyst Intern</div>
+            <div class="org">RBC</div>
+            <a class="url" href="https://jobs.rbc.com/ca/en/featuredopportunities/student-early-talent-jobs" target="_blank" rel="noopener">https://jobs.rbc.com/ca/en/featuredopportunities/student-early-talent-jobs</a>
+          </td>
+          <td><ul class="findings"><li class="f-warning"><b>hub_url_as_listing</b> — Presented as a specific opening, but the URL is a career hub page<br><i>Link the individual posting, or relabel as a hub source.</i></li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">70</td>
+          <td>
+            <div class="title">2026 Fall – GRM, Developer – AI Innovation for Risk Management</div>
+            <div class="org">RBC</div>
+            <a class="url" href="https://jobs.rbc.com/ca/en/featuredopportunities/student-early-talent-jobs" target="_blank" rel="noopener">https://jobs.rbc.com/ca/en/featuredopportunities/student-early-talent-jobs</a>
+          </td>
+          <td><ul class="findings"><li class="f-warning"><b>hub_url_as_listing</b> — Presented as a specific opening, but the URL is a career hub page<br><i>Link the individual posting, or relabel as a hub source.</i></li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">82</td>
+          <td>
+            <div class="title">ASPIRE Commercial Banking — National Office Co-op / Internship</div>
+            <div class="org">Scotiabank</div>
+            <a class="url" href="https://www.eluta.ca/spl/aspire-commercial-banking-national-office-fall-2026-co-op-internship-job-details-scotiabank-681b6428257abed2e927bb6ae967e8fd" target="_blank" rel="noopener">https://www.eluta.ca/spl/aspire-commercial-banking-national-office-fall-2026-co-op-interns</a>
+          </td>
+          <td><ul class="findings"><li class="f-info"><b>aggregator_link</b> — Links to aggregator eluta.ca rather than the employer<br><i>Aggregator links expire sooner and add redirect hops.</i></li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">82</td>
+          <td>
+            <div class="title">Canadian Banking — Accounting Automotive Finance Internship/Co-op</div>
+            <div class="org">Scotiabank</div>
+            <a class="url" href="https://www.eluta.ca/spl/canadian-banking-accounting-automotive-finance-internship-co-op-fall-2026-job-details-97aaa479cf4a5df6bd6abb0f84c0b668" target="_blank" rel="noopener">https://www.eluta.ca/spl/canadian-banking-accounting-automotive-finance-internship-co-op-f</a>
+          </td>
+          <td><ul class="findings"><li class="f-info"><b>aggregator_link</b> — Links to aggregator eluta.ca rather than the employer<br><i>Aggregator links expire sooner and add redirect hops.</i></li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">82</td>
+          <td>
+            <div class="title">Global Operations — Detection and Application Fraud Internship/Co-op</div>
+            <div class="org">Scotiabank</div>
+            <a class="url" href="https://www.eluta.ca/spl/global-operations-detection-and-application-fraud-internship-co-op-fall-2026-jobdetails-b25bb544fb4ad600c6e203a8d62af4e0" target="_blank" rel="noopener">https://www.eluta.ca/spl/global-operations-detection-and-application-fraud-internship-co-o</a>
+          </td>
+          <td><ul class="findings"><li class="f-info"><b>aggregator_link</b> — Links to aggregator eluta.ca rather than the employer<br><i>Aggregator links expire sooner and add redirect hops.</i></li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">82</td>
+          <td>
+            <div class="title">Velocity — Finance Accounting Internship/Co-op</div>
+            <div class="org">Scotiabank</div>
+            <a class="url" href="https://www.eluta.ca/spl/velocity-finance-accounting-internship-co-op-fall-2026-job-details-scotiabank-866d1dc2857a2b57b7256efabf2d042a" target="_blank" rel="noopener">https://www.eluta.ca/spl/velocity-finance-accounting-internship-co-op-fall-2026-job-detail</a>
+          </td>
+          <td><ul class="findings"><li class="f-info"><b>aggregator_link</b> — Links to aggregator eluta.ca rather than the employer<br><i>Aggregator links expire sooner and add redirect hops.</i></li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">82</td>
+          <td>
+            <div class="title">Velocity — Cloud Engineer Internship/Co-op</div>
+            <div class="org">Scotiabank</div>
+            <a class="url" href="https://www.eluta.ca/spl/velocity-cloud-engineer-internship-co-op-fall-2026-job-details-scotiabank-79356c6cd35d039e6bcd90d972b23fc6" target="_blank" rel="noopener">https://www.eluta.ca/spl/velocity-cloud-engineer-internship-co-op-fall-2026-job-details-sc</a>
+          </td>
+          <td><ul class="findings"><li class="f-info"><b>aggregator_link</b> — Links to aggregator eluta.ca rather than the employer<br><i>Aggregator links expire sooner and add redirect hops.</i></li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">82</td>
+          <td>
+            <div class="title">Canadian Banking — Technology Analysis Internship/Co-op</div>
+            <div class="org">Scotiabank</div>
+            <a class="url" href="https://www.eluta.ca/spl/canadian-banking-technology-analysis-internship-co-op-fall-2026-job-details-scotiabank-a5ab72235fc8749ab6f70a51fdcdcfcc" target="_blank" rel="noopener">https://www.eluta.ca/spl/canadian-banking-technology-analysis-internship-co-op-fall-2026-j</a>
+          </td>
+          <td><ul class="findings"><li class="f-info"><b>aggregator_link</b> — Links to aggregator eluta.ca rather than the employer<br><i>Aggregator links expire sooner and add redirect hops.</i></li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">70</td>
+          <td>
+            <div class="title">IT Technical Advisor I — 4 Month Internship/Co-op</div>
+            <div class="org">Intact</div>
+            <a class="url" href="https://ca.linkedin.com/jobs/view/it-technical-advisor-i-%E2%80%93-4-month-internship-co-op-fall-2026-at-intact-4408693641" target="_blank" rel="noopener">https://ca.linkedin.com/jobs/view/it-technical-advisor-i-%E2%80%93-4-month-internship-co-o</a>
+          </td>
+          <td><ul class="findings"><li class="f-warning"><b>bot_protected_source</b> — ca.linkedin.com blocks automated checks, so this listing can never be auto-verified<br><i>Find the employer's own posting URL. Until then this needs periodic manual review.</i></li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">82</td>
+          <td>
+            <div class="title">Civil Project Management Intern / Co-op</div>
+            <div class="org">Arup</div>
+            <a class="url" href="https://jobs.arup.com/jobs/civil-project-management-intern-co-op-3677" target="_blank" rel="noopener">https://jobs.arup.com/jobs/civil-project-management-intern-co-op-3677</a>
+          </td>
+          <td><ul class="findings"><li class="f-info"><b>unparseable_term</b> — Could not determine whether term 'Rolling / verify' is current</li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">82</td>
+          <td>
+            <div class="title">Architecture Intern / Co-op</div>
+            <div class="org">Arup</div>
+            <a class="url" href="https://jobs.arup.com/jobs/architecture-intern-co-op-5194" target="_blank" rel="noopener">https://jobs.arup.com/jobs/architecture-intern-co-op-5194</a>
+          </td>
+          <td><ul class="findings"><li class="f-info"><b>unparseable_term</b> — Could not determine whether term 'Rolling / verify' is current</li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">82</td>
+          <td>
+            <div class="title">BIM Intern / Co-op</div>
+            <div class="org">Arup</div>
+            <a class="url" href="https://jobs.arup.com/jobs/bim-intern-co-op-5202" target="_blank" rel="noopener">https://jobs.arup.com/jobs/bim-intern-co-op-5202</a>
+          </td>
+          <td><ul class="findings"><li class="f-info"><b>unparseable_term</b> — Could not determine whether term 'Rolling / verify' is current</li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">82</td>
+          <td>
+            <div class="title">Software Development Intern / Co-op</div>
+            <div class="org">Arup</div>
+            <a class="url" href="https://jobs.arup.com/jobs/software-development-intern-co-op-1403" target="_blank" rel="noopener">https://jobs.arup.com/jobs/software-development-intern-co-op-1403</a>
+          </td>
+          <td><ul class="findings"><li class="f-info"><b>unparseable_term</b> — Could not determine whether term 'Rolling / verify' is current</li><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">85</td>
+          <td>
+            <div class="title">Fund My Business Intern / Co-op</div>
+            <div class="org">TD Bank</div>
+            <a class="url" href="https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Toronto-Ontario/Fund-My-Business-Intern---Co-Op_R_1480660" target="_blank" rel="noopener">https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Toronto-Ontario/Fund-My-Busines</a>
+          </td>
+          <td><ul class="findings"><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">85</td>
+          <td>
+            <div class="title">Governance &amp; Control Intern / Co-op</div>
+            <div class="org">TD Bank</div>
+            <a class="url" href="https://td.wd3.myworkdayjobs.com/TD_Bank_Careers/job/Toronto-Ontario/Governance---Control-Intern---Co-Op--FALL-2026-_R_1481025" target="_blank" rel="noopener">https://td.wd3.myworkdayjobs.com/TD_Bank_Careers/job/Toronto-Ontario/Governance---Control-</a>
+          </td>
+          <td><ul class="findings"><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">85</td>
+          <td>
+            <div class="title">Run My Business Intern / Co-op</div>
+            <div class="org">TD Bank</div>
+            <a class="url" href="https://td.wd3.myworkdayjobs.com/TD_Bank_Careers/job/TD-Centre---West---100-Wellington-Street-West-Toronto-Ontario/Run-My-Business-Intern---Co-Op--FALL-2026-_R_1481183" target="_blank" rel="noopener">https://td.wd3.myworkdayjobs.com/TD_Bank_Careers/job/TD-Centre---West---100-Wellington-Str</a>
+          </td>
+          <td><ul class="findings"><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">85</td>
+          <td>
+            <div class="title">Wealth Colleague Experience Intern/Co-op</div>
+            <div class="org">TD Bank</div>
+            <a class="url" href="https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Wealth-Colleague-Experience-Intern-Co-Op--Fall-2026-_R_1479122" target="_blank" rel="noopener">https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Wealth-Colleague-Experience-Int</a>
+          </td>
+          <td><ul class="findings"><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">85</td>
+          <td>
+            <div class="title">Digital Servicing Intern/Co-op</div>
+            <div class="org">TD Bank</div>
+            <a class="url" href="https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Digital-Servicing-Intern-Co-op--FALL-2026-_R_1481233" target="_blank" rel="noopener">https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Digital-Servicing-Intern-Co-op-</a>
+          </td>
+          <td><ul class="findings"><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">85</td>
+          <td>
+            <div class="title">Project Management Intern</div>
+            <div class="org">Arup</div>
+            <a class="url" href="https://jobs.arup.com/jobs/project-management-intern-august-december-2026-32738" target="_blank" rel="noopener">https://jobs.arup.com/jobs/project-management-intern-august-december-2026-32738</a>
+          </td>
+          <td><ul class="findings"><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">85</td>
+          <td>
+            <div class="title">Marketing Intern</div>
+            <div class="org">Arup</div>
+            <a class="url" href="https://jobs.arup.com/jobs/marketing-intern-august-december-2026-32787" target="_blank" rel="noopener">https://jobs.arup.com/jobs/marketing-intern-august-december-2026-32787</a>
+          </td>
+          <td><ul class="findings"><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-r">
+          <td><span class="badge b-r">review</span></td>
+          <td class="conf">85</td>
+          <td>
+            <div class="title">Fire Safety Intern</div>
+            <div class="org">Arup</div>
+            <a class="url" href="https://jobs.arup.com/jobs/fire-safety-intern-august-december-2026-32744" target="_blank" rel="noopener">https://jobs.arup.com/jobs/fire-safety-intern-august-december-2026-32744</a>
+          </td>
+          <td><ul class="findings"><li class="f-warning"><b>never_verified</b> — Status is 'verify before applying' -- this has never been confirmed<br><i>Run the network verifier, or check manually.</i></li></ul></td>
+        </tr>
+        <tr class="row-a">
+          <td><span class="badge b-a">archive</span></td>
+          <td class="conf">94</td>
+          <td>
+            <div class="title">Co-op Student — Corporate Security Services</div>
+            <div class="org">Peel Regional Police</div>
+            <a class="url" href="https://www.eluta.ca/spl/co-op-student-corporate-security-services-f0c46eb5c6a0029bbffbcda0cb90f4cf" target="_blank" rel="noopener">https://www.eluta.ca/spl/co-op-student-corporate-security-services-f0c46eb5c6a0029bbffbcda</a>
+          </td>
+          <td><ul class="findings"><li class="f-info"><b>aggregator_link</b> — Links to aggregator eluta.ca rather than the employer<br><i>Aggregator links expire sooner and add redirect hops.</i></li><li class="f-info"><b>unparseable_term</b> — Could not determine whether term 'Verify' is current</li></ul></td>
+        </tr>
+        <tr class="row-a">
+          <td><span class="badge b-a">archive</span></td>
+          <td class="conf">97</td>
+          <td>
+            <div class="title">University Co-op Student — Distribution Planning</div>
+            <div class="org">Hydro One</div>
+            <a class="url" href="https://www.eluta.ca/spl/university-co-op-student-distribution-planning-12-months-fall-2026-b740166ea0e15d4d6ba334e10c3684d0" target="_blank" rel="noopener">https://www.eluta.ca/spl/university-co-op-student-distribution-planning-12-months-fall-202</a>
+          </td>
+          <td><ul class="findings"><li class="f-info"><b>aggregator_link</b> — Links to aggregator eluta.ca rather than the employer<br><i>Aggregator links expire sooner and add redirect hops.</i></li></ul></td>
+        </tr>
+        <tr class="row-a">
+          <td><span class="badge b-a">archive</span></td>
+          <td class="conf">100</td>
+          <td>
+            <div class="title">GBM Investment Banking (Mining) Internship/Co-op</div>
+            <div class="org">Scotiabank</div>
+            <a class="url" href="https://jobs.scotiabank.com/job/Toronto-GBM-Investment-Banking-%28Mining%29-InternshipCo-op-Winter-2027-ON/604279917/" target="_blank" rel="noopener">https://jobs.scotiabank.com/job/Toronto-GBM-Investment-Banking-%28Mining%29-InternshipCo-o</a>
+          </td>
+          <td><ul class="findings"><li class='f-ok'>No issues found</li></ul></td>
+        </tr>
+        <tr class="row-a">
+          <td><span class="badge b-a">archive</span></td>
+          <td class="conf">100</td>
+          <td>
+            <div class="title">Student &amp; New Grad Jobs</div>
+            <div class="org">Hydro One</div>
+            <a class="url" href="https://jobs.hydroone.com/go/Student-Jobs/826900/" target="_blank" rel="noopener">https://jobs.hydroone.com/go/Student-Jobs/826900/</a>
+          </td>
+          <td><ul class="findings"><li class='f-ok'>No issues found</li></ul></td>
+        </tr>
+        <tr class="row-a">
+          <td><span class="badge b-a">archive</span></td>
+          <td class="conf">100</td>
+          <td>
+            <div class="title">Summer Employment Opportunities Program</div>
+            <div class="org">Ontario Public Service</div>
+            <a class="url" href="https://www.gojobs.gov.on.ca/Preview.aspx?JobID=201105&amp;Language=English" target="_blank" rel="noopener">https://www.gojobs.gov.on.ca/Preview.aspx?JobID=201105&amp;Language=English</a>
+          </td>
+          <td><ul class="findings"><li class='f-ok'>No issues found</li></ul></td>
+        </tr>
+        <tr class="row-a">
+          <td><span class="badge b-a">archive</span></td>
+          <td class="conf">100</td>
+          <td>
+            <div class="title">Ontario Internship Program</div>
+            <div class="org">Government of Ontario</div>
+            <a class="url" href="https://www.ontario.ca/page/apply-ontario-internship-program" target="_blank" rel="noopener">https://www.ontario.ca/page/apply-ontario-internship-program</a>
+          </td>
+          <td><ul class="findings"><li class='f-ok'>No issues found</li></ul></td>
+        </tr>
+        <tr class="row-p">
+          <td><span class="badge b-p">publish</span></td>
+          <td class="conf">100</td>
+          <td>
+            <div class="title">RBC Co-ops &amp; Internships — Student Early Talent Hub</div>
+            <div class="org">RBC</div>
+            <a class="url" href="https://jobs.rbc.com/ca/en/students-grad-co-ops-internships" target="_blank" rel="noopener">https://jobs.rbc.com/ca/en/students-grad-co-ops-internships</a>
+          </td>
+          <td><ul class="findings"><li class='f-ok'>No issues found</li></ul></td>
+        </tr>
+        <tr class="row-p">
+          <td><span class="badge b-p">publish</span></td>
+          <td class="conf">100</td>
+          <td>
+            <div class="title">Students &amp; New Grads Jobs</div>
+            <div class="org">Scotiabank</div>
+            <a class="url" href="https://jobs.scotiabank.com/go/Student-%26-New-Grad-Jobs/2298417/" target="_blank" rel="noopener">https://jobs.scotiabank.com/go/Student-%26-New-Grad-Jobs/2298417/</a>
+          </td>
+          <td><ul class="findings"><li class='f-ok'>No issues found</li></ul></td>
+        </tr>
+        <tr class="row-p">
+          <td><span class="badge b-p">publish</span></td>
+          <td class="conf">100</td>
+          <td>
+            <div class="title">Students &amp; New Grads</div>
+            <div class="org">Ontario Power Generation</div>
+            <a class="url" href="https://jobs.opg.com/go/Our-Students-%26-New-Grads/2626017" target="_blank" rel="noopener">https://jobs.opg.com/go/Our-Students-%26-New-Grads/2626017</a>
+          </td>
+          <td><ul class="findings"><li class='f-ok'>No issues found</li></ul></td>
+        </tr>
+        <tr class="row-p">
+          <td><span class="badge b-p">publish</span></td>
+          <td class="conf">100</td>
+          <td>
+            <div class="title">Job Bank — Internship Search</div>
+            <div class="org">Government of Canada Job Bank</div>
+            <a class="url" href="https://www.jobbank.gc.ca/jobsearch/jobsearch?searchstring=internship" target="_blank" rel="noopener">https://www.jobbank.gc.ca/jobsearch/jobsearch?searchstring=internship</a>
+          </td>
+          <td><ul class="findings"><li class='f-ok'>No issues found</li></ul></td>
+        </tr>
+        <tr class="row-p">
+          <td><span class="badge b-p">publish</span></td>
+          <td class="conf">100</td>
+          <td>
+            <div class="title">Job Bank — Student Jobs in Ontario</div>
+            <div class="org">Government of Canada Job Bank</div>
+            <a class="url" href="https://www.jobbank.gc.ca/jobsearch/jobsearch?fprov=ON&amp;jkw=student" target="_blank" rel="noopener">https://www.jobbank.gc.ca/jobsearch/jobsearch?fprov=ON&amp;jkw=student</a>
+          </td>
+          <td><ul class="findings"><li class='f-ok'>No issues found</li></ul></td>
+        </tr>
+        <tr class="row-p">
+          <td><span class="badge b-p">publish</span></td>
+          <td class="conf">100</td>
+          <td>
+            <div class="title">Ontario Public Service — Student and New Professionals</div>
+            <div class="org">Government of Ontario / OPS</div>
+            <a class="url" href="https://www.ontario.ca/page/careers-student-and-new-professionals" target="_blank" rel="noopener">https://www.ontario.ca/page/careers-student-and-new-professionals</a>
+          </td>
+          <td><ul class="findings"><li class='f-ok'>No issues found</li></ul></td>
+        </tr></tbody></table>
+</div></body></html>

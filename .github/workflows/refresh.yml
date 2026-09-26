@@ -1,0 +1,79 @@
+name: Refresh opportunity dataset
+
+# Runs DAILY. The 20-day gate lives in refresh.py, not here.
+#
+# Why not a cron that fires every 20 days? Cron has no concept of "every N days
+# from an arbitrary start" -- `*/20` in the day-of-month field means the 1st and
+# 21st of each month, which resets at month boundaries and is NOT a 20-day
+# cycle. Running daily with an in-script gate also self-heals: if one run fails
+# (runner outage, transient API error), tomorrow's run picks it up rather than
+# the whole cycle being missed.
+
+on:
+  schedule:
+    - cron: "0 13 * * *"   # 13:00 UTC = 09:00 ET (EDT) / 08:00 ET (EST)
+  workflow_dispatch:        # manual trigger button in the Actions tab
+    inputs:
+      force:
+        description: "Ignore the 20-day gate"
+        type: boolean
+        default: false
+      dry_run:
+        description: "Process but do not publish"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write           # needed to commit the refreshed dataset
+
+concurrency:
+  group: dataset-refresh    # never let two refreshes race each other
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run refresh pipeline
+        env:
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+        run: |
+          python scripts/refresh.py \
+            ${{ inputs.force && '--force' || '' }} \
+            ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Commit updated dataset
+        run: |
+          if git diff --quiet data/; then
+            echo "No changes -- gate was closed or dataset unchanged."
+            exit 0
+          fi
+          git config user.name  "oif-bot"
+          git config user.email "actions@github.com"
+          git add data/opportunities.json data/state.json data/opportunities.prev.json
+          ACTIVE=$(python -c "import json;print(json.load(open('data/opportunities.json'))['counts']['active'])")
+          git commit -m "chore(data): 20-day refresh -- ${ACTIVE} active listings"
+          git push
+
+      - name: Upload run artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dataset-${{ github.run_number }}
+          path: data/
+          retention-days: 30

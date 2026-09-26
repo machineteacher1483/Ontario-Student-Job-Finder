@@ -1,0 +1,81 @@
+name: Validate listings
+
+# Task 2. Runs on every push that touches listing data, plus weekly.
+# Static checks run always (free, no network). The weekly scheduled run also
+# probes URLs live, which is slower and rate-limited.
+
+on:
+  push:
+    paths:
+      - "data/**"
+      - "pipeline/validate.py"
+      - "pipeline/netcheck.py"
+  pull_request:
+    paths:
+      - "data/**"
+  schedule:
+    - cron: "0 14 * * 1"     # Mondays 14:00 UTC — weekly deep check
+  workflow_dispatch:
+    inputs:
+      network:
+        description: "Probe every URL live"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Unit tests
+        run: python -m pytest tests/ -q
+
+      - name: Validate listings
+        id: validate
+        continue-on-error: true    # report problems, don't block the build
+        run: |
+          python scripts/validate_listings.py \
+            --input data/site_listings.json \
+            ${{ (github.event_name == 'schedule' || inputs.network) && '--network' || '' }}
+
+      - name: Publish review queue
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: review-queue-${{ github.run_number }}
+          path: reports/
+          retention-days: 90
+
+      - name: Summarise in the run page
+        if: always()
+        run: |
+          python - <<'PY' >> $GITHUB_STEP_SUMMARY
+          import json, pathlib
+          p = pathlib.Path("reports/validation_report.json")
+          if not p.exists():
+              print("No report produced."); raise SystemExit
+          r = json.loads(p.read_text()); c = r["counts"]
+          print("## Listing validation\n")
+          print(f"- Quarantine: **{c.get('quarantine',0)}**")
+          print(f"- Needs review: **{c.get('review',0)}**")
+          print(f"- Archive: **{c.get('archive',0)}**")
+          print(f"- Ready: **{c.get('publish',0)}**\n")
+          print("### Most common findings\n")
+          print("| Count | Finding |\n|---|---|")
+          for code, n in sorted(r["finding_counts"].items(), key=lambda x: -x[1])[:10]:
+              print(f"| {n} | `{code}` |")
+          print("\nFull review queue is in the run artifacts.")
+          PY

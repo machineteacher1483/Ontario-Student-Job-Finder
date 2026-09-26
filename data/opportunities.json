@@ -1,0 +1,1741 @@
+{
+  "generated_at": "2026-09-26T22:40:06",
+  "refresh_interval_days": 20,
+  "counts": {
+    "total": 56,
+    "active": 3,
+    "archived": 53,
+    "pending_review": 0
+  },
+  "source_health": {
+    "Curated (hand-entered)": {
+      "last_error": "seeded from site HTML; see reports/review_queue.html",
+      "last_matched_count": 53,
+      "last_outcome": "ok",
+      "last_raw_count": 53,
+      "needs_review": true
+    },
+    "DemoCorp": {
+      "last_attempt": "2026-09-26T22:40:06",
+      "last_outcome": "ok",
+      "needs_review": false,
+      "last_success": "2026-09-26T22:40:06",
+      "last_raw_count": 5,
+      "last_matched_count": 3
+    }
+  },
+  "opportunities": [
+    {
+      "title": "Software Engineering Intern (Summer 2027)",
+      "employer": "DemoCorp",
+      "source_url": "https://job-boards.greenhouse.io/demo/jobs/1001",
+      "source_type": "greenhouse",
+      "source_name": "DemoCorp",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Summer 2027",
+      "opportunity_type": "internship",
+      "program_tags": [
+        "CS/IT/Data"
+      ],
+      "industry": "",
+      "deadline": null,
+      "posted_at": "2026-08-01",
+      "date_collected": "2026-09-26",
+      "last_verified": null,
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:100"
+      ],
+      "id": "103c40af8e051761"
+    },
+    {
+      "title": "Supply Chain Co-op Student",
+      "employer": "DemoCorp",
+      "source_url": "https://job-boards.greenhouse.io/demo/jobs/1002",
+      "source_type": "greenhouse",
+      "source_name": "DemoCorp",
+      "city": "Cambridge",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business"
+      ],
+      "industry": "",
+      "deadline": null,
+      "posted_at": "2026-08-05",
+      "date_collected": "2026-09-26",
+      "last_verified": null,
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:100"
+      ],
+      "id": "758703a7e21bf3e4"
+    },
+    {
+      "title": "Civil Engineering Intern",
+      "employer": "DemoCorp",
+      "source_url": "https://job-boards.greenhouse.io/demo/jobs/1005",
+      "source_type": "greenhouse",
+      "source_name": "DemoCorp",
+      "city": "Ottawa",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "internship",
+      "program_tags": [
+        "CS/IT/Data",
+        "Engineering/Architecture"
+      ],
+      "industry": "",
+      "deadline": null,
+      "posted_at": "2026-08-07",
+      "date_collected": "2026-09-26",
+      "last_verified": null,
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:100"
+      ],
+      "id": "65a165c603e58e1a"
+    },
+    {
+      "title": "RBC Co-ops & Internships \u2014 Student Early Talent Hub",
+      "employer": "RBC",
+      "source_url": "https://jobs.rbc.com/ca/en/students-grad-co-ops-internships",
+      "source_type": "Employer career hub",
+      "source_name": "RBC",
+      "city": "Toronto / Ontario / Canada",
+      "province": "GTA / Multi-city",
+      "term": "Rolling",
+      "opportunity_type": "Internship / Co-op Source",
+      "program_tags": [
+        "Business",
+        "Finance",
+        "Technology",
+        "Data",
+        "Risk"
+      ],
+      "industry": "Banking & Finance",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "verdict:publish",
+        "confidence:100",
+        "notes:Official student early talent page. Use as a primary monitored source for RBC co-op and internship postings.",
+        "disappeared_from_source"
+      ],
+      "id": "032dc7125a028cca"
+    },
+    {
+      "title": "2026 Fall \u2013 GRM, AI Innovation Business Analyst Intern",
+      "employer": "RBC",
+      "source_url": "https://jobs.rbc.com/ca/en/featuredopportunities/student-early-talent-jobs",
+      "source_type": "Employer career result",
+      "source_name": "RBC",
+      "city": "Toronto / Canada",
+      "province": "GTA",
+      "term": "Fall 2026",
+      "opportunity_type": "4-month Internship",
+      "program_tags": [
+        "Business Analytics",
+        "AI",
+        "Risk",
+        "Data"
+      ],
+      "industry": "Banking & Finance",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:hub_url_as_listing",
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:70",
+        "notes:Surfaced on RBC student opportunities page. Strong fit for business, analytics, AI and risk students.",
+        "disappeared_from_source"
+      ],
+      "id": "7e48ffbb6113f039"
+    },
+    {
+      "title": "2026 Fall \u2013 GRM, Developer \u2013 AI Innovation for Risk Management",
+      "employer": "RBC",
+      "source_url": "https://jobs.rbc.com/ca/en/featuredopportunities/student-early-talent-jobs",
+      "source_type": "Employer career result",
+      "source_name": "RBC",
+      "city": "Toronto / Canada",
+      "province": "GTA",
+      "term": "Fall 2026",
+      "opportunity_type": "4-month Internship",
+      "program_tags": [
+        "Computer Science",
+        "Software",
+        "AI",
+        "Risk"
+      ],
+      "industry": "Banking & Finance",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:hub_url_as_listing",
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:70",
+        "notes:Technology internship lead for CS, software engineering, AI and risk analytics students.",
+        "disappeared_from_source"
+      ],
+      "id": "42c925e51bced016"
+    },
+    {
+      "title": "Students & New Grads Jobs",
+      "employer": "Scotiabank",
+      "source_url": "https://jobs.scotiabank.com/go/Student-%26-New-Grad-Jobs/2298417/",
+      "source_type": "Employer career hub",
+      "source_name": "Scotiabank",
+      "city": "Toronto / Ontario / Canada",
+      "province": "GTA / Multi-city",
+      "term": "Rolling",
+      "opportunity_type": "Student career hub",
+      "program_tags": [
+        "Business",
+        "Finance",
+        "Accounting",
+        "Data",
+        "Technology"
+      ],
+      "industry": "Banking & Finance",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "verdict:publish",
+        "confidence:100",
+        "notes:Official student/new grad landing page; use for recurring scan and alerts.",
+        "disappeared_from_source"
+      ],
+      "id": "d262826b8e1718f0"
+    },
+    {
+      "title": "ASPIRE Commercial Banking \u2014 National Office Co-op / Internship",
+      "employer": "Scotiabank",
+      "source_url": "https://www.eluta.ca/spl/aspire-commercial-banking-national-office-fall-2026-co-op-internship-job-details-scotiabank-681b6428257abed2e927bb6ae967e8fd",
+      "source_type": "Employer / Eluta listing",
+      "source_name": "Scotiabank",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "Fall 2026",
+      "opportunity_type": "Co-op / Internship",
+      "program_tags": [
+        "Business",
+        "Finance",
+        "Economics"
+      ],
+      "industry": "Banking & Finance",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:82",
+        "notes:Commercial banking pathway; strong for business and finance students.",
+        "disappeared_from_source"
+      ],
+      "id": "135f08c005636f7d"
+    },
+    {
+      "title": "Canadian Banking \u2014 Accounting Automotive Finance Internship/Co-op",
+      "employer": "Scotiabank",
+      "source_url": "https://www.eluta.ca/spl/canadian-banking-accounting-automotive-finance-internship-co-op-fall-2026-job-details-97aaa479cf4a5df6bd6abb0f84c0b668",
+      "source_type": "Employer / Eluta listing",
+      "source_name": "Scotiabank",
+      "city": "Hamilton / Toronto",
+      "province": "GTA / Hamilton",
+      "term": "Fall 2026",
+      "opportunity_type": "Co-op / Internship",
+      "program_tags": [
+        "Accounting",
+        "Finance",
+        "Business"
+      ],
+      "industry": "Banking & Finance",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:82",
+        "notes:Finance/accounting lead with Ontario locations listed as Hamilton and Toronto.",
+        "disappeared_from_source"
+      ],
+      "id": "0b0c76f36b1068e2"
+    },
+    {
+      "title": "Global Operations \u2014 Detection and Application Fraud Internship/Co-op",
+      "employer": "Scotiabank",
+      "source_url": "https://www.eluta.ca/spl/global-operations-detection-and-application-fraud-internship-co-op-fall-2026-jobdetails-b25bb544fb4ad600c6e203a8d62af4e0",
+      "source_type": "Employer / Eluta listing",
+      "source_name": "Scotiabank",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "Fall 2026",
+      "opportunity_type": "Co-op / Internship",
+      "program_tags": [
+        "Business",
+        "Criminology",
+        "Data",
+        "Risk",
+        "Operations"
+      ],
+      "industry": "Banking & Finance",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:82",
+        "notes:Relevant to fraud operations, risk, compliance, data and business students.",
+        "disappeared_from_source"
+      ],
+      "id": "3903c73664d2d44c"
+    },
+    {
+      "title": "Velocity \u2014 Finance Accounting Internship/Co-op",
+      "employer": "Scotiabank",
+      "source_url": "https://www.eluta.ca/spl/velocity-finance-accounting-internship-co-op-fall-2026-job-details-scotiabank-866d1dc2857a2b57b7256efabf2d042a",
+      "source_type": "Employer / Eluta listing",
+      "source_name": "Scotiabank",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "Fall 2026",
+      "opportunity_type": "Co-op / Internship",
+      "program_tags": [
+        "Accounting",
+        "Finance",
+        "Business"
+      ],
+      "industry": "Banking & Finance",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:82",
+        "notes:Accounting and finance internship lead under Scotiabank Velocity.",
+        "disappeared_from_source"
+      ],
+      "id": "d7c9970bc2adbf79"
+    },
+    {
+      "title": "Velocity \u2014 Cloud Engineer Internship/Co-op",
+      "employer": "Scotiabank",
+      "source_url": "https://www.eluta.ca/spl/velocity-cloud-engineer-internship-co-op-fall-2026-job-details-scotiabank-79356c6cd35d039e6bcd90d972b23fc6",
+      "source_type": "Employer / Eluta listing",
+      "source_name": "Scotiabank",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "Fall 2026",
+      "opportunity_type": "Co-op / Internship",
+      "program_tags": [
+        "Computer Science",
+        "Cloud",
+        "Software",
+        "IT"
+      ],
+      "industry": "Banking & Finance",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:82",
+        "notes:Technology and cloud engineering lead for CS, software, IT and cloud students.",
+        "disappeared_from_source"
+      ],
+      "id": "abe220ac4b7cbb9b"
+    },
+    {
+      "title": "Canadian Banking \u2014 Technology Analysis Internship/Co-op",
+      "employer": "Scotiabank",
+      "source_url": "https://www.eluta.ca/spl/canadian-banking-technology-analysis-internship-co-op-fall-2026-job-details-scotiabank-a5ab72235fc8749ab6f70a51fdcdcfcc",
+      "source_type": "Employer / Eluta listing",
+      "source_name": "Scotiabank",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "Fall 2026",
+      "opportunity_type": "Co-op / Internship",
+      "program_tags": [
+        "Business Technology",
+        "IT",
+        "Data",
+        "Systems Analysis"
+      ],
+      "industry": "Banking & Finance",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:82",
+        "notes:Bridge role for students with business + technology profile.",
+        "disappeared_from_source"
+      ],
+      "id": "931470468ad0f2bb"
+    },
+    {
+      "title": "GBM Investment Banking (Mining) Internship/Co-op",
+      "employer": "Scotiabank",
+      "source_url": "https://jobs.scotiabank.com/job/Toronto-GBM-Investment-Banking-%28Mining%29-InternshipCo-op-Winter-2027-ON/604279917/",
+      "source_type": "Employer career posting",
+      "source_name": "Scotiabank",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "Winter 2027",
+      "opportunity_type": "Internship / Co-op",
+      "program_tags": [
+        "Finance",
+        "Economics",
+        "Mining",
+        "Engineering",
+        "Business"
+      ],
+      "industry": "Banking & Finance",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "verdict:archive",
+        "confidence:100",
+        "notes:Official posting surfaced with application deadline July 31, 2026; keep for next-cycle pattern and sector mapping."
+      ],
+      "id": "a7baebc51d1decc7"
+    },
+    {
+      "title": "Fund My Business Intern / Co-op",
+      "employer": "TD Bank",
+      "source_url": "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Toronto-Ontario/Fund-My-Business-Intern---Co-Op_R_1480660",
+      "source_type": "Workday employer posting",
+      "source_name": "TD Bank",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "Fall 2026",
+      "opportunity_type": "Intern / Co-op",
+      "program_tags": [
+        "Business",
+        "Finance",
+        "Operations"
+      ],
+      "industry": "Banking & Finance",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:85",
+        "notes:TD business internship lead; monitor TD Workday student/co-op search.",
+        "disappeared_from_source"
+      ],
+      "id": "40b2bad5dbb8fcdf"
+    },
+    {
+      "title": "Governance & Control Intern / Co-op",
+      "employer": "TD Bank",
+      "source_url": "https://td.wd3.myworkdayjobs.com/TD_Bank_Careers/job/Toronto-Ontario/Governance---Control-Intern---Co-Op--FALL-2026-_R_1481025",
+      "source_type": "Workday employer posting",
+      "source_name": "TD Bank",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "Fall 2026",
+      "opportunity_type": "Intern / Co-op",
+      "program_tags": [
+        "Business",
+        "Compliance",
+        "Risk",
+        "Finance"
+      ],
+      "industry": "Banking & Finance",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:85",
+        "notes:Good fit for students interested in controls, risk, audit or financial operations.",
+        "disappeared_from_source"
+      ],
+      "id": "873638b9666e07ca"
+    },
+    {
+      "title": "Run My Business Intern / Co-op",
+      "employer": "TD Bank",
+      "source_url": "https://td.wd3.myworkdayjobs.com/TD_Bank_Careers/job/TD-Centre---West---100-Wellington-Street-West-Toronto-Ontario/Run-My-Business-Intern---Co-Op--FALL-2026-_R_1481183",
+      "source_type": "Workday employer posting",
+      "source_name": "TD Bank",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "Fall 2026",
+      "opportunity_type": "Intern / Co-op",
+      "program_tags": [
+        "Business",
+        "Operations",
+        "Strategy"
+      ],
+      "industry": "Banking & Finance",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:85",
+        "notes:Business operations role; suitable for commerce, business analytics and operations students.",
+        "disappeared_from_source"
+      ],
+      "id": "64b17c8795405886"
+    },
+    {
+      "title": "Wealth Colleague Experience Intern/Co-op",
+      "employer": "TD Bank",
+      "source_url": "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Wealth-Colleague-Experience-Intern-Co-Op--Fall-2026-_R_1479122",
+      "source_type": "Workday employer posting",
+      "source_name": "TD Bank",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "Fall 2026",
+      "opportunity_type": "Intern / Co-op",
+      "program_tags": [
+        "HR",
+        "Business",
+        "Psychology",
+        "Communications"
+      ],
+      "industry": "Banking & Finance",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:85",
+        "notes:Good fit for HR, organizational psychology, communications and business students.",
+        "disappeared_from_source"
+      ],
+      "id": "ed9facc09474ad26"
+    },
+    {
+      "title": "Digital Servicing Intern/Co-op",
+      "employer": "TD Bank",
+      "source_url": "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Digital-Servicing-Intern-Co-op--FALL-2026-_R_1481233",
+      "source_type": "Workday employer posting",
+      "source_name": "TD Bank",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "Fall 2026",
+      "opportunity_type": "Intern / Co-op",
+      "program_tags": [
+        "Digital Business",
+        "UX",
+        "IT",
+        "Product",
+        "Analytics"
+      ],
+      "industry": "Banking & Finance",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:85",
+        "notes:Digital servicing role for product, analytics, tech-business and service design students.",
+        "disappeared_from_source"
+      ],
+      "id": "a061505928eb39ef"
+    },
+    {
+      "title": "IT Technical Advisor I \u2014 4 Month Internship/Co-op",
+      "employer": "Intact",
+      "source_url": "https://ca.linkedin.com/jobs/view/it-technical-advisor-i-%E2%80%93-4-month-internship-co-op-fall-2026-at-intact-4408693641",
+      "source_type": "LinkedIn / employer listing",
+      "source_name": "Intact",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "Fall 2026",
+      "opportunity_type": "4-month Internship / Co-op",
+      "program_tags": [
+        "Computer Science",
+        "IT",
+        "Business Technology"
+      ],
+      "industry": "Insurance & Technology",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:bot_protected_source",
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:70",
+        "notes:Student must be active during internship and/or returning to school in Winter 2027 per listing snippet.",
+        "disappeared_from_source"
+      ],
+      "id": "311a9ddefb6d7805"
+    },
+    {
+      "title": "Security Analyst I \u2014 4 Month Internship/Co-op",
+      "employer": "Intact",
+      "source_url": "https://ca.indeed.com/m/jobs?l=Toronto%2C+ON&q=Winter+Co+Op",
+      "source_type": "Aggregated listing",
+      "source_name": "Intact",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "Fall 2026",
+      "opportunity_type": "4-month Internship / Co-op",
+      "program_tags": [
+        "Cybersecurity",
+        "IT",
+        "Computer Science"
+      ],
+      "industry": "Insurance & Technology",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "critical:search_url_as_listing",
+        "warning:bot_protected_source",
+        "warning:never_verified",
+        "verdict:quarantine",
+        "confidence:0",
+        "notes:Surfaced in Indeed/LinkedIn search snippets. Verify on Intact official careers before promoting.",
+        "disappeared_from_source"
+      ],
+      "id": "b415aa9de78a50ee"
+    },
+    {
+      "title": "Software Developer I \u2014 4 Month Internship/Co-op",
+      "employer": "Intact",
+      "source_url": "https://emplois.ca.indeed.com/q-winter-co-op-l-greater-toronto-area%2C-on-jobs.html",
+      "source_type": "Aggregated listing",
+      "source_name": "Intact",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "Fall 2026",
+      "opportunity_type": "4-month Internship / Co-op",
+      "program_tags": [
+        "Computer Science",
+        "Software Engineering"
+      ],
+      "industry": "Insurance & Technology",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "critical:search_url_as_listing",
+        "warning:bot_protected_source",
+        "warning:never_verified",
+        "verdict:quarantine",
+        "confidence:0",
+        "notes:Toronto Fall 2026 software co-op lead surfaced in search. Requires official source confirmation.",
+        "disappeared_from_source"
+      ],
+      "id": "7aeba9f742056bf6"
+    },
+    {
+      "title": "Project Management Intern",
+      "employer": "Arup",
+      "source_url": "https://jobs.arup.com/jobs/project-management-intern-august-december-2026-32738",
+      "source_type": "Employer career posting",
+      "source_name": "Arup",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "August\u2013December 2026",
+      "opportunity_type": "Internship",
+      "program_tags": [
+        "Engineering",
+        "Project Management",
+        "Construction",
+        "Business"
+      ],
+      "industry": "Engineering, Design & Consulting",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:85",
+        "notes:Official Arup Toronto internship lead for project management.",
+        "disappeared_from_source"
+      ],
+      "id": "fa71757aa005af97"
+    },
+    {
+      "title": "Marketing Intern",
+      "employer": "Arup",
+      "source_url": "https://jobs.arup.com/jobs/marketing-intern-august-december-2026-32787",
+      "source_type": "Employer career posting",
+      "source_name": "Arup",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "August\u2013December 2026",
+      "opportunity_type": "Internship",
+      "program_tags": [
+        "Marketing",
+        "Communications",
+        "Business"
+      ],
+      "industry": "Engineering, Design & Consulting",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:85",
+        "notes:Marketing/communications internship lead in a professional services environment.",
+        "disappeared_from_source"
+      ],
+      "id": "96b4a0f22fe0a1ab"
+    },
+    {
+      "title": "Fire Safety Intern",
+      "employer": "Arup",
+      "source_url": "https://jobs.arup.com/jobs/fire-safety-intern-august-december-2026-32744",
+      "source_type": "Employer career posting",
+      "source_name": "Arup",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "August\u2013December 2026",
+      "opportunity_type": "Internship",
+      "program_tags": [
+        "Fire Safety",
+        "Mechanical",
+        "Civil",
+        "Building Engineering"
+      ],
+      "industry": "Engineering, Design & Consulting",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:85",
+        "notes:Engineering-oriented internship for building systems/fire safety students.",
+        "disappeared_from_source"
+      ],
+      "id": "e8f5b637f4827e1a"
+    },
+    {
+      "title": "Civil Project Management Intern / Co-op",
+      "employer": "Arup",
+      "source_url": "https://jobs.arup.com/jobs/civil-project-management-intern-co-op-3677",
+      "source_type": "Employer career posting",
+      "source_name": "Arup",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "Rolling / verify",
+      "opportunity_type": "Internship / Co-op",
+      "program_tags": [
+        "Civil Engineering",
+        "Construction",
+        "Project Management"
+      ],
+      "industry": "Engineering, Design & Consulting",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:82",
+        "notes:Strong civil engineering and project delivery lead.",
+        "disappeared_from_source"
+      ],
+      "id": "60569d5f12991f5a"
+    },
+    {
+      "title": "Architecture Intern / Co-op",
+      "employer": "Arup",
+      "source_url": "https://jobs.arup.com/jobs/architecture-intern-co-op-5194",
+      "source_type": "Employer career posting",
+      "source_name": "Arup",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "Rolling / verify",
+      "opportunity_type": "Internship / Co-op",
+      "program_tags": [
+        "Architecture",
+        "Design",
+        "Urban Planning"
+      ],
+      "industry": "Architecture & Design",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:82",
+        "notes:Relevant to architecture and design students.",
+        "disappeared_from_source"
+      ],
+      "id": "00e80574f244b17b"
+    },
+    {
+      "title": "BIM Intern / Co-op",
+      "employer": "Arup",
+      "source_url": "https://jobs.arup.com/jobs/bim-intern-co-op-5202",
+      "source_type": "Employer career posting",
+      "source_name": "Arup",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "Rolling / verify",
+      "opportunity_type": "Internship / Co-op",
+      "program_tags": [
+        "BIM",
+        "Civil",
+        "Architecture",
+        "Digital Design"
+      ],
+      "industry": "Engineering, Design & Consulting",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:82",
+        "notes:Good for students with Revit/BIM/digital design background.",
+        "disappeared_from_source"
+      ],
+      "id": "3ba0d00d05d80f39"
+    },
+    {
+      "title": "Software Development Intern / Co-op",
+      "employer": "Arup",
+      "source_url": "https://jobs.arup.com/jobs/software-development-intern-co-op-1403",
+      "source_type": "Employer career posting",
+      "source_name": "Arup",
+      "city": "Toronto",
+      "province": "GTA",
+      "term": "Rolling / verify",
+      "opportunity_type": "Internship / Co-op",
+      "program_tags": [
+        "Computer Science",
+        "Software",
+        "Digital Engineering"
+      ],
+      "industry": "Engineering, Technology & Consulting",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:82",
+        "notes:Software role within engineering consulting; useful for CS students who want applied industry projects.",
+        "disappeared_from_source"
+      ],
+      "id": "df6eb865e0c4e5a1"
+    },
+    {
+      "title": "Students & New Grads",
+      "employer": "Ontario Power Generation",
+      "source_url": "https://jobs.opg.com/go/Our-Students-%26-New-Grads/2626017",
+      "source_type": "Employer career hub",
+      "source_name": "Ontario Power Generation",
+      "city": "Oshawa / Durham / Tiverton / Ontario",
+      "province": "Durham / Bruce / Multi-city",
+      "term": "Rolling",
+      "opportunity_type": "Paid work term source",
+      "program_tags": [
+        "Engineering",
+        "Business",
+        "Analytics",
+        "Education",
+        "Trades"
+      ],
+      "industry": "Energy & Utilities",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "verdict:publish",
+        "confidence:100",
+        "notes:OPG states it recruits university/college students for paid work terms directly related to their field of study.",
+        "disappeared_from_source"
+      ],
+      "id": "7c9ae9899ce95622"
+    },
+    {
+      "title": "Fall 2026 \u2014 Business Analytics & Adult Education Programs",
+      "employer": "Ontario Power Generation",
+      "source_url": "https://jobs.opg.com/go/Our-Students-%26-New-Grads/2626017?q=&sortColumn=sort_title&sortDirection=asc",
+      "source_type": "Employer career result",
+      "source_name": "Ontario Power Generation",
+      "city": "Tiverton",
+      "province": "Bruce County",
+      "term": "Fall 2026",
+      "opportunity_type": "Co-op / Development",
+      "program_tags": [
+        "Business Analytics",
+        "Adult Education",
+        "Learning & Development"
+      ],
+      "industry": "Energy & Utilities",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "critical:search_url_as_listing",
+        "warning:never_verified",
+        "verdict:quarantine",
+        "confidence:0",
+        "notes:Listed on OPG Students & New Grads search result. Verify application status on OPG.",
+        "disappeared_from_source"
+      ],
+      "id": "156cf30b44596a6b"
+    },
+    {
+      "title": "Fall 2026 \u2014 MBA Student",
+      "employer": "Ontario Power Generation",
+      "source_url": "https://jobs.opg.com/go/Our-Students-%26-New-Grads/2626017?q=&sortColumn=sort_title&sortDirection=asc",
+      "source_type": "Employer career result",
+      "source_name": "Ontario Power Generation",
+      "city": "Oshawa / Durham Region",
+      "province": "Durham",
+      "term": "Fall 2026",
+      "opportunity_type": "Co-op / Development",
+      "program_tags": [
+        "MBA",
+        "Business",
+        "Strategy",
+        "Operations"
+      ],
+      "industry": "Energy & Utilities",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "critical:search_url_as_listing",
+        "warning:never_verified",
+        "verdict:quarantine",
+        "confidence:0",
+        "notes:OPG student/new grad lead for MBA or graduate business students.",
+        "disappeared_from_source"
+      ],
+      "id": "c5fde56b2931f384"
+    },
+    {
+      "title": "Student & New Grad Jobs",
+      "employer": "Hydro One",
+      "source_url": "https://jobs.hydroone.com/go/Student-Jobs/826900/",
+      "source_type": "Employer career hub",
+      "source_name": "Hydro One",
+      "city": "Ontario-wide",
+      "province": "Multi-city",
+      "term": "Rolling",
+      "opportunity_type": "Student career hub",
+      "program_tags": [
+        "Engineering",
+        "Business Administration",
+        "Technical",
+        "IT"
+      ],
+      "industry": "Energy & Utilities",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "verdict:archive",
+        "confidence:100",
+        "notes:Hydro One says it welcomes 300+ students each year; current scan showed no open positions matching Student Jobs, so keep as a watchlist source."
+      ],
+      "id": "1c4eb56dbffc5502"
+    },
+    {
+      "title": "University Co-op Student \u2014 Distribution Planning",
+      "employer": "Hydro One",
+      "source_url": "https://www.eluta.ca/spl/university-co-op-student-distribution-planning-12-months-fall-2026-b740166ea0e15d4d6ba334e10c3684d0",
+      "source_type": "Eluta listing",
+      "source_name": "Hydro One",
+      "city": "Ontario",
+      "province": "Multi-city",
+      "term": "Fall 2026",
+      "opportunity_type": "12-month Co-op",
+      "program_tags": [
+        "Electrical Engineering",
+        "Engineering Technology"
+      ],
+      "industry": "Energy & Utilities",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "verdict:archive",
+        "confidence:97",
+        "notes:Hydro One asks students to apply to maximum 3 co-op positions per term; use for pattern and future matching."
+      ],
+      "id": "254df94053dd8a6e"
+    },
+    {
+      "title": "College Co-op Student \u2014 Outage Planning",
+      "employer": "Hydro One",
+      "source_url": "https://jobs.hydroone.com/job/Barrie-College-Co-Op-Student-Outage-Planning-4-Months-Winter-2026-ON/1290316647/",
+      "source_type": "Employer career posting",
+      "source_name": "Hydro One",
+      "city": "Barrie",
+      "province": "Central Ontario",
+      "term": "Winter 2026",
+      "opportunity_type": "4-month Co-op",
+      "program_tags": [
+        "Electrical Engineering Technology",
+        "AutoCAD"
+      ],
+      "industry": "Energy & Utilities",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "critical:term_passed",
+        "verdict:quarantine",
+        "confidence:0",
+        "notes:Good model posting for engineering technology students; use for resume keyword extraction and future alert templates.",
+        "disappeared_from_source"
+      ],
+      "id": "291ddb2713ebd3ca"
+    },
+    {
+      "title": "Community Development Co-op Student",
+      "employer": "Stantec",
+      "source_url": "https://www.eluta.ca/spl/community-development-co-op-student-summer-2026-4-12-months-a03e5f280973589efac38f43a5758119",
+      "source_type": "Eluta listing",
+      "source_name": "Stantec",
+      "city": "Markham",
+      "province": "York Region",
+      "term": "Summer 2026 / 4\u201312 months",
+      "opportunity_type": "Co-op",
+      "program_tags": [
+        "Civil Engineering",
+        "Urban Planning",
+        "Environmental",
+        "GIS"
+      ],
+      "industry": "Engineering, Planning & Consulting",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "critical:term_passed",
+        "verdict:quarantine",
+        "confidence:0",
+        "notes:Markham office co-op lead; monitor Stantec for civil/community development student roles.",
+        "disappeared_from_source"
+      ],
+      "id": "aafb0a5ad95b56c3"
+    },
+    {
+      "title": "Co-op Student \u2014 Business Planning and Analysis",
+      "employer": "Peel Regional Police",
+      "source_url": "https://www.eluta.ca/spl/co-op-student-business-planning-and-analysis-32bdc353451164bb07a6ce6f876b3fe7",
+      "source_type": "Eluta listing",
+      "source_name": "Peel Regional Police",
+      "city": "Peel Region",
+      "province": "Mississauga / Brampton",
+      "term": "Verify",
+      "opportunity_type": "Co-op Student",
+      "program_tags": [
+        "Business",
+        "Analytics",
+        "Public Administration"
+      ],
+      "industry": "Public Sector & Policing",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:79",
+        "notes:Public sector co-op lead for business analysis and planning students.",
+        "disappeared_from_source"
+      ],
+      "id": "423460820c63cedb"
+    },
+    {
+      "title": "Co-op Student \u2014 Corporate Security Services",
+      "employer": "Peel Regional Police",
+      "source_url": "https://www.eluta.ca/spl/co-op-student-corporate-security-services-f0c46eb5c6a0029bbffbcda0cb90f4cf",
+      "source_type": "Eluta listing",
+      "source_name": "Peel Regional Police",
+      "city": "Peel Region",
+      "province": "Mississauga / Brampton",
+      "term": "Verify",
+      "opportunity_type": "Co-op Student",
+      "program_tags": [
+        "Security",
+        "Criminology",
+        "Public Safety",
+        "Business"
+      ],
+      "industry": "Public Sector & Policing",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "verdict:archive",
+        "confidence:94",
+        "notes:Security/public safety oriented co-op lead for criminology and public safety students."
+      ],
+      "id": "d8bc5ee2edf6c8a1"
+    },
+    {
+      "title": "Environmental Stewardship Co-op",
+      "employer": "Niagara Parks Commission",
+      "source_url": "https://www.eluta.ca/spl/environmental-stewardship-co-op-e66b7abb8a312133260b071835ccfa7c",
+      "source_type": "Eluta listing",
+      "source_name": "Niagara Parks Commission",
+      "city": "Niagara Falls / Niagara Region",
+      "province": "Niagara",
+      "term": "Summer 2026",
+      "opportunity_type": "Summer Student / Co-op",
+      "program_tags": [
+        "Environmental Studies",
+        "Biology",
+        "Geography",
+        "Outdoor Recreation"
+      ],
+      "industry": "Environment, Tourism & Public Agency",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "critical:term_passed",
+        "verdict:quarantine",
+        "confidence:0",
+        "notes:Environmental field/workplace lead; excellent for ecology, environmental science and geography students.",
+        "disappeared_from_source"
+      ],
+      "id": "6db36aad3a470b2c"
+    },
+    {
+      "title": "Logistics Co-op",
+      "employer": "IKO Industries Ltd.",
+      "source_url": "https://www.eluta.ca/spl/logistics-co-op-549eed8b812b4ea6dfada94880c5ba2c",
+      "source_type": "Eluta listing",
+      "source_name": "IKO Industries Ltd.",
+      "city": "Brampton",
+      "province": "Peel Region",
+      "term": "Verify",
+      "opportunity_type": "Co-op",
+      "program_tags": [
+        "Supply Chain",
+        "Logistics",
+        "Operations"
+      ],
+      "industry": "Manufacturing & Supply Chain",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:never_verified",
+        "verdict:review",
+        "confidence:79",
+        "notes:In-person Brampton logistics co-op lead at 84 Orenda Road.",
+        "disappeared_from_source"
+      ],
+      "id": "2a4b14eb6d551745"
+    },
+    {
+      "title": "Outside Sales Internship / Co-op",
+      "employer": "Uline",
+      "source_url": "https://ca.indeed.com/q-uline-jobs-l-ontario-jobs.html",
+      "source_type": "Indeed / employer career listing",
+      "source_name": "Uline",
+      "city": "Milton",
+      "province": "Halton",
+      "term": "Summer 2026",
+      "opportunity_type": "Internship / Co-op",
+      "program_tags": [
+        "Business",
+        "Sales",
+        "Marketing",
+        "Supply Chain"
+      ],
+      "industry": "Sales, Distribution & Supply Chain",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "critical:search_url_as_listing",
+        "warning:bot_protected_source",
+        "critical:term_passed",
+        "verdict:quarantine",
+        "confidence:0",
+        "notes:Sales internship lead in Milton. Good for business students seeking B2B sales exposure.",
+        "disappeared_from_source"
+      ],
+      "id": "3e23265f33f6735f"
+    },
+    {
+      "title": "Student, Supply Chain Analyst",
+      "employer": "General Dynamics Land Systems",
+      "source_url": "https://ca.indeed.com/q-general-dynamics-land-systems-l-london%2C-on-jobs.html",
+      "source_type": "Indeed / employer listing",
+      "source_name": "General Dynamics Land Systems",
+      "city": "London",
+      "province": "Southwestern Ontario",
+      "term": "September 2026 / 4\u20138 months",
+      "opportunity_type": "Student / Co-op",
+      "program_tags": [
+        "Supply Chain",
+        "Logistics",
+        "Business"
+      ],
+      "industry": "Defence Manufacturing & Supply Chain",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "critical:search_url_as_listing",
+        "warning:bot_protected_source",
+        "warning:never_verified",
+        "verdict:quarantine",
+        "confidence:0",
+        "notes:Listing snippet says start date September 2026 and asks for 2nd-year business/logistics/supply chain co-op or post-grad supply chain students.",
+        "disappeared_from_source"
+      ],
+      "id": "79a46da2c5d819d5"
+    },
+    {
+      "title": "Student, Software Developer",
+      "employer": "General Dynamics Land Systems",
+      "source_url": "https://ca.indeed.com/q-general-dynamics-land-systems-student-l-london%2C-on-jobs.html",
+      "source_type": "Indeed / employer listing",
+      "source_name": "General Dynamics Land Systems",
+      "city": "London",
+      "province": "Southwestern Ontario",
+      "term": "September 2026",
+      "opportunity_type": "Student / Co-op",
+      "program_tags": [
+        "Computer Science",
+        "Software Engineering",
+        "IT"
+      ],
+      "industry": "Defence Manufacturing & Technology",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "critical:search_url_as_listing",
+        "warning:bot_protected_source",
+        "warning:never_verified",
+        "verdict:quarantine",
+        "confidence:0",
+        "notes:Technology student lead in London; verify on company site before sharing as active.",
+        "disappeared_from_source"
+      ],
+      "id": "7a1f8954216e0c2f"
+    },
+    {
+      "title": "Staff Accountant \u2014 Audit Public/Private Co-op/Intern",
+      "employer": "Accounting firm / Ontario offices",
+      "source_url": "https://ca.indeed.com/viewjob?jk=2877129e0d8b6e2f",
+      "source_type": "Indeed listing",
+      "source_name": "Accounting firm / Ontario offices",
+      "city": "Toronto / Ontario",
+      "province": "GTA / Ontario",
+      "term": "Winter 2027",
+      "opportunity_type": "Co-op / Intern",
+      "program_tags": [
+        "Accounting",
+        "Commerce",
+        "Finance"
+      ],
+      "industry": "Accounting & Professional Services",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:bot_protected_source",
+        "critical:vague_employer",
+        "warning:never_verified",
+        "verdict:quarantine",
+        "confidence:0",
+        "notes:Accounting internship lead surfaced in Toronto Winter 2027 search. Verify employer and office location before posting to students.",
+        "disappeared_from_source"
+      ],
+      "id": "69e90d467fdb7432"
+    },
+    {
+      "title": "Co-op Accountant, Assurance and Accounting",
+      "employer": "MNP",
+      "source_url": "https://ca.indeed.com/q-student-jobs-l-london%2C-on-jobs.html?vjk=325889a359eae6d4",
+      "source_type": "Indeed listing",
+      "source_name": "MNP",
+      "city": "London",
+      "province": "Southwestern Ontario",
+      "term": "January 2027",
+      "opportunity_type": "Co-op",
+      "program_tags": [
+        "Accounting",
+        "Commerce",
+        "Finance"
+      ],
+      "industry": "Accounting & Professional Services",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "critical:search_url_as_listing",
+        "warning:bot_protected_source",
+        "warning:never_verified",
+        "verdict:quarantine",
+        "confidence:0",
+        "notes:Search snippet indicates MNP London co-op accountant lead for January 2027.",
+        "disappeared_from_source"
+      ],
+      "id": "0ae951f2f8c6790c"
+    },
+    {
+      "title": "Co-op / Intern \u2014 Master Planning & Logistics",
+      "employer": "Automotive employer",
+      "source_url": "https://ca.indeed.com/q-co-op-internship-l-ontario-jobs.html",
+      "source_type": "Indeed listing",
+      "source_name": "Automotive employer",
+      "city": "Ontario",
+      "province": "Ontario",
+      "term": "August 2026 / 8 months",
+      "opportunity_type": "Co-op / Intern",
+      "program_tags": [
+        "Supply Chain",
+        "Logistics",
+        "Industrial Engineering"
+      ],
+      "industry": "Automotive & Manufacturing",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "critical:search_url_as_listing",
+        "warning:bot_protected_source",
+        "critical:vague_employer",
+        "critical:term_passed",
+        "warning:never_verified",
+        "verdict:quarantine",
+        "confidence:0",
+        "notes:Aggregated search lead for automotive logistics and planning students. Needs official employer verification.",
+        "disappeared_from_source"
+      ],
+      "id": "b9f8e1ca154001a0"
+    },
+    {
+      "title": "IT / Business Co-op \u2014 12-month fixed term",
+      "employer": "Industrial and Commercial Bank of China (Canada)",
+      "source_url": "https://ca.indeed.com/q-developer-intern-it-intern-co-op-student-l-ontario-jobs.html",
+      "source_type": "Indeed listing",
+      "source_name": "Industrial and Commercial Bank of China (Canada)",
+      "city": "Richmond Hill",
+      "province": "York Region",
+      "term": "September 2026 / 12 months",
+      "opportunity_type": "Fixed-term Co-op",
+      "program_tags": [
+        "IT",
+        "Business",
+        "Finance",
+        "Operations"
+      ],
+      "industry": "Banking & Technology",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "critical:search_url_as_listing",
+        "warning:bot_protected_source",
+        "warning:never_verified",
+        "verdict:quarantine",
+        "confidence:0",
+        "notes:Search snippet references ICBC Canada, Richmond Hill, fixed-term co-op beginning September 2026.",
+        "disappeared_from_source"
+      ],
+      "id": "fdcde885bef6ee3e"
+    },
+    {
+      "title": "Job Bank \u2014 Internship Search",
+      "employer": "Government of Canada Job Bank",
+      "source_url": "https://www.jobbank.gc.ca/jobsearch/jobsearch?searchstring=internship",
+      "source_type": "Government job board",
+      "source_name": "Government of Canada Job Bank",
+      "city": "Ontario / Canada",
+      "province": "Multi-city",
+      "term": "Rolling",
+      "opportunity_type": "Public job board source",
+      "program_tags": [
+        "All programs"
+      ],
+      "industry": "Multi-industry",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "verdict:publish",
+        "confidence:100",
+        "notes:Useful for direct employer postings, Canada Summer Jobs, entry-level and student roles. Filter by Ontario and keyword.",
+        "disappeared_from_source"
+      ],
+      "id": "a5445de5a53b58ef"
+    },
+    {
+      "title": "Job Bank \u2014 Student Jobs in Ontario",
+      "employer": "Government of Canada Job Bank",
+      "source_url": "https://www.jobbank.gc.ca/jobsearch/jobsearch?fprov=ON&jkw=student",
+      "source_type": "Government job board",
+      "source_name": "Government of Canada Job Bank",
+      "city": "Ontario",
+      "province": "Multi-city",
+      "term": "Rolling",
+      "opportunity_type": "Public job board source",
+      "program_tags": [
+        "All programs"
+      ],
+      "industry": "Multi-industry",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "verdict:publish",
+        "confidence:100",
+        "notes:Search source for student jobs across Ontario. Needs filtering to separate career-related roles from general summer jobs.",
+        "disappeared_from_source"
+      ],
+      "id": "4b0579bbe8019686"
+    },
+    {
+      "title": "Ontario Public Service \u2014 Student and New Professionals",
+      "employer": "Government of Ontario / OPS",
+      "source_url": "https://www.ontario.ca/page/careers-student-and-new-professionals",
+      "source_type": "Government program page",
+      "source_name": "Government of Ontario / OPS",
+      "city": "Ontario-wide",
+      "province": "Multi-city",
+      "term": "Annual / rolling by program",
+      "opportunity_type": "Student program source",
+      "program_tags": [
+        "Policy",
+        "Admin",
+        "IT",
+        "Environment",
+        "Science",
+        "Business"
+      ],
+      "industry": "Public Sector",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "verdict:publish",
+        "confidence:100",
+        "notes:OPS page covers internships, co-op opportunities and student/summer programs. Important source for schools to monitor.",
+        "disappeared_from_source"
+      ],
+      "id": "74564443ca4c0162"
+    },
+    {
+      "title": "Summer Employment Opportunities Program",
+      "employer": "Ontario Public Service",
+      "source_url": "https://www.gojobs.gov.on.ca/Preview.aspx?JobID=201105&Language=English",
+      "source_type": "Government program page",
+      "source_name": "Ontario Public Service",
+      "city": "Ontario-wide",
+      "province": "Multi-city",
+      "term": "Summer 2027 next cycle",
+      "opportunity_type": "Summer student source",
+      "program_tags": [
+        "All programs"
+      ],
+      "industry": "Public Sector",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "verdict:archive",
+        "confidence:100",
+        "notes:2026 student summer job ads have closed; new 2027 opportunities expected in fall/winter posting cycle."
+      ],
+      "id": "dfe59c5999f07b50"
+    },
+    {
+      "title": "Ontario Internship Program",
+      "employer": "Government of Ontario",
+      "source_url": "https://www.ontario.ca/page/apply-ontario-internship-program",
+      "source_type": "Government program page",
+      "source_name": "Government of Ontario",
+      "city": "Ontario-wide",
+      "province": "Multi-city",
+      "term": "Annual",
+      "opportunity_type": "Internship program",
+      "program_tags": [
+        "Recent grads: policy",
+        "business",
+        "finance",
+        "HR",
+        "IT",
+        "communications"
+      ],
+      "industry": "Public Sector",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "verdict:archive",
+        "confidence:100",
+        "notes:For recent college/university graduates; useful for schools supporting final-year students and new grads."
+      ],
+      "id": "c2e9c53a6ec6d7a8"
+    },
+    {
+      "title": "Full-Time Summer Camp Child/Youth Support Worker",
+      "employer": "Community Living York South",
+      "source_url": "https://ca.indeed.com/q-community-living-york-south-l-markham%2C-on-jobs.html",
+      "source_type": "Indeed listing",
+      "source_name": "Community Living York South",
+      "city": "Richmond Hill",
+      "province": "York Region",
+      "term": "Summer 2026",
+      "opportunity_type": "Summer student / youth support",
+      "program_tags": [
+        "Psychology",
+        "Social Work",
+        "Child & Youth Care",
+        "Health",
+        "Recreation"
+      ],
+      "industry": "Community Services & Disability Support",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "critical:search_url_as_listing",
+        "warning:bot_protected_source",
+        "critical:term_passed",
+        "verdict:quarantine",
+        "confidence:0",
+        "notes:Very relevant for OT/rehab/social service pathway students seeking human-service experience.",
+        "disappeared_from_source"
+      ],
+      "id": "dbe219f830c73517"
+    },
+    {
+      "title": "Summer Student Worker",
+      "employer": "Toronto Botanical Garden",
+      "source_url": "https://ca.indeed.com/q-student-summer-l-richmond-hill%2C-on-jobs.html",
+      "source_type": "Indeed listing",
+      "source_name": "Toronto Botanical Garden",
+      "city": "North York",
+      "province": "Toronto",
+      "term": "Summer 2026",
+      "opportunity_type": "Summer student",
+      "program_tags": [
+        "Biology",
+        "Environmental Studies",
+        "Education",
+        "Recreation"
+      ],
+      "industry": "Environment, Education & Nonprofit",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "critical:search_url_as_listing",
+        "warning:bot_protected_source",
+        "critical:term_passed",
+        "verdict:quarantine",
+        "confidence:0",
+        "notes:Useful for environmental science, biology and education students; verify next cycle.",
+        "disappeared_from_source"
+      ],
+      "id": "e5d9122564986234"
+    },
+    {
+      "title": "Back Up Summer Program Coordinator",
+      "employer": "Rooks to Cooks",
+      "source_url": "https://ca.indeed.com/q-summer-student-l-richmond-hill%2C-on-jobs.html",
+      "source_type": "Indeed listing",
+      "source_name": "Rooks to Cooks",
+      "city": "North York / GTA",
+      "province": "GTA",
+      "term": "Summer 2026",
+      "opportunity_type": "Summer student / seasonal",
+      "program_tags": [
+        "Education",
+        "Recreation",
+        "Child & Youth Care",
+        "Hospitality"
+      ],
+      "industry": "Education, Camps & Youth Programs",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "critical:search_url_as_listing",
+        "warning:bot_protected_source",
+        "critical:term_passed",
+        "verdict:quarantine",
+        "confidence:0",
+        "notes:Useful as education/youth program experience, not strictly degree-required internship.",
+        "disappeared_from_source"
+      ],
+      "id": "7fdbc8d5ac28f293"
+    },
+    {
+      "title": "Summer Student / Youth Program Leads",
+      "employer": "Safehaven / youth-service employers",
+      "source_url": "https://ca.indeed.com/q-summer-student-l-woodbridge%2C-on-jobs.html",
+      "source_type": "Indeed search result",
+      "source_name": "Safehaven / youth-service employers",
+      "city": "Woodbridge / GTA",
+      "province": "York Region / GTA",
+      "term": "Summer 2026 / next cycle",
+      "opportunity_type": "Summer student",
+      "program_tags": [
+        "Psychology",
+        "Social Work",
+        "Health Sciences",
+        "OT pathway"
+      ],
+      "industry": "Health, Disability Support & Community Services",
+      "deadline": null,
+      "posted_at": null,
+      "date_collected": "2026-09-23",
+      "last_verified": null,
+      "status": "archived",
+      "flags": [
+        "warning:bot_protected_source",
+        "critical:vague_employer",
+        "critical:term_passed",
+        "verdict:quarantine",
+        "confidence:0",
+        "notes:Use as a hidden-market source category for health/rehab-related student experience.",
+        "disappeared_from_source"
+      ],
+      "id": "691d6eb5f7c642f5"
+    }
+  ]
+}
