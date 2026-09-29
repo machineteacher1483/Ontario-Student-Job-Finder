@@ -5,13 +5,13 @@
       "name": "Shopify",
       "type": "greenhouse",
       "board_token": "shopify",
-      "enabled": true,
+      "enabled": false,
       "notes": "Confirm token before first production run"
     },
     {
       "name": "Wealthsimple",
-      "type": "greenhouse",
-      "board_token": "wealthsimple",
+      "type": "ashby",
+      "org_slug": "wealthsimple",
       "enabled": true
     },
     {
@@ -24,7 +24,7 @@
       "name": "Clio",
       "type": "lever",
       "company_slug": "clio",
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "Ada",
