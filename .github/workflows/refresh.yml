@@ -67,7 +67,7 @@ jobs:
           fi
           git config user.name  "oif-bot"
           git config user.email "actions@github.com"
-          git add data/opportunities.json data/state.json data/opportunities.prev.json
+          git add data/opportunities.json data/state.json
           ACTIVE=$(python -c "import json;print(json.load(open('data/opportunities.json'))['counts']['active'])")
           git commit -m "chore(data): 20-day refresh -- ${ACTIVE} active listings"
           git push
