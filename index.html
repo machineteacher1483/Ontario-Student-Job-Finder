@@ -1,370 +1,670 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ontario Internship Finder | Public Beta Dataset</title>
-  <style>
-    :root {
-      --bg:#f3f8ff; --panel:#ffffff; --ink:#12213d; --muted:#607087;
-      --blue:#0b5bd3; --blue2:#1282e7; --navy:#052b66; --sky:#dcedff;
-      --cyan:#0ba8d6; --green:#0f9d76; --orange:#ff9f1c; --red:#d83b3b;
-      --border:#d6e6fb; --shadow:0 16px 45px rgba(5,43,102,.11);
-    }
-    * { box-sizing:border-box; }
-    body { margin:0; font-family:Inter,Segoe UI,Roboto,Arial,sans-serif; color:var(--ink); background:linear-gradient(180deg,#eaf4ff 0,#f7fbff 44%,#f3f8ff 100%); }
-    a { color:var(--blue); }
-    .wrap { width:min(1180px,92vw); margin:0 auto; }
-    header { background:linear-gradient(135deg,#062b5f 0%,#0b5bd3 55%,#15a9dc 100%); color:white; padding:44px 0 32px; position:relative; overflow:hidden; }
-    header:before { content:""; position:absolute; inset:-70px -100px auto auto; width:420px; height:420px; border-radius:50%; background:rgba(255,255,255,.10); }
-    header:after { content:""; position:absolute; left:-120px; bottom:-180px; width:430px; height:430px; border-radius:50%; background:rgba(255,255,255,.08); }
-    .hero { position:relative; z-index:1; display:grid; grid-template-columns:1.4fr .8fr; gap:24px; align-items:center; }
-    h1 { font-size:clamp(34px,5vw,60px); line-height:1.02; margin:0 0 16px; letter-spacing:-1.8px; }
-    .subtitle { font-size:18px; line-height:1.6; max-width:760px; opacity:.94; margin:0; }
-    .hero-card { background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.28); backdrop-filter:blur(10px); padding:22px; border-radius:24px; box-shadow:0 12px 40px rgba(0,0,0,.12); }
-    .hero-card .big { font-size:44px; font-weight:800; }
-    .hero-card span { display:block; color:#dff4ff; margin-top:4px; }
-    .chips { display:flex; gap:10px; flex-wrap:wrap; margin-top:20px; }
-    .chip { background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.27); padding:8px 11px; border-radius:999px; font-size:13px; }
-    main { padding:28px 0 54px; }
-    .notice { background:#fff8e8; border:1px solid #ffe2a8; border-left:6px solid var(--orange); border-radius:18px; padding:16px 18px; margin:22px 0; line-height:1.55; }
-    .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:22px 0; }
-    .metric { background:var(--panel); border:1px solid var(--border); border-radius:20px; padding:20px; box-shadow:var(--shadow); }
-    .metric b { font-size:32px; color:var(--navy); display:block; }
-    .metric span { color:var(--muted); line-height:1.4; }
-    section { margin:28px 0; }
-    .section-head { display:flex; justify-content:space-between; align-items:end; gap:16px; margin-bottom:14px; }
-    h2 { font-size:28px; margin:0; color:var(--navy); letter-spacing:-.4px; }
-    .small { color:var(--muted); font-size:14px; }
-    .controls { background:var(--panel); border:1px solid var(--border); border-radius:24px; padding:18px; box-shadow:var(--shadow); display:grid; grid-template-columns:1.3fr repeat(5,1fr); gap:12px; position:sticky; top:0; z-index:4; }
-    input, select { width:100%; padding:12px 12px; border:1px solid #bfd4ef; border-radius:14px; background:#fbfdff; font-size:14px; color:var(--ink); outline:none; }
-    input:focus, select:focus { border-color:var(--blue); box-shadow:0 0 0 3px rgba(11,91,211,.10); }
-    .toolrow { display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
-    button { border:0; background:var(--blue); color:white; padding:11px 14px; border-radius:14px; font-weight:700; cursor:pointer; }
-    button.secondary { background:#e8f2ff; color:var(--blue); border:1px solid #b9d8ff; }
-    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:18px; }
-    .card { background:var(--panel); border:1px solid var(--border); border-radius:22px; padding:18px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:12px; min-height:290px; }
-    .card h3 { margin:0; font-size:19px; line-height:1.25; color:var(--navy); }
-    .org { color:var(--blue); font-weight:800; }
-    .meta { display:flex; gap:8px; flex-wrap:wrap; }
-    .tag { font-size:12px; padding:6px 8px; background:#eef6ff; color:#16466e; border-radius:999px; border:1px solid #d4e9ff; }
-    .status { background:#ecfff8; color:#0b7054; border-color:#bcefdc; }
-    .status.warn { background:#fff7e7; color:#9a5d05; border-color:#f6db9e; }
-    .status.closed { background:#fff0f0; color:#9a2020; border-color:#ffd0d0; }
-    .notes { color:#405169; line-height:1.45; font-size:14px; flex:1; }
-    .apply { margin-top:auto; display:flex; justify-content:space-between; align-items:center; gap:10px; }
-    .apply a { text-decoration:none; font-weight:800; background:var(--blue); color:white; padding:10px 12px; border-radius:12px; }
-    .confidence { font-size:12px; color:var(--muted); }
-    .sources { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
-    .source { background:var(--panel); border:1px solid var(--border); border-radius:18px; padding:16px; box-shadow:0 10px 30px rgba(5,43,102,.08); }
-    .source h3 { margin:0 0 6px; color:var(--navy); }
-    .source p { margin:6px 0; color:#4f6078; line-height:1.45; }
-    .pipeline { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
-    .step { background:var(--panel); border:1px solid var(--border); border-radius:20px; padding:18px; box-shadow:0 10px 30px rgba(5,43,102,.08); }
-    .step b { display:inline-grid; place-items:center; width:34px; height:34px; border-radius:12px; background:var(--blue); color:white; margin-right:8px; }
-    .step h3 { margin:0 0 8px; color:var(--navy); }
-    .step p, .step li { color:#46576f; line-height:1.5; }
-    pre { background:#071e42; color:#d7efff; padding:16px; border-radius:18px; overflow:auto; font-size:13px; line-height:1.5; }
-    .footer { margin-top:40px; color:#66758d; font-size:13px; line-height:1.55; }
-    .empty { background:#fff; border:1px dashed #9ec2ee; border-radius:18px; padding:24px; color:#607087; display:none; }
-    @media(max-width:980px){ .hero,.grid3,.cards,.sources,.pipeline{ grid-template-columns:1fr; } .controls{ grid-template-columns:1fr 1fr; position:static; } }
-    @media(max-width:620px){ .controls{ grid-template-columns:1fr; } .hero-card .big{font-size:34px;} }
-    .status.ok { background:#e6f7f0; color:#0f7355; border-color:#b9e6d6; }
-    .status.bad { background:#fdecec; color:#b32020; border-color:#f5c2c2; }
-    .problems { margin-top:10px; padding:9px 11px; background:#fff6ec; border:1px solid #ffd9b0;
-      border-radius:12px; font-size:12.5px; color:#8a4b12; line-height:1.45; }
-    .controls { grid-template-columns:1.3fr repeat(6,1fr); }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ontario Internship Finder — co-ops, internships and summer roles</title>
+<meta name="description" content="Search verified co-op, internship and summer student openings across Ontario by program, city and work term." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ===========================================================================
+   Tokens
+
+   One rule governs colour here: hue encodes verification status and nothing
+   else. Green, amber, grey and red never appear as decoration. The brand
+   indigo is reserved for things you can interact with. That constraint is
+   why the page reads as a tool rather than a brochure.
+   ======================================================================== */
+:root {
+  --paper:      #F7F8FA;
+  --surface:    #FFFFFF;
+  --ink:        #171A2B;
+  --ink-2:      #4A5063;
+  --ink-3:      #767D91;
+  --rule:       #E2E5EB;
+  --rule-firm:  #C9CED8;
+
+  --brand:      #4A3AD9;
+  --brand-ink:  #3325B0;
+  --brand-wash: #EEEBFC;
+
+  /* Status — the only other colour allowed on the page */
+  --ok:          #0E7C5A;
+  --ok-wash:     #E4F4EE;
+  --check:       #8A5300;
+  --check-wash:  #FBF0DF;
+  --closed:      #646B7C;
+  --closed-wash: #EDEFF3;
+  --issue:       #B3261E;
+  --issue-wash:  #FBE9E7;
+
+  /* Modular scale, 16px base, ratio 1.25 */
+  --t-xs: 0.8125rem;
+  --t-s:  0.875rem;
+  --t-m:  1rem;
+  --t-l:  1.25rem;
+  --t-xl: 1.5625rem;
+  --t-3xl: 2.441rem;
+
+  --sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --display: "Bricolage Grotesque", var(--sans);
+
+  --gut: clamp(1rem, 4vw, 2rem);
+  --measure: 62ch;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:#111420; --surface:#181C2A; --ink:#EDEFF4; --ink-2:#AFB6C6;
+    --ink-3:#848CA0; --rule:#2A3042; --rule-firm:#3A4256;
+    --brand:#9A8CFF; --brand-ink:#B6ABFF; --brand-wash:#232045;
+    --ok:#4FC79B; --ok-wash:#16302A; --check:#DFA349; --check-wash:#332614;
+    --closed:#98A0B2; --closed-wash:#242936; --issue:#F08A82; --issue-wash:#33191A;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: var(--t-m);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--display); font-weight: 700;
+  line-height: 1.1; letter-spacing: -0.02em; margin: 0;
+}
+
+a { color: var(--brand); text-underline-offset: 3px; }
+a:hover { color: var(--brand-ink); }
+
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; border-radius: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+.shell { width: min(1120px, 100% - 2 * var(--gut)); margin-inline: auto; }
+
+/* --- Masthead ----------------------------------------------------------- */
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  background: var(--surface);
+  position: sticky; top: 0; z-index: 20;
+}
+.masthead .shell {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding-block: 0.7rem; min-height: 52px;
+}
+.wordmark {
+  font-family: var(--display); font-weight: 700; font-size: var(--t-m);
+  letter-spacing: -0.02em; display: flex; align-items: center; gap: 0.5rem;
+}
+.wordmark .mark {
+  width: 22px; height: 22px; border-radius: 6px; flex: none;
+  background: var(--brand); color: #fff;
+  display: grid; place-items: center; font-size: 12px; font-weight: 700;
+}
+.freshness { font-size: var(--t-xs); color: var(--ink-3); text-align: right; }
+
+/* --- Opening ------------------------------------------------------------ */
+.opening { padding-block: clamp(2rem, 6vw, 3.4rem) 1.4rem; }
+.opening h1 {
+  font-size: clamp(1.9rem, 5.4vw, var(--t-3xl));
+  max-width: 17ch; margin-bottom: 0.7rem;
+}
+.standfirst {
+  color: var(--ink-2); max-width: var(--measure); margin: 0 0 1.6rem;
+  font-size: var(--t-l); line-height: 1.45;
+}
+.standfirst b { font-weight: 600; color: var(--ink); }
+
+/* --- Search ------------------------------------------------------------- */
+.finder {
+  background: var(--surface); border: 1px solid var(--rule);
+  border-radius: 14px; padding: 0.85rem; display: grid; gap: 0.65rem;
+}
+.searchline {
+  display: flex; align-items: center; gap: 0.6rem;
+  border: 1px solid var(--rule-firm); border-radius: 10px;
+  padding: 0 0.85rem; background: var(--paper);
+  transition: border-color .12s ease, box-shadow .12s ease;
+}
+.searchline:focus-within {
+  border-color: var(--brand); box-shadow: 0 0 0 3px var(--brand-wash);
+}
+.searchline svg { flex: none; color: var(--ink-3); }
+#q {
+  border: 0; background: none; padding: 0.8rem 0;
+  font: inherit; color: var(--ink); width: 100%;
+}
+#q:focus { outline: none; }
+#q::placeholder { color: var(--ink-3); }
+
+.filters { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.filters select {
+  font: inherit; font-size: var(--t-s); color: var(--ink);
+  background-color: var(--paper); border: 1px solid var(--rule-firm);
+  border-radius: 999px; padding: 0.42rem 2rem 0.42rem 0.85rem;
+  appearance: none; cursor: pointer; max-width: 15rem;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 4.5L6 8l3.5-3.5' fill='none' stroke='%23767D91' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 0.7rem center;
+  transition: border-color .12s ease;
+}
+.filters select:hover { border-color: var(--ink-3); }
+.filters select.on {
+  border-color: var(--brand); color: var(--brand-ink);
+  background-color: var(--brand-wash); font-weight: 500;
+}
+
+.btn-reset {
+  font: inherit; font-size: var(--t-s); color: var(--ink-2);
+  background: none; border: 1px solid transparent; border-radius: 999px;
+  padding: 0.42rem 0.8rem; cursor: pointer;
+}
+.btn-reset:hover { border-color: var(--rule-firm); color: var(--ink); }
+.btn-reset[hidden] { display: none; }
+
+/* --- Result bar --------------------------------------------------------- */
+.resultbar {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 1rem; flex-wrap: wrap;
+  padding: 1.6rem 0 0.4rem; border-bottom: 1px solid var(--rule);
+}
+.resultbar p { margin: 0; font-size: var(--t-s); color: var(--ink-2); }
+.resultbar strong { color: var(--ink); font-weight: 600; }
+
+/* --- Term grouping ------------------------------------------------------
+   Work terms are how student life is actually structured, so they organise
+   the results rather than sitting as one more filter on a flat grid. */
+.termgroup { margin-top: 1.9rem; }
+.termhead {
+  position: sticky; top: 52px; z-index: 10;
+  background: var(--paper); padding: 0.55rem 0;
+  border-bottom: 1px solid var(--rule-firm);
+  display: flex; align-items: baseline; gap: 0.7rem;
+}
+.termhead h2 { font-size: var(--t-l); }
+.termhead span { font-size: var(--t-xs); color: var(--ink-3); }
+
+.cards {
+  display: grid; gap: 0.9rem; padding-top: 0.9rem;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+}
+
+/* --- Card --------------------------------------------------------------- */
+.card {
+  background: var(--surface); border: 1px solid var(--rule);
+  border-radius: 12px; padding: 1.05rem 1.1rem 0.95rem;
+  display: flex; flex-direction: column; gap: 0.6rem;
+}
+.card .employer { font-size: var(--t-xs); color: var(--ink-2); font-weight: 500; }
+.card h3 { font-size: var(--t-m); line-height: 1.3; letter-spacing: -0.01em; }
+
+.facts { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.fact {
+  font-size: var(--t-xs); color: var(--ink-2);
+  background: var(--paper); border: 1px solid var(--rule);
+  border-radius: 6px; padding: 0.15rem 0.45rem;
+}
+
+.blurb {
+  font-size: var(--t-s); color: var(--ink-2); margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3;
+  -webkit-box-orient: vertical; overflow: hidden;
+}
+
+.state {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: var(--t-xs); font-weight: 600; width: fit-content;
+  padding: 0.2rem 0.55rem 0.2rem 0.45rem; border-radius: 999px;
+}
+.state::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%;
+  background: currentColor; flex: none;
+}
+.state.ok     { color: var(--ok);     background: var(--ok-wash); }
+.state.check  { color: var(--check);  background: var(--check-wash); }
+.state.closed { color: var(--closed); background: var(--closed-wash); }
+.state.issue  { color: var(--issue);  background: var(--issue-wash); }
+
+.flagged { font-size: var(--t-xs); color: var(--check); margin: 0; }
+.flagged.sev { color: var(--issue); }
+
+.card footer {
+  margin-top: auto; padding-top: 0.7rem; border-top: 1px solid var(--rule);
+  display: flex; align-items: center; justify-content: space-between; gap: 0.6rem;
+}
+.card footer .src {
+  font-size: var(--t-xs); color: var(--ink-3);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.apply {
+  font-size: var(--t-s); font-weight: 600; text-decoration: none;
+  color: var(--brand); border: 1px solid var(--rule-firm);
+  border-radius: 8px; padding: 0.35rem 0.75rem; white-space: nowrap;
+  transition: border-color .12s ease, background-color .12s ease;
+}
+.apply:hover { border-color: var(--brand); background: var(--brand-wash); }
+
+/* --- Empty / error ------------------------------------------------------ */
+.state-msg {
+  border: 1px dashed var(--rule-firm); border-radius: 12px;
+  padding: 2rem 1.4rem; text-align: center; color: var(--ink-2);
+  margin-top: 1.6rem;
+}
+.state-msg h2 { font-size: var(--t-l); margin-bottom: 0.4rem; color: var(--ink); }
+.state-msg p { margin: 0 auto; max-width: 48ch; font-size: var(--t-s); }
+.state-msg code {
+  background: var(--paper); border: 1px solid var(--rule);
+  border-radius: 5px; padding: 0.08rem 0.3rem; font-size: 0.9em;
+}
+
+/* --- Endmatter ---------------------------------------------------------- */
+.endmatter { margin-top: 3.4rem; padding-top: 1.8rem; border-top: 1px solid var(--rule); }
+.endmatter h2 { font-size: var(--t-l); margin-bottom: 0.5rem; }
+.endmatter > p {
+  color: var(--ink-2); max-width: var(--measure);
+  font-size: var(--t-s); margin: 0 0 1.1rem;
+}
+
+.feeds { display: grid; gap: 0.6rem; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+.feed {
+  border: 1px solid var(--rule); border-radius: 10px;
+  padding: 0.75rem 0.85rem; background: var(--surface);
+}
+.feed b { display: block; font-size: var(--t-s); font-weight: 600; }
+.feed span { font-size: var(--t-xs); color: var(--ink-3); }
+
+.forwhom {
+  display: grid; gap: 1.4rem; margin-top: 2.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.forwhom h3 { font-size: var(--t-m); margin-bottom: 0.3rem; }
+.forwhom p { margin: 0; font-size: var(--t-s); color: var(--ink-2); }
+
+footer.page {
+  margin-top: 3rem; padding: 1.4rem 0 3rem; border-top: 1px solid var(--rule);
+  font-size: var(--t-xs); color: var(--ink-3);
+}
+footer.page p { margin: 0 0 0.3rem; max-width: var(--measure); }
+
+@media (max-width: 560px) {
+  .masthead { position: static; }
+  .termhead { top: 0; }
+  .cards { grid-template-columns: 1fr; }
+  .filters select { flex: 1 1 8rem; }
+}
+</style>
 </head>
+
 <body>
-<header>
-  <div class="wrap hero">
-    <div>
-      <h1>Ontario Internship Finder</h1>
-      <p class="subtitle">A shareable public beta page for Ontario college and university students to find internships, co-ops, summer student roles and hidden SME opportunities by program, industry and city.</p>
-      <div class="chips">
-        <span class="chip">Program-based search</span><span class="chip">Company + city filters</span><span class="chip">20-day update cycle</span><span class="chip">Career-centre ready</span>
-      </div>
-    </div>
-    <div class="hero-card">
-      <div class="big">53</div><span>publicly collected leads in this beta dataset</span><br/>
-      <div class="big">14</div><span>monitored source feeds and employer hubs</span><br/>
-      <div class="big">20 days</div><span>recommended refresh interval</span>
-    </div>
+
+<header class="masthead">
+  <div class="shell">
+    <div class="wordmark"><span class="mark" aria-hidden="true">O</span>Ontario Internship Finder</div>
+    <div class="freshness" id="freshness"></div>
   </div>
 </header>
-<main class="wrap">
-  <div class="notice"><strong>Data note:</strong> This prototype uses publicly discoverable Ontario internship/co-op/student-job leads collected as of <strong>August 12, 2026</strong>. Internship postings expire quickly. Always open the source link and verify eligibility, deadline, location and work-term dates before applying. Some records are employer hubs or watchlist sources, not guaranteed open postings.</div>
 
-  <div class="grid3">
-    <div class="metric"><b>Students</b><span>Search by major, city, industry, term and opportunity type.</span></div>
-    <div class="metric"><b>Career Offices</b><span>Use the source directory to build a repeatable employer outreach and posting scan workflow.</span></div>
-    <div class="metric"><b>SMEs</b><span>Hidden internships can be submitted and verified before appearing on the public list.</span></div>
+<main class="shell">
+
+  <div class="opening">
+    <h1>Co-ops, internships and summer roles across Ontario</h1>
+    <p class="standfirst" id="standfirst">Loading listings…</p>
+
+    <div class="finder">
+      <label class="searchline">
+        <svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.7"/>
+          <path d="M11 11l3.2 3.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+        </svg>
+        <input id="q" type="search" autocomplete="off" aria-label="Search listings"
+               placeholder="Search a role, employer or city" />
+      </label>
+
+      <div class="filters">
+        <select id="program"  aria-label="Program"><option value="">Any program</option></select>
+        <select id="industry" aria-label="Industry"><option value="">Any industry</option></select>
+        <select id="city"     aria-label="City"><option value="">Anywhere in Ontario</option></select>
+        <select id="term"     aria-label="Work term"><option value="">Any work term</option></select>
+        <select id="quality"  aria-label="Listing quality">
+          <option value="applyable">Open listings</option>
+          <option value="verified">Verified only</option>
+          <option value="all">Include closed</option>
+          <option value="problems">Flagged listings</option>
+        </select>
+        <button type="button" class="btn-reset" id="reset" hidden>Clear filters</button>
+      </div>
+    </div>
   </div>
 
-  <section>
-    <div class="section-head"><h2>Search the Opportunity Dataset</h2><span class="small" id="resultCount"></span></div>
-    <div class="controls">
-      <input id="q" placeholder="Search keyword: AI, supply chain, Toronto, biology, accounting..." />
-      <select id="program"><option value="">All programs</option></select>
-      <select id="industry"><option value="">All industries</option></select>
-      <select id="city"><option value="">All cities</option></select>
-      <select id="term"><option value="">All terms</option></select>
-      <select id="status"><option value="">All statuses</option></select>
+  <div class="resultbar">
+    <p id="resultCount"></p>
+    <p id="qualityNote"></p>
+  </div>
+
+  <div id="results"></div>
+
+  <div class="state-msg" id="stateMsg" hidden>
+    <h2>Nothing matches yet</h2>
+    <p>Try a broader program or city, or switch the last filter to
+       “Include closed” to see roles from past work terms.</p>
+  </div>
+
+  <section class="endmatter" id="feedSection" hidden>
+    <h2>Where these listings come from</h2>
+    <p>Listings are collected from employer career systems and public job boards,
+       then rechecked on a fixed cycle. If a source stops responding, its existing
+       listings stay up and get marked for review rather than disappearing.</p>
+    <div class="feeds" id="feeds"></div>
+  </section>
+
+  <div class="forwhom">
+    <div>
+      <h3>For students</h3>
+      <p>Filter by your program, city and the term you are free to work. Open the
+         source link and confirm the deadline before you apply — postings close fast.</p>
     </div>
-    <div class="toolrow">
-      <select id="quality" title="Listing quality filter">
-        <option value="applyable">Applyable (hide quality issues)</option>
-        <option value="verified">Verified only</option>
-        <option value="all">Show everything</option>
-        <option value="problems">Quality issues only (admin)</option>
-      </select>
-      <button onclick="resetFilters()" class="secondary">Reset filters</button>
+    <div>
+      <h3>For career offices</h3>
+      <p>The source list doubles as a scan list for employer outreach. Closed roles
+         are kept on purpose: they show who hires students and when intake reopens.</p>
     </div>
-    <p id="dataMeta" class="small" style="margin:14px 0 4px"></p>
-    <div id="cards" class="cards"></div>
-    <div id="empty" class="empty">No matching records. Try a broader program, industry or city.</div>
-  </section>
-
-  <section>
-    <div class="section-head"><h2>Monitored Source Directory</h2><span class="small">Use these feeds for the automated update pipeline.</span></div>
-    <div class="sources" id="sources"></div>
-  </section>
-
-  <section>
-    <div class="section-head"><h2>20-Day Update Implementation Plan</h2><span class="small">Concrete MVP-to-production workflow</span></div>
-    <div class="pipeline">
-      <div class="step"><h3><b>1</b>Build the source registry</h3><p>Create a table of approved public sources: employer career pages, government job boards, school-friendly boards, and manually verified SME submissions. Store source name, URL, allowed collection method, update frequency and reliability score.</p></div>
-      <div class="step"><h3><b>2</b>Use legal collection methods first</h3><p>Prefer official APIs, RSS feeds, public career-page search URLs, employer ATS feeds, partner feeds, and manual submissions. Do not scrape platforms that prohibit automated access or require login unless you have permission.</p></div>
-      <div class="step"><h3><b>3</b>Normalize each posting</h3><p>Convert every record into the same schema: title, employer, city, province, source URL, program tags, industry, term, deadline, work format, paid/unpaid, eligibility, date collected and expiry status.</p></div>
-      <div class="step"><h3><b>4</b>Deduplicate records</h3><p>Generate a unique hash from title + employer + city + term + source URL. If the same role appears on Indeed, Eluta and the employer site, keep the employer site as the preferred apply link.</p></div>
-      <div class="step"><h3><b>5</b>Map roles to student programs</h3><p>Use keyword rules first: “supply chain” → Logistics/Business; “software/cloud/AI” → CS/IT/Data; “child/youth/support” → Psychology/Social Work/Health Sciences; “civil/BIM” → Engineering/Architecture.</p></div>
-      <div class="step"><h3><b>6</b>Run a verification pass</h3><p>Before publishing, check whether the source page is still live, the deadline has not passed, the location is in Ontario, and the role is suitable for college/university students.</p></div>
-      <div class="step"><h3><b>7</b>Schedule every 20 days</h3><p>Use GitHub Actions, Netlify Scheduled Functions, Vercel Cron, or a small Python script on a server. Run daily, but only refresh if the last successful update was 20+ days ago.</p></div>
-      <div class="step"><h3><b>8</b>Publish data separately from design</h3><p>Store opportunities in <code>/data/opportunities.json</code>. The HTML page reads the JSON and renders cards. This lets you update data without redesigning the page.</p></div>
-      <div class="step"><h3><b>9</b>Add school/employer submission forms</h3><p>Students, SMEs and career centres can submit leads through a form. New leads should enter “Pending review” status and only become public after manual verification.</p></div>
-      <div class="step"><h3><b>10</b>Track expired and hidden leads</h3><p>Expired listings should not disappear. Mark them as “Archived / watch next cycle” because they reveal which employers hire students and when the next intake may open.</p></div>
+    <div>
+      <h3>For employers</h3>
+      <p>Small and mid-sized employers can have a role added. Submissions are
+         checked before they appear here.</p>
     </div>
-  </section>
+  </div>
 
-  <section>
-    <div class="section-head"><h2>Recommended Technical Setup</h2><span class="small">Low-cost MVP stack</span></div>
-    <pre>Frontend:  Static HTML + JavaScript, hosted on Netlify / Vercel / GitHub Pages
-Data:      /data/opportunities.json or Supabase table
-Forms:     Tally / Google Forms / Airtable / Supabase form table
-Updater:   Python script + GitHub Actions daily schedule with 20-day gate
-Review:    Google Sheet or Airtable admin view
-Rule:      Employer official link wins over job-board duplicate links
+  <footer class="page">
+    <p id="dataNote"></p>
+    <p>Listings link to the employer or job board that published them.
+       This site does not accept applications.</p>
+  </footer>
 
-Pseudo-schedule:
-- Daily 9:00 AM ET: updater checks last_successful_refresh
-- If days_since_last_refresh >= 20: collect + normalize + dedupe + verify + publish
-- If source fails: keep old data but mark source as "needs review"
-- If posting deadline passed: move to "Archived / watch next cycle"</pre>
-  </section>
-
-  <section>
-    <div class="section-head"><h2>SME Hidden Internship Intake</h2><span class="small">For future database expansion</span></div>
-    <div class="notice" style="background:#eef8ff;border-color:#c9e6ff;border-left-color:var(--blue)">
-      <strong>Suggested intake fields:</strong> Company name, industry, city, contact email, student level, program fit, paid/unpaid status, expected start date, weekly hours, job duties, required skills, application deadline, and whether the employer can provide a school co-op agreement.
-    </div>
-  </section>
-
-  <div class="footer">Public beta dataset created for Ontario student internship discovery. This page is a prototype and not a legal, immigration, employment or school co-op approval tool. Schools and students should verify every posting directly with the employer or official job board.</div>
 </main>
-<script>
-/* ---------------------------------------------------------------------------
-   Data now lives in data/opportunities.json, written by the refresh pipeline.
-   This file contains NO listing data -- editing listings means running the
-   pipeline or editing that JSON, never touching this page.
---------------------------------------------------------------------------- */
 
-let OPPS = [];
+<script>
+/* ===========================================================================
+   Data comes from data/opportunities.json, written by the refresh pipeline.
+   No listing data lives in this file.
+   ======================================================================== */
+
+let ALL = [];
 let META = {};
 
-/* Map the pipeline's canonical schema onto the fields these cards render. */
-function adapt(o){
+/* --- Adapt the pipeline schema to what a card needs ---------------------- */
+function adapt(o) {
   const flags = o.flags || [];
-  const get = p => { const f = flags.find(x => x.startsWith(p)); return f ? f.slice(p.length) : ''; };
-  const confidence = parseInt(get('confidence:'), 10);
-  const problems = flags
-    .filter(f => f.startsWith('critical:') || f.startsWith('warning:'))
-    .map(f => f.split(':')[1].replace(/_/g, ' '));
+  const pick = p => { const f = flags.find(x => x.startsWith(p)); return f ? f.slice(p.length) : ''; };
+  const conf = parseInt(pick('confidence:'), 10);
 
   return {
-    title:        o.title || '',
-    organization: o.employer || '',
-    city:         o.city || o.province || 'Ontario',
-    region:       o.province || '',
-    industry:     o.industry || 'Multi-industry',
-    program:      (o.program_tags || []).join(', ') || 'All programs',
-    type:         o.opportunity_type || 'Student role',
-    term:         o.term || 'Verify',
-    status:       o.status || 'pending_review',
-    verdict:      get('verdict:') || 'review',
-    confidence:   isNaN(confidence) ? null : confidence,
-    problems:     problems,
-    notes:        get('notes:'),
-    url:          o.source_url || '',
-    lastVerified: o.last_verified || null
+    title:      o.title || 'Untitled role',
+    employer:   o.employer || 'Unnamed employer',
+    city:       o.city || o.province || 'Ontario',
+    industry:   o.industry || '',
+    programs:   (o.program_tags || []).filter(Boolean),
+    type:       o.opportunity_type || '',
+    termRaw:    o.term || '',
+    verdict:    pick('verdict:') || 'review',
+    confidence: isNaN(conf) ? null : conf,
+    problems:   flags.filter(f => f.startsWith('critical:') || f.startsWith('warning:'))
+                     .map(f => f.split(':')[1].replace(/_/g, ' ')),
+    severe:     flags.some(f => f.startsWith('critical:')),
+    blurb:      pick('notes:'),
+    url:        o.source_url || '',
+    source:     o.source_type || ''
   };
 }
 
-async function loadData(){
-  const cards = document.getElementById('cards');
-  cards.innerHTML = '<p class="small">Loading listings…</p>';
+/* --- Work-term bucketing -------------------------------------------------
+   The data holds 18 different term strings ("Fall 2026", "August–December
+   2026", "Rolling / verify"). Collapse them so headings stay readable. */
+const SEASONS = { winter: 1, spring: 2, summer: 3, fall: 4 };
+const MONTH_SEASON = {
+  january:'winter', february:'winter', march:'winter', april:'winter',
+  may:'summer', june:'summer', july:'summer', august:'summer',
+  september:'fall', october:'fall', november:'fall', december:'fall'
+};
+/* Sort sentinels must sit ABOVE a real term rank, which is year*10 (~20264).
+   Order: rolling, upcoming terms, unconfirmed, then past terms last. */
+const RANK_UNCONFIRMED = 400000;
+const RANK_PAST        = 500000;
+const UNKNOWN_TERM = { label: 'Work term not confirmed', rank: RANK_UNCONFIRMED };
+
+function bucketTerm(raw) {
+  const low = (raw || '').toLowerCase();
+  if (!low) return UNKNOWN_TERM;
+  if (/rolling|annual|ongoing/.test(low)) return { label: 'Open on a rolling basis', rank: -1 };
+
+  let season = Object.keys(SEASONS).find(s => low.includes(s));
+  if (!season) {
+    const hits = Object.keys(MONTH_SEASON).filter(m => low.includes(m));
+    if (hits.length) season = MONTH_SEASON[hits[hits.length - 1]];
+  }
+  const yr = low.match(/\b(20\d{2})\b/);
+  if (!season || !yr) return UNKNOWN_TERM;
+
+  const year = +yr[1];
+  const label = season[0].toUpperCase() + season.slice(1) + ' ' + year;
+  const rank = year * 10 + SEASONS[season];
+
+  /* Past terms sort below upcoming ones — they are reference, not opportunity */
+  const now = new Date();
+  const m = now.getMonth();
+  const nowRank = now.getFullYear() * 10 + (m < 4 ? 1 : m < 8 ? 3 : 4);
+  return { label, rank: rank < nowRank ? RANK_PAST + rank : rank };
+}
+
+const STATE = {
+  publish:    { cls: 'ok',     label: 'Verified' },
+  review:     { cls: 'check',  label: 'Check before applying' },
+  archive:    { cls: 'closed', label: 'Closed' },
+  quarantine: { cls: 'issue',  label: 'Flagged' }
+};
+
+/* --- Load ---------------------------------------------------------------- */
+async function load() {
   try {
-    const res = await fetch('data/opportunities.json', {cache: 'no-store'});
-    if(!res.ok) throw new Error('HTTP ' + res.status);
-    const payload = await res.json();
-    META = payload;
-    OPPS = (payload.opportunities || []).map(adapt);
+    const res = await fetch('data/opportunities.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    META = await res.json();
+    ALL = (META.opportunities || []).map(adapt);
   } catch (err) {
-    cards.innerHTML = `<div class="notice"><b>Could not load listings.</b><br>
-      ${esc(String(err))}<br><br>
-      If you are opening this file directly from your computer, browsers block
-      <code>fetch()</code> on <code>file://</code> URLs. Run a local server instead:
-      <code>python -m http.server 8000</code>, then visit
-      <code>http://localhost:8000</code>.</div>`;
+    document.getElementById('standfirst').textContent =
+      'Listings could not be loaded.';
+    document.getElementById('results').innerHTML = `
+      <div class="state-msg">
+        <h2>Listings did not load</h2>
+        <p>${esc(String(err))}<br><br>
+           Opening this file straight from disk will always fail: browsers block
+           <code>fetch()</code> on <code>file://</code>. Serve the folder instead
+           with <code>python -m http.server 8000</code>, then open
+           <code>localhost:8000</code>.</p>
+      </div>`;
     return;
   }
   buildFilters();
-  renderMeta();
+  paintMeta();
+  paintFeeds();
   render();
 }
 
-/* Dropdown options are derived from the data, so they can never drift out of
-   sync with what is actually in the file. */
-function buildFilters(){
-  const uniq = key => [...new Set(OPPS.map(o => o[key]).filter(Boolean))].sort();
-  const multi = key => [...new Set(OPPS.flatMap(
-      o => o[key].split(',').map(s => s.trim()).filter(Boolean)))].sort();
+function buildFilters() {
+  const single = k => [...new Set(ALL.map(o => o[k]).filter(Boolean))].sort();
+  const many   = k => [...new Set(ALL.flatMap(o => o[k]))].filter(Boolean).sort();
+  const terms  = [...new Map(ALL.map(o => {
+                    const b = bucketTerm(o.termRaw); return [b.label, b];
+                  })).values()]
+                  .sort((a, b) => a.rank - b.rank).map(b => b.label);
 
-  fill('program',  multi('program'));
-  fill('industry', uniq('industry'));
-  fill('city',     uniq('city'));
-  fill('term',     uniq('term'));
-  fill('status',   uniq('verdict'));
+  fill('program',  many('programs'));
+  fill('industry', single('industry'));
+  fill('city',     single('city'));
+  fill('term',     terms);
 }
 
-function fill(id, values){
+function fill(id, values) {
   const sel = document.getElementById(id);
-  const first = sel.querySelector('option');
-  sel.innerHTML = '';
-  if(first) sel.appendChild(first);
-  values.forEach(v => {
-    const opt = document.createElement('option');
-    opt.value = v; opt.textContent = v;
-    sel.appendChild(opt);
-  });
+  sel.replaceChildren(sel.querySelector('option'));
+  for (const v of values) {
+    const o = document.createElement('option');
+    o.value = v; o.textContent = v;
+    sel.appendChild(o);
+  }
 }
 
-function renderMeta(){
-  const el = document.getElementById('dataMeta');
-  if(!el) return;
+function paintMeta() {
   const c = META.counts || {};
-  const when = META.generated_at ? META.generated_at.replace('T', ' ') : 'unknown';
-  el.innerHTML = `Dataset generated <b>${esc(when)}</b> ·
-    ${c.active || 0} verified · ${c.pending_review || 0} awaiting review ·
-    ${c.archived || 0} archived ·
-    refreshes every ${META.refresh_interval_days || 20} days`;
+  const gen = META.generated_at ? new Date(META.generated_at) : null;
+  const days = gen ? Math.floor((Date.now() - gen.getTime()) / 86400000) : null;
+
+  document.getElementById('freshness').textContent =
+    days === null ? '' :
+    days <= 0 ? 'Checked today' :
+    days === 1 ? 'Checked yesterday' : `Checked ${days} days ago`;
+
+  const open = ALL.filter(o => o.verdict === 'publish' || o.verdict === 'review').length;
+  document.getElementById('standfirst').innerHTML =
+    `<b>${open} open ${open === 1 ? 'listing' : 'listings'}</b> across Ontario, each
+     checked automatically for dead links, passed deadlines and missing employer
+     details. Rechecked every ${META.refresh_interval_days || 20} days.`;
+
+  document.getElementById('dataNote').textContent =
+    `Dataset generated ${gen ? gen.toISOString().slice(0, 10) : 'unknown'}. ` +
+    `${c.total || 0} records held, ${c.active || 0} verified, ` +
+    `${c.pending_review || 0} awaiting review, ${c.archived || 0} closed.`;
 }
 
-function verdictClass(v){
-  return {publish:'ok', review:'warn', archive:'closed', quarantine:'bad'}[v] || 'warn';
-}
-function verdictLabel(v){
-  return {publish:'Verified', review:'Unverified — check before applying',
-          archive:'Archived', quarantine:'Quality issue'}[v] || v;
+function paintFeeds() {
+  const rows = Object.entries(META.source_health || {});
+  if (!rows.length) return;
+  document.getElementById('feedSection').hidden = false;
+  document.getElementById('feeds').innerHTML = rows.map(([name, h]) => `
+    <div class="feed">
+      <b>${esc(name)}</b>
+      <span>${h.needs_review ? 'Needs review' : 'Responding normally'}${
+        h.last_matched_count != null ? ` · ${h.last_matched_count} student roles` : ''
+      }</span>
+    </div>`).join('');
 }
 
-function render(){
+/* --- Render -------------------------------------------------------------- */
+function render() {
   const q = document.getElementById('q').value.trim().toLowerCase();
-  const f = {
-    program:  document.getElementById('program').value,
-    industry: document.getElementById('industry').value,
-    city:     document.getElementById('city').value,
-    term:     document.getElementById('term').value,
-    status:   document.getElementById('status').value
-  };
-  const quality = document.getElementById('quality').value;
+  const f = { program: val('program'), industry: val('industry'),
+              city: val('city'), term: val('term') };
+  const quality = val('quality');
 
-  let data = OPPS.filter(o => {
-    /* Quality gate. Default hides quarantined records from students, but an
-       admin can switch it on to work through the review queue. */
-    if(quality === 'verified'  && o.verdict !== 'publish') return false;
-    if(quality === 'applyable' && (o.verdict === 'quarantine' || o.verdict === 'archive')) return false;
-    if(quality === 'problems'  && o.verdict !== 'quarantine') return false;
+  const rows = ALL.filter(o => {
+    if (quality === 'verified'  && o.verdict !== 'publish') return false;
+    if (quality === 'applyable' && (o.verdict === 'quarantine' || o.verdict === 'archive')) return false;
+    if (quality === 'problems'  && o.verdict !== 'quarantine') return false;
 
-    const blob = [o.title,o.organization,o.city,o.industry,o.program,o.term,o.notes]
-                   .join(' ').toLowerCase();
-    return (!q || blob.includes(q)) &&
-      (!f.program  || o.program.includes(f.program)) &&
-      (!f.industry || o.industry === f.industry) &&
-      (!f.city     || o.city === f.city) &&
-      (!f.term     || o.term === f.term) &&
-      (!f.status   || o.verdict === f.status);
+    if (q) {
+      const hay = [o.title, o.employer, o.city, o.industry, o.blurb,
+                   o.programs.join(' ')].join(' ').toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    if (f.program  && !o.programs.includes(f.program)) return false;
+    if (f.industry && o.industry !== f.industry) return false;
+    if (f.city     && o.city !== f.city) return false;
+    if (f.term     && bucketTerm(o.termRaw).label !== f.term) return false;
+    return true;
   });
 
-  document.getElementById('resultCount').textContent = data.length + ' matching records';
-  document.getElementById('empty').style.display = data.length ? 'none' : 'block';
+  for (const id of ['program', 'industry', 'city', 'term']) {
+    document.getElementById(id).classList.toggle('on', !!val(id));
+  }
+  const dirty = q || f.program || f.industry || f.city || f.term || quality !== 'applyable';
+  document.getElementById('reset').hidden = !dirty;
 
-  document.getElementById('cards').innerHTML = data.map(o => {
-    const problems = o.problems.length
-      ? `<div class="problems"><b>Flagged:</b> ${esc(o.problems.join(' · '))}</div>` : '';
-    const conf = o.confidence === null ? '' : ` · Confidence ${o.confidence}/100`;
-    return `<article class="card">
-      <div class="org">${esc(o.organization)}</div>
+  document.getElementById('resultCount').innerHTML = rows.length
+    ? `<strong>${rows.length}</strong> ${rows.length === 1 ? 'listing' : 'listings'}`
+    : 'No matches';
+
+  const hidden = ALL.length - rows.length;
+  document.getElementById('qualityNote').textContent =
+    quality === 'problems' ? 'Showing only listings the checker flagged'
+    : quality === 'applyable' && hidden ? `${hidden} closed or flagged listings hidden`
+    : '';
+
+  document.getElementById('stateMsg').hidden = rows.length > 0;
+
+  const groups = new Map();
+  for (const o of rows) {
+    const b = bucketTerm(o.termRaw);
+    if (!groups.has(b.label)) groups.set(b.label, { ...b, items: [] });
+    groups.get(b.label).items.push(o);
+  }
+
+  document.getElementById('results').innerHTML =
+    [...groups.values()].sort((a, b) => a.rank - b.rank).map(g => `
+      <section class="termgroup">
+        <div class="termhead">
+          <h2>${esc(g.label)}</h2>
+          <span>${g.items.length} ${g.items.length === 1 ? 'listing' : 'listings'}</span>
+        </div>
+        <div class="cards">${g.items.map(card).join('')}</div>
+      </section>`).join('');
+}
+
+function card(o) {
+  const st = STATE[o.verdict] || STATE.review;
+  const facts = [o.city, o.type, o.industry].filter(Boolean)
+    .map(t => `<span class="fact">${esc(t)}</span>`).join('');
+  const flagged = o.problems.length
+    ? `<p class="flagged${o.severe ? ' sev' : ''}">${esc(o.problems.join(', '))}</p>` : '';
+
+  return `<article class="card">
+    <span class="state ${st.cls}">${esc(st.label)}</span>
+    <div>
+      <div class="employer">${esc(o.employer)}</div>
       <h3>${esc(o.title)}</h3>
-      <div class="meta">
-        <span class="tag">${esc(o.city)}</span>
-        <span class="tag">${esc(o.industry)}</span>
-        <span class="tag">${esc(o.term)}</span>
-        <span class="tag status ${verdictClass(o.verdict)}">${esc(verdictLabel(o.verdict))}</span>
-      </div>
-      <div class="notes"><strong>Program fit:</strong> ${esc(o.program)}
-        ${o.notes ? '<br/><br/>' + esc(o.notes) : ''}</div>
-      ${problems}
-      <div class="apply">
-        <span class="confidence">${esc(o.type)}${conf}</span>
-        <a href="${esc(o.url)}" target="_blank" rel="noopener">Open source</a>
-      </div>
-    </article>`;
-  }).join('');
+    </div>
+    <div class="facts">${facts}</div>
+    ${o.blurb ? `<p class="blurb">${esc(o.blurb)}</p>` : ''}
+    ${flagged}
+    <footer>
+      <span class="src">${esc(o.programs[0] || o.source || '')}</span>
+      <a class="apply" href="${esc(o.url)}" target="_blank" rel="noopener">Open posting</a>
+    </footer>
+  </article>`;
 }
 
-function renderSources(){
-  const el = document.getElementById('sources');
-  if(!el) return;
-  const health = META.source_health || {};
-  const rows = Object.entries(health);
-  if(!rows.length){ el.innerHTML = '<p class="small">No source health data yet.</p>'; return; }
-  el.innerHTML = rows.map(([name, h]) => `<div class="source">
-    <h3>${esc(name)}</h3>
-    <p><strong>${h.needs_review ? 'Needs review' : 'Healthy'}</strong> ·
-       last outcome <code>${esc(h.last_outcome || '?')}</code></p>
-    <p>${h.last_matched_count ?? 0} student roles from
-       ${h.last_raw_count ?? 0} postings</p>
-    ${h.last_error ? `<p class="small">${esc(h.last_error)}</p>` : ''}
-  </div>`).join('');
+/* --- Helpers ------------------------------------------------------------- */
+function val(id) { return document.getElementById(id).value; }
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"']/g,
+    m => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[m]));
 }
 
-function resetFilters(){
-  ['q','program','industry','city','term','status'].forEach(
-    id => document.getElementById(id).value = '');
+for (const id of ['q', 'program', 'industry', 'city', 'term', 'quality']) {
+  document.getElementById(id).addEventListener('input', render);
+}
+document.getElementById('reset').addEventListener('click', () => {
+  for (const id of ['q', 'program', 'industry', 'city', 'term']) {
+    document.getElementById(id).value = '';
+  }
   document.getElementById('quality').value = 'applyable';
   render();
-}
+  document.getElementById('q').focus();
+});
 
-function esc(s){
-  return String(s ?? '').replace(/[&<>"']/g,
-    m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-}
-
-['q','program','industry','city','term','status','quality'].forEach(
-  id => document.getElementById(id).addEventListener('input', render));
-
-loadData().then(renderSources);
+load();
 </script>
 </body>
 </html>
