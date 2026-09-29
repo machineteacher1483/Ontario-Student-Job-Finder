@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-26T22:40:06",
+  "generated_at": "2026-09-29T04:47:16",
   "refresh_interval_days": 20,
   "counts": {
-    "total": 56,
-    "active": 3,
-    "archived": 53,
-    "pending_review": 0
+    "total": 88,
+    "active": 31,
+    "archived": 56,
+    "pending_review": 1
   },
   "source_health": {
     "Curated (hand-entered)": {
@@ -17,14 +17,893 @@
     },
     "DemoCorp": {
       "last_attempt": "2026-09-26T22:40:06",
+      "last_matched_count": 3,
+      "last_outcome": "ok",
+      "last_raw_count": 5,
+      "last_success": "2026-09-26T22:40:06",
+      "needs_review": false
+    },
+    "Wealthsimple": {
+      "last_attempt": "2026-09-29T04:47:13",
       "last_outcome": "ok",
       "needs_review": false,
-      "last_success": "2026-09-26T22:40:06",
-      "last_raw_count": 5,
-      "last_matched_count": 3
+      "last_success": "2026-09-29T04:47:13",
+      "last_raw_count": 41,
+      "last_matched_count": 1
+    },
+    "Faire": {
+      "last_attempt": "2026-09-29T04:47:14",
+      "last_outcome": "ok",
+      "needs_review": false,
+      "last_success": "2026-09-29T04:47:14",
+      "last_raw_count": 74,
+      "last_matched_count": 0
+    },
+    "Adzuna": {
+      "last_attempt": "2026-09-29T04:47:14",
+      "last_outcome": "ok",
+      "needs_review": false,
+      "last_success": "2026-09-29T04:47:14",
+      "last_raw_count": 44,
+      "last_matched_count": 33
     }
   },
   "opportunities": [
+    {
+      "title": "Intern, Finance",
+      "employer": "Wealthsimple",
+      "source_url": "https://jobs.ashbyhq.com/wealthsimple/50dcb3a5-b896-42c6-8173-0f6a95718ead",
+      "source_type": "ashby",
+      "source_name": "Wealthsimple",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Winter 2014",
+      "opportunity_type": "internship",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "Internships",
+      "deadline": null,
+      "posted_at": "2026-09-08",
+      "date_collected": "2026-09-29",
+      "last_verified": null,
+      "status": "pending_review",
+      "flags": [
+        "critical:term_passed",
+        "warning:status_contradiction",
+        "verdict:quarantine",
+        "confidence:0"
+      ],
+      "id": "81cb933b04215c59"
+    },
+    {
+      "title": "Co-op & Internship Education Student Advisor (Temporary)",
+      "employer": "Sheridan College",
+      "source_url": "https://www.adzuna.ca/details/5899453516?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Oakville",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "co-op",
+      "program_tags": [],
+      "industry": "Teaching Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-26",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "228bce6819228e96"
+    },
+    {
+      "title": "Junior Analyst - Distribution Intern, Summer 2027 (Co-op/Internship) - 4 months",
+      "employer": "BMO",
+      "source_url": "https://www.adzuna.ca/details/5878953898?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Summer 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "Accounting & Finance Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-10",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "3e66a71dfe7bad1a"
+    },
+    {
+      "title": "Private Wealth Analyst, Summer 2027 (Co-op/Internship) - 4 months",
+      "employer": "BMO",
+      "source_url": "https://www.adzuna.ca/details/5863467176?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Summer 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "Accounting & Finance Jobs",
+      "deadline": null,
+      "posted_at": "2026-08-31",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "28d1513cced9c3b8"
+    },
+    {
+      "title": "Internship - Winter 2027 - Environment, Health & Safety Co-Op Student",
+      "employer": "RTX Corporation",
+      "source_url": "https://www.adzuna.ca/details/5868486552?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Mississauga",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Psychology/Social Work/Health Sciences",
+        "Media/Design"
+      ],
+      "industry": "Engineering Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-03",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "9927e399a1c068e8"
+    },
+    {
+      "title": "Internship - Winter 2027 - Environment, Health & Safety Co-Op Student",
+      "employer": "RTX",
+      "source_url": "https://www.adzuna.ca/details/5868544888?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Mississauga",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Psychology/Social Work/Health Sciences",
+        "Media/Design"
+      ],
+      "industry": "Engineering Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-03",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "b90fd35f230ab5a3"
+    },
+    {
+      "title": "Winter 2027 Co-op - Indigenous Student Internship - Administrative Assistant",
+      "employer": "CGI",
+      "source_url": "https://www.adzuna.ca/details/5894952645?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business"
+      ],
+      "industry": "Admin Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-23",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "a7b8c3b059377701"
+    },
+    {
+      "title": "Investment Team Intern, Summer 2027 (Co-op/Internship) - 4 months",
+      "employer": "BMO",
+      "source_url": "https://www.adzuna.ca/details/5878953901?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Summer 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Media/Design"
+      ],
+      "industry": "Accounting & Finance Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-10",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "1ecdfa6f265d5451"
+    },
+    {
+      "title": "Communications, Winter 2027 - Toronto (Co-op/Internship) - 4 Months",
+      "employer": "QuadReal Property Group",
+      "source_url": "https://www.adzuna.ca/details/5879459132?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "Creative & Design Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-11",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "b2e73e49ff67bca9"
+    },
+    {
+      "title": "Weld Engineering Supervisor",
+      "employer": "CenterLine  Limited",
+      "source_url": "https://www.adzuna.ca/details/5892741024?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Windsor",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data"
+      ],
+      "industry": "Engineering Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-21",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "6bfe68bc6cdde3f8"
+    },
+    {
+      "title": "Quantitative Developer (Alpha Research Team) - GAM, Summer 2027 (Co-op/Internship) - 12 months",
+      "employer": "BMO",
+      "source_url": "https://www.adzuna.ca/details/5883984487?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Summer 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Media/Design"
+      ],
+      "industry": "Accounting & Finance Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-14",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "ff93984c5ee860d4"
+    },
+    {
+      "title": "2027 Winter Co-op Data Engineering Software Developer",
+      "employer": "General Motors",
+      "source_url": "https://www.adzuna.ca/details/5864137193?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Markham",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business"
+      ],
+      "industry": "Engineering Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-01",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "also_listed_on:Adzuna",
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "8953b170d5615be0"
+    },
+    {
+      "title": "Data Engineering, Winter 2027 - Toronto (Co-op/Internship) - 4 Months",
+      "employer": "QuadReal Property Group",
+      "source_url": "https://www.adzuna.ca/details/5879440329?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "IT Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-11",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "eda544d18eb02fab"
+    },
+    {
+      "title": "AI Research, Winter 2027 - Toronto (Co-op/Internship) - 4 Months",
+      "employer": "QuadReal Property Group",
+      "source_url": "https://www.adzuna.ca/details/5880781094?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "Scientific & QA Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-12",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "4f60be317c100161"
+    },
+    {
+      "title": "2027 Winter Co-op - Supervisor CCA",
+      "employer": "General Motors",
+      "source_url": "https://www.adzuna.ca/details/5885889253?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Oshawa",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business"
+      ],
+      "industry": "Manufacturing Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-16",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "also_listed_on:Adzuna",
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "83197354aca7c5fe"
+    },
+    {
+      "title": "Private Wealth Administrative Assistant - Peterborough, Winter 2027 (Co-op/Internship) - 4 months",
+      "employer": "BMO",
+      "source_url": "https://www.adzuna.ca/details/5897472516?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Peterborough Region",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "Sales Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-24",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "62114cc16351d038"
+    },
+    {
+      "title": "Private Wealth Analyst, Summer 2027 (Co-op/Internship) - 4 months",
+      "employer": "Bank of Montreal",
+      "source_url": "https://www.adzuna.ca/details/5866749803?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Summer 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "Accounting & Finance Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-02",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "5dd2750588581232"
+    },
+    {
+      "title": "Cyber Security, Winter 2027 - Toronto (Co-op/Internship) - 4 Months",
+      "employer": "QuadReal Property Group",
+      "source_url": "https://www.adzuna.ca/details/5879464343?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "IT Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-11",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "4c3ba06a23be9e63"
+    },
+    {
+      "title": "Investments, Winter 2027 - Toronto (Co-op/Internship) - 4 Months",
+      "employer": "QuadReal Property Group",
+      "source_url": "https://www.adzuna.ca/details/5878175630?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "Accounting & Finance Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-10",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "b88c8739cd317682"
+    },
+    {
+      "title": "Investments, Summer 2027 - Toronto (Co-op/Internship) - 4 Months",
+      "employer": "QuadReal Property Group",
+      "source_url": "https://www.adzuna.ca/details/5879449029?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Summer 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "Accounting & Finance Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-11",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "70149450a5aaf959"
+    },
+    {
+      "title": "Canadian Debt Investments, Summer 2027 - Toronto (Co-op/Internship) - 4 Months",
+      "employer": "QuadReal Property Group",
+      "source_url": "https://www.adzuna.ca/details/5879449740?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Summer 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "Accounting & Finance Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-11",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "631c8d1207193f32"
+    },
+    {
+      "title": "Actuarial Analyst, Winter 2027 (Co-op/Internship) - 4 months",
+      "employer": "BMO",
+      "source_url": "https://www.adzuna.ca/details/5897472538?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "Accounting & Finance Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-24",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "0d3e03c51f6352bb"
+    },
+    {
+      "title": "AI Engineer, Winter 2027 (Co-op/Internship) - 8 months",
+      "employer": "BMO",
+      "source_url": "https://www.adzuna.ca/details/5897472540?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Media/Design"
+      ],
+      "industry": "IT Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-24",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "885cc3b34f3c9899"
+    },
+    {
+      "title": "Private Wealth Administrative Assistant, Winter 2027 (Co-op/Internship) - 4 months",
+      "employer": "BMO",
+      "source_url": "https://www.adzuna.ca/details/5898845118?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Waterloo Region",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "Admin Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-25",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "47b2b20ca8b17150"
+    },
+    {
+      "title": "2027 Winter Co-op Data Engineering Software Developer",
+      "employer": "General Motors",
+      "source_url": "https://www.adzuna.ca/details/5866654630?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Oshawa",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data"
+      ],
+      "industry": "Engineering Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-02",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "851ab69f02b6262a"
+    },
+    {
+      "title": "Payroll Intern",
+      "employer": "Trench Group",
+      "source_url": "https://www.adzuna.ca/details/5883410961?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Markham",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "internship",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business"
+      ],
+      "industry": "HR & Recruitment Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-14",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "b0de5177ff9b2530"
+    },
+    {
+      "title": "BB Dowlink Layer 1 Test Developer Co-op",
+      "employer": "Ericsson",
+      "source_url": "https://www.adzuna.ca/details/5871771682?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Ottawa",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data"
+      ],
+      "industry": "Engineering Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-05",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "52523e483352087b"
+    },
+    {
+      "title": "Rail Systems Co-op Student",
+      "employer": "Hatch",
+      "source_url": "https://www.adzuna.ca/details/5876250580?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Mississauga",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "Engineering Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-08",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "da37a36c4f7396e1"
+    },
+    {
+      "title": "HR Student",
+      "employer": "Hatch",
+      "source_url": "https://www.adzuna.ca/details/5879000512?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Mississauga",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "internship",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "HR & Recruitment Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-10",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "368ea8fdd2a40719"
+    },
+    {
+      "title": "Finance-Accounting & Controlling Co-op",
+      "employer": "Safran",
+      "source_url": "https://www.adzuna.ca/details/5899384734?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "London",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Engineering/Architecture",
+        "Media/Design"
+      ],
+      "industry": "Accounting & Finance Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-26",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "1f9d9520e185c8b3"
+    },
+    {
+      "title": "Finance-Accounting & Controlling Co-op",
+      "employer": "Safran",
+      "source_url": "https://www.adzuna.ca/details/5899384735?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Engineering/Architecture",
+        "Media/Design"
+      ],
+      "industry": "Accounting & Finance Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-26",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "0ab5c4fb0ca37c3b"
+    },
+    {
+      "title": "Marketing Specialist",
+      "employer": "LogiSense Corporation",
+      "source_url": "https://www.adzuna.ca/details/5880005132?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Waterloo Region",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "new-grad",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "PR, Advertising & Marketing Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-11",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-09-29",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "6d7d945414701317"
+    },
     {
       "title": "Software Engineering Intern (Summer 2027)",
       "employer": "DemoCorp",
@@ -43,10 +922,11 @@
       "posted_at": "2026-08-01",
       "date_collected": "2026-09-26",
       "last_verified": null,
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:100"
+        "confidence:100",
+        "disappeared_from_source"
       ],
       "id": "103c40af8e051761"
     },
@@ -69,10 +949,11 @@
       "posted_at": "2026-08-05",
       "date_collected": "2026-09-26",
       "last_verified": null,
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:100"
+        "confidence:100",
+        "disappeared_from_source"
       ],
       "id": "758703a7e21bf3e4"
     },
@@ -95,10 +976,11 @@
       "posted_at": "2026-08-07",
       "date_collected": "2026-09-26",
       "last_verified": null,
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:100"
+        "confidence:100",
+        "disappeared_from_source"
       ],
       "id": "65a165c603e58e1a"
     },
