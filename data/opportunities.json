@@ -1,13 +1,21 @@
 {
-  "generated_at": "2026-09-29T04:47:16",
+  "generated_at": "2026-10-19T18:57:29",
   "refresh_interval_days": 20,
   "counts": {
-    "total": 88,
-    "active": 31,
-    "archived": 56,
+    "total": 98,
+    "active": 11,
+    "archived": 86,
     "pending_review": 1
   },
   "source_health": {
+    "Adzuna": {
+      "last_attempt": "2026-10-19T18:57:28",
+      "last_matched_count": 13,
+      "last_outcome": "ok",
+      "last_raw_count": 21,
+      "last_success": "2026-10-19T18:57:28",
+      "needs_review": false
+    },
     "Curated (hand-entered)": {
       "last_error": "seeded from site HTML; see reports/review_queue.html",
       "last_matched_count": 53,
@@ -23,32 +31,343 @@
       "last_success": "2026-09-26T22:40:06",
       "needs_review": false
     },
-    "Wealthsimple": {
-      "last_attempt": "2026-09-29T04:47:13",
-      "last_outcome": "ok",
-      "needs_review": false,
-      "last_success": "2026-09-29T04:47:13",
-      "last_raw_count": 41,
-      "last_matched_count": 1
-    },
     "Faire": {
-      "last_attempt": "2026-09-29T04:47:14",
+      "last_attempt": "2026-10-19T18:57:25",
+      "last_matched_count": 0,
       "last_outcome": "ok",
-      "needs_review": false,
-      "last_success": "2026-09-29T04:47:14",
-      "last_raw_count": 74,
-      "last_matched_count": 0
+      "last_raw_count": 81,
+      "last_success": "2026-10-19T18:57:25",
+      "needs_review": false
     },
-    "Adzuna": {
-      "last_attempt": "2026-09-29T04:47:14",
+    "Wealthsimple": {
+      "last_attempt": "2026-10-19T18:57:25",
+      "last_matched_count": 1,
       "last_outcome": "ok",
-      "needs_review": false,
-      "last_success": "2026-09-29T04:47:14",
-      "last_raw_count": 44,
-      "last_matched_count": 33
+      "last_raw_count": 46,
+      "last_success": "2026-10-19T18:57:25",
+      "needs_review": false
     }
   },
   "opportunities": [
+    {
+      "title": "Intern, Client Experience Strategy & Operations",
+      "employer": "Wealthsimple",
+      "source_url": "https://jobs.ashbyhq.com/wealthsimple/581eee5b-329b-4de3-a9ac-72bf9ce0c654",
+      "source_type": "ashby",
+      "source_name": "Wealthsimple",
+      "city": "Remote (Canada)",
+      "province": "ON",
+      "term": "Winter 2014",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "Operations",
+      "deadline": null,
+      "posted_at": "2026-10-13",
+      "date_collected": "2026-10-19",
+      "last_verified": null,
+      "status": "pending_review",
+      "flags": [
+        "critical:term_passed",
+        "warning:status_contradiction",
+        "verdict:quarantine",
+        "confidence:0"
+      ],
+      "id": "bafcebe8e9304740"
+    },
+    {
+      "title": "Social Media Marketing Intern",
+      "employer": "Qode Media",
+      "source_url": "https://www.adzuna.ca/details/5908475480?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "Logistics/Business",
+        "Psychology/Social Work/Health Sciences",
+        "Media/Design"
+      ],
+      "industry": "PR, Advertising & Marketing Jobs",
+      "deadline": null,
+      "posted_at": "2026-10-02",
+      "date_collected": "2026-10-19",
+      "last_verified": "2026-10-19",
+      "status": "active",
+      "flags": [
+        "also_listed_on:Adzuna",
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "2647a2c4907ad103"
+    },
+    {
+      "title": "Private Wealth Analyst, Summer 2027 (Co-op/Internship) - 4 months",
+      "employer": "Bank of Montreal",
+      "source_url": "https://www.adzuna.ca/details/5913586297?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Summer 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "Accounting & Finance Jobs",
+      "deadline": null,
+      "posted_at": "2026-10-06",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-10-19",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "5dd2750588581232"
+    },
+    {
+      "title": "Weld Engineering Supervisor",
+      "employer": "CenterLine  Limited",
+      "source_url": "https://www.adzuna.ca/details/5892741024?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Windsor",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data"
+      ],
+      "industry": "Engineering Jobs",
+      "deadline": null,
+      "posted_at": "2026-09-21",
+      "date_collected": "2026-09-29",
+      "last_verified": "2026-10-19",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "6bfe68bc6cdde3f8"
+    },
+    {
+      "title": "Business Analyst, Winter 2027 (Co-op/Internship) - 4 Months",
+      "employer": "Bank of Montreal",
+      "source_url": "https://www.adzuna.ca/details/5933122866?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "IT Jobs",
+      "deadline": null,
+      "posted_at": "2026-10-18",
+      "date_collected": "2026-10-19",
+      "last_verified": "2026-10-19",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "b2615c3d4b113889"
+    },
+    {
+      "title": "Private Wealth Administrative Assistant, Winter 2027 (Co-op/Internship) - 4 months",
+      "employer": "Bank of Montreal",
+      "source_url": "https://www.adzuna.ca/details/5931901574?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Waterloo Region",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "Admin Jobs",
+      "deadline": null,
+      "posted_at": "2026-10-17",
+      "date_collected": "2026-10-19",
+      "last_verified": "2026-10-19",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "3b88650fa8e8f4e5"
+    },
+    {
+      "title": "Wealth Investorline Associate, Winter 2027 (Co-op/Internship) - 4 months",
+      "employer": "Bank of Montreal",
+      "source_url": "https://www.adzuna.ca/details/5920324734?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "Accounting & Finance Jobs",
+      "deadline": null,
+      "posted_at": "2026-10-09",
+      "date_collected": "2026-10-19",
+      "last_verified": "2026-10-19",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "0f6ecee9e44d2788"
+    },
+    {
+      "title": "Transportation Co-op Student - Winter 2027 - 8 Months",
+      "employer": "Stantec",
+      "source_url": "https://www.adzuna.ca/details/5933122103?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Stoney Creek",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data"
+      ],
+      "industry": "Engineering Jobs",
+      "deadline": null,
+      "posted_at": "2026-10-18",
+      "date_collected": "2026-10-19",
+      "last_verified": "2026-10-19",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "91162b20032f3cc2"
+    },
+    {
+      "title": "Estimating Student",
+      "employer": "Hatch",
+      "source_url": "https://www.adzuna.ca/details/5919851743?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Mississauga",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "internship",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "Trade & Construction Jobs",
+      "deadline": null,
+      "posted_at": "2026-10-08",
+      "date_collected": "2026-10-19",
+      "last_verified": "2026-10-19",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "4d79d7fe82ce7073"
+    },
+    {
+      "title": "Transportation Co-op Student - Winter 2027 - 8 Months",
+      "employer": "Stantec",
+      "source_url": "https://www.adzuna.ca/details/5933063161?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Hamilton Region",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Media/Design"
+      ],
+      "industry": "Engineering Jobs",
+      "deadline": null,
+      "posted_at": "2026-10-18",
+      "date_collected": "2026-10-19",
+      "last_verified": "2026-10-19",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "d59ed0c93048ea2b"
+    },
+    {
+      "title": "Co-op and Internship Officer - Limited Term",
+      "employer": "Ontario Tech University",
+      "source_url": "https://www.adzuna.ca/details/5928334169?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Oshawa",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "co-op",
+      "program_tags": [],
+      "industry": "Admin Jobs",
+      "deadline": null,
+      "posted_at": "2026-10-14",
+      "date_collected": "2026-10-19",
+      "last_verified": "2026-10-19",
+      "status": "active",
+      "flags": [
+        "also_listed_on:Adzuna",
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "0678b08b42ce06a3"
+    },
+    {
+      "title": "Planning Student",
+      "employer": "Hatch",
+      "source_url": "https://www.adzuna.ca/details/5919851736?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Mississauga",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "internship",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Media/Design"
+      ],
+      "industry": "Consultancy Jobs",
+      "deadline": null,
+      "posted_at": "2026-10-08",
+      "date_collected": "2026-10-19",
+      "last_verified": "2026-10-19",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "13dff8d936b60479"
+    },
     {
       "title": "Intern, Finance",
       "employer": "Wealthsimple",
@@ -69,12 +388,13 @@
       "posted_at": "2026-09-08",
       "date_collected": "2026-09-29",
       "last_verified": null,
-      "status": "pending_review",
+      "status": "archived",
       "flags": [
         "critical:term_passed",
         "warning:status_contradiction",
         "verdict:quarantine",
-        "confidence:0"
+        "confidence:0",
+        "disappeared_from_source"
       ],
       "id": "81cb933b04215c59"
     },
@@ -94,10 +414,11 @@
       "posted_at": "2026-09-26",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "228bce6819228e96"
     },
@@ -121,10 +442,11 @@
       "posted_at": "2026-09-10",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "3e66a71dfe7bad1a"
     },
@@ -148,10 +470,11 @@
       "posted_at": "2026-08-31",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "28d1513cced9c3b8"
     },
@@ -176,10 +499,11 @@
       "posted_at": "2026-09-03",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "9927e399a1c068e8"
     },
@@ -204,10 +528,11 @@
       "posted_at": "2026-09-03",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "b90fd35f230ab5a3"
     },
@@ -230,10 +555,11 @@
       "posted_at": "2026-09-23",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "a7b8c3b059377701"
     },
@@ -256,10 +582,11 @@
       "posted_at": "2026-09-10",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "1ecdfa6f265d5451"
     },
@@ -283,37 +610,13 @@
       "posted_at": "2026-09-11",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "b2e73e49ff67bca9"
-    },
-    {
-      "title": "Weld Engineering Supervisor",
-      "employer": "CenterLine  Limited",
-      "source_url": "https://www.adzuna.ca/details/5892741024?utm_medium=api&utm_source=b43d3547",
-      "source_type": "adzuna",
-      "source_name": "Adzuna",
-      "city": "Windsor",
-      "province": "ON",
-      "term": "",
-      "opportunity_type": "co-op",
-      "program_tags": [
-        "CS/IT/Data"
-      ],
-      "industry": "Engineering Jobs",
-      "deadline": null,
-      "posted_at": "2026-09-21",
-      "date_collected": "2026-09-29",
-      "last_verified": "2026-09-29",
-      "status": "active",
-      "flags": [
-        "verdict:publish",
-        "confidence:97"
-      ],
-      "id": "6bfe68bc6cdde3f8"
     },
     {
       "title": "Quantitative Developer (Alpha Research Team) - GAM, Summer 2027 (Co-op/Internship) - 12 months",
@@ -334,10 +637,11 @@
       "posted_at": "2026-09-14",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "ff93984c5ee860d4"
     },
@@ -360,11 +664,12 @@
       "posted_at": "2026-09-01",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "also_listed_on:Adzuna",
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "8953b170d5615be0"
     },
@@ -388,10 +693,11 @@
       "posted_at": "2026-09-11",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "eda544d18eb02fab"
     },
@@ -415,10 +721,11 @@
       "posted_at": "2026-09-12",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "4f60be317c100161"
     },
@@ -441,11 +748,12 @@
       "posted_at": "2026-09-16",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "also_listed_on:Adzuna",
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "83197354aca7c5fe"
     },
@@ -469,39 +777,13 @@
       "posted_at": "2026-09-24",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "62114cc16351d038"
-    },
-    {
-      "title": "Private Wealth Analyst, Summer 2027 (Co-op/Internship) - 4 months",
-      "employer": "Bank of Montreal",
-      "source_url": "https://www.adzuna.ca/details/5866749803?utm_medium=api&utm_source=b43d3547",
-      "source_type": "adzuna",
-      "source_name": "Adzuna",
-      "city": "Toronto",
-      "province": "ON",
-      "term": "Summer 2027",
-      "opportunity_type": "co-op",
-      "program_tags": [
-        "CS/IT/Data",
-        "Logistics/Business",
-        "Media/Design"
-      ],
-      "industry": "Accounting & Finance Jobs",
-      "deadline": null,
-      "posted_at": "2026-09-02",
-      "date_collected": "2026-09-29",
-      "last_verified": "2026-09-29",
-      "status": "active",
-      "flags": [
-        "verdict:publish",
-        "confidence:97"
-      ],
-      "id": "5dd2750588581232"
     },
     {
       "title": "Cyber Security, Winter 2027 - Toronto (Co-op/Internship) - 4 Months",
@@ -523,10 +805,11 @@
       "posted_at": "2026-09-11",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "4c3ba06a23be9e63"
     },
@@ -550,10 +833,11 @@
       "posted_at": "2026-09-10",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "b88c8739cd317682"
     },
@@ -577,10 +861,11 @@
       "posted_at": "2026-09-11",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "70149450a5aaf959"
     },
@@ -604,10 +889,11 @@
       "posted_at": "2026-09-11",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "631c8d1207193f32"
     },
@@ -631,10 +917,11 @@
       "posted_at": "2026-09-24",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "0d3e03c51f6352bb"
     },
@@ -657,10 +944,11 @@
       "posted_at": "2026-09-24",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "885cc3b34f3c9899"
     },
@@ -684,10 +972,11 @@
       "posted_at": "2026-09-25",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "47b2b20ca8b17150"
     },
@@ -709,10 +998,11 @@
       "posted_at": "2026-09-02",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "851ab69f02b6262a"
     },
@@ -735,10 +1025,11 @@
       "posted_at": "2026-09-14",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "b0de5177ff9b2530"
     },
@@ -760,10 +1051,11 @@
       "posted_at": "2026-09-05",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "52523e483352087b"
     },
@@ -787,10 +1079,11 @@
       "posted_at": "2026-09-08",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "da37a36c4f7396e1"
     },
@@ -814,10 +1107,11 @@
       "posted_at": "2026-09-10",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "368ea8fdd2a40719"
     },
@@ -842,10 +1136,11 @@
       "posted_at": "2026-09-26",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "1f9d9520e185c8b3"
     },
@@ -870,10 +1165,11 @@
       "posted_at": "2026-09-26",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "0ab5c4fb0ca37c3b"
     },
@@ -897,10 +1193,11 @@
       "posted_at": "2026-09-11",
       "date_collected": "2026-09-29",
       "last_verified": "2026-09-29",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "6d7d945414701317"
     },
