@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-10-19T18:57:29",
+  "generated_at": "2026-11-09T22:50:40",
   "refresh_interval_days": 20,
   "counts": {
-    "total": 98,
-    "active": 11,
-    "archived": 86,
-    "pending_review": 1
+    "total": 107,
+    "active": 10,
+    "archived": 97,
+    "pending_review": 0
   },
   "source_health": {
     "Adzuna": {
-      "last_attempt": "2026-10-19T18:57:28",
-      "last_matched_count": 13,
+      "last_attempt": "2026-11-09T22:50:39",
+      "last_matched_count": 10,
       "last_outcome": "ok",
-      "last_raw_count": 21,
-      "last_success": "2026-10-19T18:57:28",
+      "last_raw_count": 19,
+      "last_success": "2026-11-09T22:50:39",
       "needs_review": false
     },
     "Curated (hand-entered)": {
@@ -32,23 +32,281 @@
       "needs_review": false
     },
     "Faire": {
-      "last_attempt": "2026-10-19T18:57:25",
+      "last_attempt": "2026-11-09T22:50:38",
       "last_matched_count": 0,
       "last_outcome": "ok",
-      "last_raw_count": 81,
-      "last_success": "2026-10-19T18:57:25",
+      "last_raw_count": 67,
+      "last_success": "2026-11-09T22:50:38",
       "needs_review": false
     },
     "Wealthsimple": {
-      "last_attempt": "2026-10-19T18:57:25",
-      "last_matched_count": 1,
+      "last_attempt": "2026-11-09T22:50:38",
+      "last_matched_count": 0,
       "last_outcome": "ok",
-      "last_raw_count": 46,
-      "last_success": "2026-10-19T18:57:25",
+      "last_raw_count": 42,
+      "last_success": "2026-11-09T22:50:38",
       "needs_review": false
     }
   },
   "opportunities": [
+    {
+      "title": "Electrical Engineering Intern/Co-op",
+      "employer": "GFT",
+      "source_url": "https://www.adzuna.ca/details/5957730894?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Design Exchange",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Engineering/Architecture",
+        "Media/Design"
+      ],
+      "industry": "Engineering Jobs",
+      "deadline": null,
+      "posted_at": "2026-11-08",
+      "date_collected": "2026-11-09",
+      "last_verified": "2026-11-09",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "e75a13852ab5f445"
+    },
+    {
+      "title": "Project Planning & Scheduling Co-op Student or intern",
+      "employer": "Equest",
+      "source_url": "https://www.adzuna.ca/details/5957587757?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Ottawa",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business",
+        "Engineering/Architecture",
+        "Media/Design"
+      ],
+      "industry": "Engineering Jobs",
+      "deadline": null,
+      "posted_at": "2026-11-07",
+      "date_collected": "2026-11-09",
+      "last_verified": "2026-11-09",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "4d64c165a096ca6c"
+    },
+    {
+      "title": "Investment Team Intern, Summer 2027 (Co-op/Internship) - 4 months",
+      "employer": "Bank of Montreal",
+      "source_url": "https://www.adzuna.ca/details/5955488203?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "Summer 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Media/Design"
+      ],
+      "industry": "Accounting & Finance Jobs",
+      "deadline": null,
+      "posted_at": "2026-11-06",
+      "date_collected": "2026-11-09",
+      "last_verified": "2026-11-09",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "2164945ff5d4c840"
+    },
+    {
+      "title": "Geotechnical Engineering Co-op Student / Intern (Summer 2027) 4-18 Month Term",
+      "employer": "Stantec",
+      "source_url": "https://www.adzuna.ca/details/5937568915?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Sudbury Region",
+      "province": "ON",
+      "term": "Summer 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data"
+      ],
+      "industry": "Engineering Jobs",
+      "deadline": null,
+      "posted_at": "2026-10-22",
+      "date_collected": "2026-11-09",
+      "last_verified": "2026-11-09",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "d3d255466e97f972"
+    },
+    {
+      "title": "Geotechnical Engineering Co-op Student / Intern (Summer 2027) 4-18 Month Term",
+      "employer": "Stantec",
+      "source_url": "https://www.adzuna.ca/details/5937568916?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Markham",
+      "province": "ON",
+      "term": "Summer 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data"
+      ],
+      "industry": "Engineering Jobs",
+      "deadline": null,
+      "posted_at": "2026-10-22",
+      "date_collected": "2026-11-09",
+      "last_verified": "2026-11-09",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "1a67194e3cc1e50d"
+    },
+    {
+      "title": "Future Opportunities | Join the Cansel Group Talent Network",
+      "employer": "Cansel Survey Equipment Inc.",
+      "source_url": "https://www.adzuna.ca/details/5937866736?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Richmond Hill",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Media/Design"
+      ],
+      "industry": "Customer Services Jobs",
+      "deadline": null,
+      "posted_at": "2026-10-22",
+      "date_collected": "2026-11-09",
+      "last_verified": "2026-11-09",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "c7bf7169fe6e56c4"
+    },
+    {
+      "title": "Future Opportunities | Join the Cansel Group Talent Network",
+      "employer": "Cansel Survey Equipment Inc.",
+      "source_url": "https://www.adzuna.ca/details/5949195343?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Ottawa",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Media/Design"
+      ],
+      "industry": "Customer Services Jobs",
+      "deadline": null,
+      "posted_at": "2026-11-01",
+      "date_collected": "2026-11-09",
+      "last_verified": "2026-11-09",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "339a44b1ad17dd5e"
+    },
+    {
+      "title": "Co-op and Internship Officer - Limited Term",
+      "employer": "Ontario Tech University",
+      "source_url": "https://www.adzuna.ca/details/5928334169?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Oshawa",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "co-op",
+      "program_tags": [],
+      "industry": "Admin Jobs",
+      "deadline": null,
+      "posted_at": "2026-10-14",
+      "date_collected": "2026-10-19",
+      "last_verified": "2026-11-09",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "0678b08b42ce06a3"
+    },
+    {
+      "title": "Intern, CPA Program (January \u2013 August 2027)",
+      "employer": "CPP Investments",
+      "source_url": "https://www.adzuna.ca/details/5945492048?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto",
+      "province": "ON",
+      "term": "",
+      "opportunity_type": "internship",
+      "program_tags": [
+        "CS/IT/Data",
+        "Media/Design"
+      ],
+      "industry": "Accounting & Finance Jobs",
+      "deadline": null,
+      "posted_at": "2026-10-29",
+      "date_collected": "2026-11-09",
+      "last_verified": "2026-11-09",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "33e8d52ac241f2b0"
+    },
+    {
+      "title": "Engineering Student",
+      "employer": "GHD",
+      "source_url": "https://www.adzuna.ca/details/5955455387?utm_medium=api&utm_source=b43d3547",
+      "source_type": "adzuna",
+      "source_name": "Adzuna",
+      "city": "Toronto Dominion Centre",
+      "province": "ON",
+      "term": "Winter 2027",
+      "opportunity_type": "co-op",
+      "program_tags": [
+        "CS/IT/Data",
+        "Logistics/Business"
+      ],
+      "industry": "Engineering Jobs",
+      "deadline": null,
+      "posted_at": "2026-11-06",
+      "date_collected": "2026-11-09",
+      "last_verified": "2026-11-09",
+      "status": "active",
+      "flags": [
+        "verdict:publish",
+        "confidence:97"
+      ],
+      "id": "e654aa36b308e208"
+    },
     {
       "title": "Intern, Client Experience Strategy & Operations",
       "employer": "Wealthsimple",
@@ -69,12 +327,13 @@
       "posted_at": "2026-10-13",
       "date_collected": "2026-10-19",
       "last_verified": null,
-      "status": "pending_review",
+      "status": "archived",
       "flags": [
         "critical:term_passed",
         "warning:status_contradiction",
         "verdict:quarantine",
-        "confidence:0"
+        "confidence:0",
+        "disappeared_from_source"
       ],
       "id": "bafcebe8e9304740"
     },
@@ -98,11 +357,12 @@
       "posted_at": "2026-10-02",
       "date_collected": "2026-10-19",
       "last_verified": "2026-10-19",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "also_listed_on:Adzuna",
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "2647a2c4907ad103"
     },
@@ -126,10 +386,11 @@
       "posted_at": "2026-10-06",
       "date_collected": "2026-09-29",
       "last_verified": "2026-10-19",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "5dd2750588581232"
     },
@@ -151,10 +412,11 @@
       "posted_at": "2026-09-21",
       "date_collected": "2026-09-29",
       "last_verified": "2026-10-19",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "6bfe68bc6cdde3f8"
     },
@@ -178,10 +440,11 @@
       "posted_at": "2026-10-18",
       "date_collected": "2026-10-19",
       "last_verified": "2026-10-19",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "b2615c3d4b113889"
     },
@@ -205,10 +468,11 @@
       "posted_at": "2026-10-17",
       "date_collected": "2026-10-19",
       "last_verified": "2026-10-19",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "3b88650fa8e8f4e5"
     },
@@ -232,10 +496,11 @@
       "posted_at": "2026-10-09",
       "date_collected": "2026-10-19",
       "last_verified": "2026-10-19",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "0f6ecee9e44d2788"
     },
@@ -257,10 +522,11 @@
       "posted_at": "2026-10-18",
       "date_collected": "2026-10-19",
       "last_verified": "2026-10-19",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "91162b20032f3cc2"
     },
@@ -284,10 +550,11 @@
       "posted_at": "2026-10-08",
       "date_collected": "2026-10-19",
       "last_verified": "2026-10-19",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "4d79d7fe82ce7073"
     },
@@ -310,36 +577,13 @@
       "posted_at": "2026-10-18",
       "date_collected": "2026-10-19",
       "last_verified": "2026-10-19",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "d59ed0c93048ea2b"
-    },
-    {
-      "title": "Co-op and Internship Officer - Limited Term",
-      "employer": "Ontario Tech University",
-      "source_url": "https://www.adzuna.ca/details/5928334169?utm_medium=api&utm_source=b43d3547",
-      "source_type": "adzuna",
-      "source_name": "Adzuna",
-      "city": "Oshawa",
-      "province": "ON",
-      "term": "",
-      "opportunity_type": "co-op",
-      "program_tags": [],
-      "industry": "Admin Jobs",
-      "deadline": null,
-      "posted_at": "2026-10-14",
-      "date_collected": "2026-10-19",
-      "last_verified": "2026-10-19",
-      "status": "active",
-      "flags": [
-        "also_listed_on:Adzuna",
-        "verdict:publish",
-        "confidence:97"
-      ],
-      "id": "0678b08b42ce06a3"
     },
     {
       "title": "Planning Student",
@@ -361,10 +605,11 @@
       "posted_at": "2026-10-08",
       "date_collected": "2026-10-19",
       "last_verified": "2026-10-19",
-      "status": "active",
+      "status": "archived",
       "flags": [
         "verdict:publish",
-        "confidence:97"
+        "confidence:97",
+        "disappeared_from_source"
       ],
       "id": "13dff8d936b60479"
     },
